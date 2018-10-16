@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled from '../styled-components';
 
-const CartStyles = styled.div`
+interface ICardStylesProps {
+  open: boolean;
+}
+
+const CartStyles = styled<ICardStylesProps, "div">("div")`
   padding: 20px;
   position: relative;
   background: white;

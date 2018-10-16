@@ -1,4 +1,8 @@
-function hasPermission(user, permissionsNeeded) {
+interface IUser {
+  permissions: string[]
+}
+
+export function hasPermission(user: IUser, permissionsNeeded: string) {
   const matchedPermissions = user.permissions.filter(permissionTheyHave =>
     permissionsNeeded.includes(permissionTheyHave)
   );
@@ -13,5 +17,3 @@ function hasPermission(user, permissionsNeeded) {
       `);
   }
 }
-
-exports.hasPermission = hasPermission;

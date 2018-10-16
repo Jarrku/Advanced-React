@@ -44,7 +44,7 @@ const fakeOrder = () => ({
   user: fakeUser(),
 });
 
-const fakeCartItem = overrides => ({
+const fakeCartItem = (overrides: object) => ({
   __typename: 'CartItem',
   id: 'omg123',
   quantity: 3,
@@ -53,25 +53,26 @@ const fakeCartItem = overrides => ({
   ...overrides,
 });
 
+interface ILSStore {
+  [x: string]: any;
+}
 // Fake LocalStorage
 class LocalStorageMock {
-  constructor() {
-    this.store = {};
-  }
+  store: ILSStore = {}
 
   clear() {
     this.store = {};
   }
 
-  getItem(key) {
+  getItem(key: string) {
     return this.store[key] || null;
   }
 
-  setItem(key, value) {
+  setItem(key: string, value: any) {
     this.store[key] = value.toString();
   }
 
-  removeItem(key) {
+  removeItem(key: string) {
     delete this.store[key];
   }
 }

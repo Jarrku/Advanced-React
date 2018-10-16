@@ -1,7 +1,5 @@
-import styled from 'styled-components';
-import React from 'react';
-
-import PropTypes from 'prop-types';
+import styled from './styled-components';
+import * as React from 'react';
 
 const ErrorStyles = styled.div`
   padding: 2rem;
@@ -14,11 +12,24 @@ const ErrorStyles = styled.div`
     font-weight: 100;
   }
   strong {
-    margin-right: 1rem;
+    margin-right: 1rem;\
   }
 `;
 
-const DisplayError = ({ error }) => {
+interface IProps {
+  error?: {
+    message?: string;
+    networkError?: {
+      result?: {
+        errors: Array<{
+          message: string;
+        }>
+      }
+    }
+  }
+}
+
+const DisplayError = ({ error }: IProps) => {
   if (!error || !error.message) return null;
   if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
     return error.networkError.result.errors.map((error, i) => (
@@ -38,14 +49,6 @@ const DisplayError = ({ error }) => {
       </p>
     </ErrorStyles>
   );
-};
-
-DisplayError.defaultProps = {
-  error: {},
-};
-
-DisplayError.propTypes = {
-  error: PropTypes.object,
 };
 
 export default DisplayError;

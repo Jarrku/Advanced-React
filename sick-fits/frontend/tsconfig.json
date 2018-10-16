@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true,
+    "declaration": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve"
+  },
+  "include": ["lib/**/*", "components/**/*", "pages/**/*"],
+  "exclude": ["src/**/*.spec.*", "src/**/*.test.*"]
+}
