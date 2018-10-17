@@ -760,10 +760,41 @@
   resolved "http://registry.npmjs.org/@types/async/-/async-2.0.49.tgz#92e33d13f74c895cb9a7f38ba97db8431ed14bc0"
   integrity sha512-Benr3i5odUkvpFkOpzGqrltGdbSs+EVCkEBGXbuR7uT0VzhXKIkhem6PDzHdx5EonA+rfbB3QvP6aDOw5+zp5Q==
 
+"@types/graphql@^14.0.3":
+  version "14.0.3"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fgraphql/-/graphql-14.0.3.tgz#389e2e5b83ecdb376d9f98fae2094297bc112c1c"
+  integrity sha512-TcFkpEjcQK7w8OcrQcd7iIBPjU0rdyi3ldj6d0iJ4PPSzbWqPBvXj9KSwO14hTOX2dm9RoiH7VuxksJLNYdXUQ==
+
 "@types/jest@^23.3.5":
   version "23.3.5"
   resolved "https://registry.npmjs.org/@types/jest/-/jest-23.3.5.tgz#870a1434208b60603745bfd214fc3fc675142364"
   integrity sha512-3LI+vUC3Wju28vbjIjsTKakhMB8HC4l+tMz+Z8WRzVK+kmvezE5jcOvKtBpznWSI5KDLFo+FouUhpTKoekadCA==
+
+"@types/next-server@*":
+  version "7.0.0"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fnext-server/-/next-server-7.0.0.tgz#dca2c7445b572573609475db17bc8ee4b7ab4b03"
+  integrity sha512-l9D0tUxPJPoYka9siJUOXWr5z/LVh658UZWpZdCLMl4a1ZamPoo9ZxvRs/LeQ37MXUEeTNqtiOYdbQhkWGMAbg==
+  dependencies:
+    "@types/node" "*"
+    "@types/react" "*"
+    "@types/react-loadable" "*"
+
+"@types/next@^7.0.3":
+  version "7.0.3"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fnext/-/next-7.0.3.tgz#4831741dee02c463a761292176e372af072d3c39"
+  integrity sha512-BZu82o4yJQ+dzNuvxBzmzhqIjYcyWXnZMt5uUbDmgPTMKz6dwt9H4YqoS1RKtDmxSPFdUF5y5WkZ9c37pzz3XQ==
+  dependencies:
+    "@types/next-server" "*"
+    "@types/node" "*"
+    "@types/node-fetch" "*"
+    "@types/react" "*"
+
+"@types/node-fetch@*":
+  version "2.1.2"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fnode-fetch/-/node-fetch-2.1.2.tgz#8c5da14d70321e4c4ecd5db668e3f93cf6c7399f"
+  integrity sha512-XroxUzLpKuL+CVkQqXlffRkEPi4Gh3Oui/mWyS7ztKiyqVxiU+h3imCW5I2NQmde5jK+3q++36/Q96cyRWsweg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/node@*":
   version "10.12.0"
@@ -774,6 +805,14 @@
   version "15.5.6"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
+
+"@types/react-loadable@*":
+  version "5.4.1"
+  resolved "https://verdaccio.tools.moovly.com/@types%2freact-loadable/-/react-loadable-5.4.1.tgz#bc76978c6d9039e5808797b5ee35f6ae18b7329f"
+  integrity sha512-nBvsWjPfBHepN5LoK/wgaunZSK9LmkKsPYum+/QrEKzUAb1yoe1/dwqTH6ZrinHDjru9LgjvXOqek9hvbq4Skw==
+  dependencies:
+    "@types/react" "*"
+    "@types/webpack" "*"
 
 "@types/react@*", "@types/react@^16.4.18":
   version "16.4.18"
@@ -790,6 +829,28 @@
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
+
+"@types/tapable@*":
+  version "1.0.4"
+  resolved "https://verdaccio.tools.moovly.com/@types%2ftapable/-/tapable-1.0.4.tgz#b4ffc7dc97b498c969b360a41eee247f82616370"
+  integrity sha512-78AdXtlhpCHT0K3EytMpn4JNxaf5tbqbLcbIRoQIHzpTIyjpxLQKRoxU55ujBXAtg3Nl2h/XWvfDa9dsMOd0pQ==
+
+"@types/uglify-js@*":
+  version "3.0.4"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fuglify-js/-/uglify-js-3.0.4.tgz#96beae23df6f561862a830b4288a49e86baac082"
+  integrity sha512-SudIN9TRJ+v8g5pTG8RRCqfqTMNqgWCKKd3vtynhGzkIIjxaicNAMuY5TRadJ6tzDu3Dotf3ngaMILtmOdmWEQ==
+  dependencies:
+    source-map "^0.6.1"
+
+"@types/webpack@*":
+  version "4.4.17"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fwebpack/-/webpack-4.4.17.tgz#3da3e0823a051311ba510bdc32354888921fc8b4"
+  integrity sha512-f8fHYEhlrSQJ5BHaonyatL11MYwqQ7I6QDVCT41LqIyxR7j9B2uY4cQKxDoWFC9l2NbFGsIhiJBKZ6Y6LMBFLA==
+  dependencies:
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+    source-map "^0.6.0"
 
 "@types/zen-observable@^0.8.0":
   version "0.8.0"
