@@ -1,4 +1,4 @@
-import casual from 'casual';
+import * as casual from 'casual';
 
 // seed it so we get consistent results
 casual.seed(777);
@@ -11,17 +11,18 @@ const fakeItem = () => ({
   image: 'dog-small.jpg',
   title: 'dogs are best',
   description: 'dogs',
-  largeImage: 'dog.jpg',
+  largeImage: 'dog.jpg'
 });
 
 const fakeUser = () => ({
   __typename: 'User',
+
   id: '4234',
   name: casual.name,
   email: casual.email,
   permissions: ['ADMIN'],
   orders: [],
-  cart: [],
+  cart: []
 });
 
 const fakeOrderItem = () => ({
@@ -31,7 +32,8 @@ const fakeOrderItem = () => ({
   title: casual.words(),
   price: 4234,
   quantity: 1,
-  description: casual.words(),
+
+  description: casual.words()
 });
 
 const fakeOrder = () => ({
@@ -41,7 +43,7 @@ const fakeOrder = () => ({
   total: 40000,
   items: [fakeOrderItem(), fakeOrderItem()],
   createdAt: '2018-04 - 06T19: 24: 16.000Z',
-  user: fakeUser(),
+  user: fakeUser()
 });
 
 const fakeCartItem = (overrides: object) => ({
@@ -50,7 +52,7 @@ const fakeCartItem = (overrides: object) => ({
   quantity: 3,
   item: fakeItem(),
   user: fakeUser(),
-  ...overrides,
+  ...overrides
 });
 
 interface ILSStore {
@@ -58,7 +60,7 @@ interface ILSStore {
 }
 // Fake LocalStorage
 class LocalStorageMock {
-  store: ILSStore = {}
+  store: ILSStore = {};
 
   clear() {
     this.store = {};
@@ -83,5 +85,5 @@ export {
   fakeUser,
   fakeCartItem,
   fakeOrder,
-  fakeOrderItem,
+  fakeOrderItem
 };
