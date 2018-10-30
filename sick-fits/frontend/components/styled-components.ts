@@ -7,6 +7,7 @@ interface ThemeInterface {
   red: string;
   bs: string;
   offWhite: string;
+  maxWidth: string;
 }
 
 const {
@@ -14,7 +15,7 @@ const {
   css,
   createGlobalStyle,
   keyframes,
-  ThemeProvider,
+  ThemeProvider
 } = styledComponents as ThemedStyledComponentsModule<ThemeInterface>;
 
 export { css, createGlobalStyle, keyframes, ThemeProvider };
