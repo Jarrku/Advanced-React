@@ -1,19 +1,11 @@
-import db from '../db';
+import { Operation, Item } from '../shared-interfaces';
 
-type Ctx = typeof db;
-
-type QueryType<Return = undefined, Arguments = {}, Parent = undefined> = (parent: Parent, args: Arguments, ctx: Ctx, info: any) => Return;
-
-interface Dog {
-  name: string;
-}
-
-const dogs: QueryType<Dog[]> = (parent, args, ctx, info) => {
-  return [{ name: 'Snickers' }, { name: 'Sunny' }];
+const items: Operation<Item[]> = (parent, args, ctx, info) => {
+  return ctx.client.items();
  }
 
 const Query = {
-  dogs,
+  items,
 };
 
 export default Query;

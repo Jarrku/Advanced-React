@@ -3,10 +3,18 @@ import { GraphQLServer } from 'graphql-yoga';
 import Query from './resolvers/Query';
 import Mutation from './resolvers/Mutation';
 import db from './db';
+import { prisma } from './generated/prisma-client';
+import { ContextParameters } from 'graphql-yoga/dist/types';
+
+export type Ctx = ContextParameters & {
+  db: typeof db,
+  client: typeof prisma,
+}
 
 function createServer() {
   return new GraphQLServer({
     typeDefs: 'src/schema.graphql',
+    // @ts-ignore
     resolvers: {
       Mutation,
       Query,
@@ -14,7 +22,7 @@ function createServer() {
     resolverValidationOptions: {
       requireResolversForResolveType: false,
     },
-    context: req => ({ ...req, db }),
+    context: req => ({ ...req, db, client: prisma }),
   })
 }
 
