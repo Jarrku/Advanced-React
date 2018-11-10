@@ -1,3 +1,8 @@
-const mutations = {};
 
-export default mutations;
+const Mutations = {
+  createDog(parent, args, ctx, info) {
+
+  }
+};
+
+export default Mutations;
