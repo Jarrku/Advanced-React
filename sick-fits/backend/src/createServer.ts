@@ -6,14 +6,15 @@ import db from './db';
 import { prisma } from './generated/prisma-client';
 import { ContextParameters } from 'graphql-yoga/dist/types';
 
-export type Ctx = ContextParameters & {
+export interface Ctx extends ContextParameters {
   db: typeof db,
   client: typeof prisma,
 }
 
 function createServer() {
   return new GraphQLServer({
-    typeDefs: 'src/schema.graphql',
+    typeDefs: 'src/schemas/schema.graphql',
+
     // @ts-ignore
     resolvers: {
       Mutation,

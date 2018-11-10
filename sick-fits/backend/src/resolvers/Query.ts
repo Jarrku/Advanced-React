@@ -1,11 +1,10 @@
-import { Operation, Item } from '../shared-interfaces';
+import { QueryResolvers } from './resolvers-types';
+import { Ctx } from '../createServer';
 
-const items: Operation<Item[]> = (parent, args, ctx, info) => {
-  return ctx.client.items();
- }
-
-const Query = {
-  items,
+const Query: QueryResolvers.Resolvers<Ctx> = {
+  items(parent, args, ctx, info) {
+    return ctx.client.items();
+  }
 };
 
 export default Query;
