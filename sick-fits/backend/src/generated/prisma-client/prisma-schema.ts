@@ -10,8 +10,6 @@ type BatchPayload {
   count: Long!
 }
 
-scalar DateTime
-
 type Item {
   id: ID!
   title: String!
@@ -19,8 +17,6 @@ type Item {
   image: String
   largeImage: String
   price: Int!
-  createAt: DateTime!
-  updatedAt: DateTime!
 }
 
 type ItemConnection {
@@ -35,7 +31,6 @@ input ItemCreateInput {
   image: String
   largeImage: String
   price: Int!
-  createAt: DateTime!
 }
 
 type ItemEdge {
@@ -56,12 +51,10 @@ enum ItemOrderByInput {
   largeImage_DESC
   price_ASC
   price_DESC
-  createAt_ASC
-  createAt_DESC
-  updatedAt_ASC
-  updatedAt_DESC
   createdAt_ASC
   createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
 }
 
 type ItemPreviousValues {
@@ -71,8 +64,6 @@ type ItemPreviousValues {
   image: String
   largeImage: String
   price: Int!
-  createAt: DateTime!
-  updatedAt: DateTime!
 }
 
 type ItemSubscriptionPayload {
@@ -99,7 +90,6 @@ input ItemUpdateInput {
   image: String
   largeImage: String
   price: Int
-  createAt: DateTime
 }
 
 input ItemUpdateManyMutationInput {
@@ -108,7 +98,6 @@ input ItemUpdateManyMutationInput {
   image: String
   largeImage: String
   price: Int
-  createAt: DateTime
 }
 
 input ItemWhereInput {
@@ -190,22 +179,6 @@ input ItemWhereInput {
   price_lte: Int
   price_gt: Int
   price_gte: Int
-  createAt: DateTime
-  createAt_not: DateTime
-  createAt_in: [DateTime!]
-  createAt_not_in: [DateTime!]
-  createAt_lt: DateTime
-  createAt_lte: DateTime
-  createAt_gt: DateTime
-  createAt_gte: DateTime
-  updatedAt: DateTime
-  updatedAt_not: DateTime
-  updatedAt_in: [DateTime!]
-  updatedAt_not_in: [DateTime!]
-  updatedAt_lt: DateTime
-  updatedAt_lte: DateTime
-  updatedAt_gt: DateTime
-  updatedAt_gte: DateTime
   AND: [ItemWhereInput!]
   OR: [ItemWhereInput!]
   NOT: [ItemWhereInput!]

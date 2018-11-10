@@ -42,9 +42,6 @@ export type SubscriptionResolver<
 // Scalars
 // ====================================================
 
-/** DateTime stamp */
-export type DateTime = any;
-
 export type Nil = any;
 
 // ====================================================
@@ -77,10 +74,6 @@ export interface Item extends Node {
   largeImage?: string | null;
 
   price: number;
-
-  createAt: DateTime;
-
-  updatedAt: DateTime;
 }
 
 export interface Mutation {
@@ -109,8 +102,6 @@ export interface ItemCreateInput {
   largeImage?: string | null;
 
   price: number;
-
-  createAt: DateTime;
 }
 
 // ====================================================
@@ -154,10 +145,6 @@ export namespace ItemResolvers {
     largeImage?: LargeImageResolver<string | null, TypeParent, Context>;
 
     price?: PriceResolver<number, TypeParent, Context>;
-
-    createAt?: CreateAtResolver<DateTime, TypeParent, Context>;
-
-    updatedAt?: UpdatedAtResolver<DateTime, TypeParent, Context>;
   }
 
   export type IdResolver<R = string, Parent = Item, Context = any> = Resolver<
@@ -187,16 +174,6 @@ export namespace ItemResolvers {
   > = Resolver<R, Parent, Context>;
   export type PriceResolver<
     R = number,
-    Parent = Item,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type CreateAtResolver<
-    R = DateTime,
-    Parent = Item,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type UpdatedAtResolver<
-    R = DateTime,
     Parent = Item,
     Context = any
   > = Resolver<R, Parent, Context>;

@@ -9,7 +9,6 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
       image: args.data.image || undefined,
       largeImage: args.data.largeImage || undefined,
       price: args.data.price || 0,
-      createAt: new Date()
     });
   }
 };
