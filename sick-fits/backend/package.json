@@ -8,6 +8,7 @@
     "deploy": "prisma deploy && prisma generate",
     "playground": "graphql playground",
     "generate": "gql-gen --schema './src/schemas/schema.graphql' --template graphql-codegen-typescript-resolvers-template --out ./src/resolvers",
+    "introspection": "gql-gen --schema './src/schemas/schema.graphql' --template graphql-codegen-introspection-template --out ./src",
     "dev": "npm-run-all --parallel start playground"
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "@types/node": "^10.12.3",
     "@types/stripe": "^6.0.3",
     "graphql-code-generator": "^0.13.0",
+    "graphql-codegen-introspection-template": "^0.13.0",
     "graphql-codegen-typescript-resolvers-template": "^0.13.0",
     "graphql-codegen-typescript-template": "^0.13.0",
     "jest": "^23.6.0",

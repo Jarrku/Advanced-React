@@ -3151,6 +3151,11 @@ graphql-codegen-core@0.13.0:
     ts-log "2.1.3"
     winston "3.1.0"
 
+graphql-codegen-introspection-template@^0.13.0:
+  version "0.13.0"
+  resolved "https://verdaccio.tools.moovly.com/graphql-codegen-introspection-template/-/graphql-codegen-introspection-template-0.13.0.tgz#7bd4ae777f1a8d078a09974866fe27a0d928a040"
+  integrity sha512-qYzupnNEr6EI3r0sHhEl0wvlgTpuzWx4MkVCY5rgeSweLOLKlmrwCySMZ8lxzFR9D1Y5alvW3C8LrWHPTuWIug==
+
 graphql-codegen-typescript-resolvers-template@^0.13.0:
   version "0.13.0"
   resolved "https://verdaccio.tools.moovly.com/graphql-codegen-typescript-resolvers-template/-/graphql-codegen-typescript-resolvers-template-0.13.0.tgz#fd525e5199d15714f7cb079b7b7b44dd5ba3a531"

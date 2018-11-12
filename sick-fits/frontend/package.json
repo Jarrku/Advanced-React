@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "next build",
+    "generate": "gql-gen -cs graphql.schema.json --template graphql-codegen-typescript-react-apollo-template --out ./typings/ './components/**/*.tsx'"
   },
   "author": "",
   "license": "ISC",
@@ -51,6 +52,8 @@
     "casual": "^1.5.19",
     "enzyme-to-json": "^3.3.4",
     "fork-ts-checker-webpack-plugin": "^0.4.15",
+    "graphql-code-generator": "^0.13.0",
+    "graphql-codegen-typescript-react-apollo-template": "^0.13.0",
     "graphql-tools": "^4.0.3",
     "jest": "^23.6.0",
     "jest-transform-graphql": "^2.1.0",

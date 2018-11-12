@@ -1,6 +1,8 @@
+import Items from '../components/Items';
+
 const Home: React.SFC = props => (
   <div>
-    <p>Hey!</p>
+    <Items />
   </div>
 );
 
