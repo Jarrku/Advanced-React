@@ -2,6 +2,26 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
+// GraphQL mutation operation: CreateItem
+// ====================================================
+
+export interface CreateItem_createItem {
+  __typename: "Item";
+  id: string;
+}
+
+export interface CreateItem {
+  createItem: CreateItem_createItem;
+}
+
+export interface CreateItemVariables {
+  data: ItemCreateInput;
+}
+
+/* tslint:disable */
+// This file was automatically generated and should not be edited.
+
+// ====================================================
 // GraphQL query operation: AllItems
 // ====================================================
 
@@ -24,6 +44,14 @@ export interface AllItems {
 //==============================================================
 // START Enums and Input Objects
 //==============================================================
+
+export interface ItemCreateInput {
+  title: string;
+  description: string;
+  image?: string | null;
+  largeImage?: string | null;
+  price: number;
+}
 
 //==============================================================
 // END Enums and Input Objects
