@@ -1,5 +1,6 @@
 import styled from './styled-components';
 import * as React from 'react';
+import { ApolloError } from 'apollo-boost';
 
 const ErrorStyles = styled.div`
   padding: 2rem;
@@ -17,21 +18,19 @@ const ErrorStyles = styled.div`
 `;
 
 interface IProps {
-  error?: {
-    message?: string;
-    networkError?: {
-      result?: {
-        errors: Array<{
-          message: string;
-        }>
-      }
-    }
-  }
+  error?: ApolloError;
 }
 
 const DisplayError = ({ error }: IProps) => {
   if (!error || !error.message) return null;
-  if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
+  if (
+    error.networkError &&
+    // @ts-ignore
+    error.networkError.result &&
+    // @ts-ignore
+    error.networkError.result.errors.length
+  ) {
+    // @ts-ignore
     return error.networkError.result.errors.map((error, i) => (
       <ErrorStyles key={i}>
         <p data-test="graphql-error">
