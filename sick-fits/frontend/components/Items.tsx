@@ -2,10 +2,11 @@ import * as React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import styled from './styled-components';
-import { ALL_ITEMS_QUERY } from './__generated__/types';
+import { AllItems } from './__generated__/types';
+import Item from './Item';
 
 const ALL_ITEMS_QUERY = gql`
-  query ALL_ITEMS_QUERY {
+  query AllItems {
     items {
       id
       title
@@ -16,7 +17,7 @@ const ALL_ITEMS_QUERY = gql`
   }
 `;
 
-class AllItemsQuery extends Query<ALL_ITEMS_QUERY> {}
+class AllItemsQuery extends Query<AllItems> {}
 
 const Center = styled.div`
   text-align: center;
@@ -44,7 +45,7 @@ class Items extends React.Component {
               data && (
                 <ItemsList>
                   {data.items.map(item => (
-                    <p>{item.title}</p>
+                    <Item item={item} key={item.id} />
                   ))}
                 </ItemsList>
               )

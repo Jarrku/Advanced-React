@@ -2,20 +2,20 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: ALL_ITEMS_QUERY
+// GraphQL query operation: AllItems
 // ====================================================
 
-export interface ALL_ITEMS_QUERY_items {
+export interface AllItems_items {
   __typename: "Item";
   id: string;
   title: string;
   price: number;
-  image: string | null;
   description: string;
+  image: string | null;
 }
 
-export interface ALL_ITEMS_QUERY {
-  items: ALL_ITEMS_QUERY_items[];
+export interface AllItems {
+  items: AllItems_items[];
 }
 
 /* tslint:disable */
