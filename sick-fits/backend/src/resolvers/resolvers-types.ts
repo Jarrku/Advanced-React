@@ -61,6 +61,8 @@ export interface Node {
 export interface Query {
   items: Item[];
 
+  item?: Item | null;
+
   group: MoovlyUser[];
 
   seats: Seat[];
@@ -122,6 +124,8 @@ export interface Seat {
 
 export interface Mutation {
   createItem: Item;
+
+  updateItem: Item;
 }
 
 export interface User extends Node {
@@ -136,6 +140,10 @@ export interface User extends Node {
 // InputTypes
 // ====================================================
 
+export interface ItemWhereUniqueInput {
+  id?: string | null;
+}
+
 export interface ItemCreateInput {
   title: string;
 
@@ -148,12 +156,28 @@ export interface ItemCreateInput {
   price: number;
 }
 
+export interface ItemUpdatesInput {
+  id: string;
+
+  title?: string | null;
+
+  description?: string | null;
+
+  price?: number | null;
+}
+
 // ====================================================
 // Arguments
 // ====================================================
 
+export interface ItemQueryArgs {
+  where: ItemWhereUniqueInput;
+}
 export interface CreateItemMutationArgs {
   data: ItemCreateInput;
+}
+export interface UpdateItemMutationArgs {
+  data: ItemUpdatesInput;
 }
 
 // ====================================================
@@ -168,6 +192,8 @@ export namespace QueryResolvers {
   export interface Resolvers<Context = any, TypeParent = never> {
     items?: ItemsResolver<Item[], TypeParent, Context>;
 
+    item?: ItemResolver<Item | null, TypeParent, Context>;
+
     group?: GroupResolver<MoovlyUser[], TypeParent, Context>;
 
     seats?: SeatsResolver<Seat[], TypeParent, Context>;
@@ -178,6 +204,15 @@ export namespace QueryResolvers {
     Parent = never,
     Context = any
   > = Resolver<R, Parent, Context>;
+  export type ItemResolver<
+    R = Item | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, ItemArgs>;
+  export interface ItemArgs {
+    where: ItemWhereUniqueInput;
+  }
+
   export type GroupResolver<
     R = MoovlyUser[],
     Parent = never,
@@ -378,6 +413,8 @@ export namespace SeatResolvers {
 export namespace MutationResolvers {
   export interface Resolvers<Context = any, TypeParent = never> {
     createItem?: CreateItemResolver<Item, TypeParent, Context>;
+
+    updateItem?: UpdateItemResolver<Item, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -387,6 +424,15 @@ export namespace MutationResolvers {
   > = Resolver<R, Parent, Context, CreateItemArgs>;
   export interface CreateItemArgs {
     data: ItemCreateInput;
+  }
+
+  export type UpdateItemResolver<
+    R = Item,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, UpdateItemArgs>;
+  export interface UpdateItemArgs {
+    data: ItemUpdatesInput;
   }
 }
 

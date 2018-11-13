@@ -6,10 +6,15 @@ const { Group, Licenses, Users } = clients;
 
 configuration.setToken('7483be3bcee246349a3dea580facf832046e02fc937246678b11af462e781332');
 configuration.setMiddlewares(middlewares.default);
+
 let start = 0;
 const Query: QueryResolvers.Resolvers<Ctx> = {
   items(parent, args, ctx, info) {
     return ctx.client.items();
+  },
+  item(parent, args, ctx, info) {
+    // @ts-ignore null || undefined issue
+    return ctx.client.item(args.where);
   },
   async seats() {
     const start = Date.now();
