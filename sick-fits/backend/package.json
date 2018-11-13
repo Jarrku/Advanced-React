@@ -2,17 +2,27 @@
   "name": "sick-fits-backend",
   "version": "1.0.0",
   "description": "the backend of sick fits",
+  "license": "MIT",
+  "repository": {
+    "url": "wesbos.com"
+  },
   "scripts": {
     "start": "nodemon",
+    "build": "tsc",
+    "production": "tsc && NODE_ENV=production node dist/index.js",
+    "debug": "tsc && node --inspect dist/index.js",
     "test": "jest",
     "deploy": "prisma deploy && prisma generate",
     "playground": "graphql playground",
-    "generate": "gql-gen --schema './src/schemas/schema.graphql' --template graphql-codegen-typescript-resolvers-template --out ./src/resolvers",
     "introspection": "gql-gen --schema './src/schemas/schema.graphql' --template graphql-codegen-introspection-template --out ./src",
-    "dev": "npm-run-all --parallel start playground"
+    "dev": "npm-run-all --parallel start playground",
+    "run-dev": "npm-run-all --parallel generate-types run-src",
+    "generate-types": "gql-gen --schema './src/schemas/schema.graphql' --template graphql-codegen-typescript-resolvers-template --out ./src/resolvers",
+    "run-src": "ts-node src/index.ts"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
+    "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "dotenv": "6.1.0",
     "graphql": "^0.13.2",
@@ -30,10 +40,6 @@
   "resolutions": {
     "graphql": "^0.13.0",
     "**/graphql": "^0.13.0"
-  },
-  "license": "MIT",
-  "repository": {
-    "url": "wesbos.com"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.0",

@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "ts graphql",
   "ignore": ["src/**/*.spec.ts", "src/**/resolvers-types.ts"],
-  "exec": "ts-node src/index.ts & yarn generate"
+  "exec": "yarn run-dev"
 }
