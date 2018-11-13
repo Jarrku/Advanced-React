@@ -49,6 +49,17 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
+"@babel/generator@7.0.0-beta.38":
+  version "7.0.0-beta.38"
+  resolved "https://verdaccio.tools.moovly.com/@babel%2fgenerator/-/generator-7.0.0-beta.38.tgz#6115a66663e3adfd1d6844029ffb2354680182eb"
+  integrity sha512-aOHQPhsEyaB6p2n+AK981+onHoc+Ork9rcAQVSUJR33wUkGiWRpu6/C685knRyIZVsKeSdG5Q4xMiYeFUhuLzA==
+  dependencies:
+    "@babel/types" "7.0.0-beta.38"
+    jsesc "^2.5.1"
+    lodash "^4.2.0"
+    source-map "^0.5.0"
+    trim-right "^1.0.1"
+
 "@babel/generator@^7.0.0", "@babel/generator@^7.1.5":
   version "7.1.5"
   resolved "https://verdaccio.tools.moovly.com/@babel%2fgenerator/-/generator-7.1.5.tgz#615f064d13d95f8f9157c7261f68eddf32ec15b3"
@@ -741,6 +752,15 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
+"@babel/types@7.0.0-beta.38":
+  version "7.0.0-beta.38"
+  resolved "https://verdaccio.tools.moovly.com/@babel%2ftypes/-/types-7.0.0-beta.38.tgz#2ce2443f7dc6ad535a67db4940cbd34e64035a6f"
+  integrity sha512-SAtyEjmA7KiEoL2eAOAUM6M9arQJGWxJKK0S9x0WyPOosHS420RXoxPhn57u/8orRnK8Kxm0nHQQNTX203cP1Q==
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.2.0"
+    to-fast-properties "^2.0.0"
+
 "@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.5":
   version "7.1.5"
   resolved "https://verdaccio.tools.moovly.com/@babel%2ftypes/-/types-7.1.5.tgz#12fe64e91a431234b7017b4227a78cc0eec4e081"
@@ -762,67 +782,246 @@
   resolved "https://verdaccio.tools.moovly.com/@emotion%2fmemoize/-/memoize-0.6.6.tgz#004b98298d04c7ca3b4f50ca2035d4f60d2eed1b"
   integrity sha512-h4t4jFjtm1YV7UirAFuSuFGyLa+NNxjdkq6DpFLANNQY5rHueFZHVY+8Cu1HYVP6DrheB0kv4m5xPjo7eKT7yQ==
 
-"@graphql-modules/epoxy@0.1.9":
-  version "0.1.9"
-  resolved "https://verdaccio.tools.moovly.com/@graphql-modules%2fepoxy/-/epoxy-0.1.9.tgz#291879d517ba4473ea334edbb137a2cc6aed384c"
-  integrity sha512-xWDhwe0ADZvAs6JhvpCHH0jf6YmjEmYshRI/VB6sHE54RGB9GOHqKAqWL/vcbzMrFI2cr40Qqoy7qqaEAh6Ifw==
-  dependencies:
-    "@graphql-modules/logger" "0.1.9"
-    "@types/deepmerge" "2.1.0"
-    deepmerge "2.2.1"
-    graphql-tools "4.0.2"
-    tslib "1.9.3"
+"@emotion/unitless@^0.7.0":
+  version "0.7.2"
+  resolved "https://verdaccio.tools.moovly.com/@emotion%2funitless/-/unitless-0.7.2.tgz#b180097bb44a40c3b59efea9cf28df2fe542d518"
+  integrity sha512-mK4SHgIiJiwRZyenDXlaLUdR7vm8xUvJ4VYmpWNTDtF3ykEbI1XNVcbhAZwt07xjtCvLenoJMP8Eqx1FXvoWDQ==
 
-"@graphql-modules/logger@0.1.9":
-  version "0.1.9"
-  resolved "https://verdaccio.tools.moovly.com/@graphql-modules%2flogger/-/logger-0.1.9.tgz#768186df12ad488623ef7231d1bf096fe1610b76"
-  integrity sha512-nmxHyJkb2OUA3s7Za1McljkxxdLUb8c9h2mcEHWCsjVjE92XnzPJEIr2Ab7xzRWa+/q9w8nGAYph3eZDXwFgwA==
+"@heroku-cli/color@^1.1.3":
+  version "1.1.14"
+  resolved "https://verdaccio.tools.moovly.com/@heroku-cli%2fcolor/-/color-1.1.14.tgz#035ac4e48e564fcab37c3dc4bd09dbe596f2ad68"
+  integrity sha512-2JYy//YE2YINTe21hpdVMBNc7aYFkgDeY9JUz/BCjFZmYLn0UjGaCc4BpTcMGXNJwuqoUenw2WGOFGHsJqlIDw==
   dependencies:
-    moment "2.22.2"
-    tslib "1.9.3"
-    winston "3.1.0"
+    ansi-styles "^3.2.1"
+    chalk "^2.4.1"
+    strip-ansi "^5.0.0"
+    supports-color "^5.5.0"
+    tslib "^1.9.3"
+
+"@mrmlnc/readdir-enhanced@^2.2.1":
+  version "2.2.1"
+  resolved "https://verdaccio.tools.moovly.com/@mrmlnc%2freaddir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
+  integrity sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==
+  dependencies:
+    call-me-maybe "^1.0.1"
+    glob-to-regexp "^0.3.0"
+
+"@nodelib/fs.stat@^1.1.2":
+  version "1.1.3"
+  resolved "https://verdaccio.tools.moovly.com/@nodelib%2ffs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
+  integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
+
+"@oclif/color@^0.0.0":
+  version "0.0.0"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fcolor/-/color-0.0.0.tgz#54939bbd16d1387511bf1a48ccda1a417248e6a9"
+  integrity sha512-KKd3W7eNwfNF061tr663oUNdt8EMnfuyf5Xv55SGWA1a0rjhWqS/32P7OeB7CbXcJUBdfVrPyR//1afaW12AWw==
+  dependencies:
+    ansi-styles "^3.2.1"
+    supports-color "^5.4.0"
+    tslib "^1"
+
+"@oclif/command@^1.4.21", "@oclif/command@^1.4.29", "@oclif/command@^1.5.3":
+  version "1.5.5"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fcommand/-/command-1.5.5.tgz#7d37cd8cc96191ceb82d42b8ca1487f9558750bf"
+  integrity sha512-qx3hk59Gj9uc50Nv7o/lnv6bfol0sgFcCVCZiP1c4ieALtUqkT9XpGI6S06vxhkVVye0h4+XGRvMdeJh4+2A+w==
+  dependencies:
+    "@oclif/errors" "^1.2.2"
+    "@oclif/parser" "^3.7.0"
+    debug "^4.1.0"
+    semver "^5.6.0"
+
+"@oclif/config@^1.6.17", "@oclif/config@^1.8.7":
+  version "1.9.0"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fconfig/-/config-1.9.0.tgz#f0df483bad3988f24cddd4d85fdc8eafa9eb7ff2"
+  integrity sha512-R9HJvS7x4Ff/VFGlg8b7hxFnuC77y7znr1iXwRay4Jhd/EFJyZRT9d9SHzA6TS8lz9vDTW93xOFakT9AXld4Kg==
+  dependencies:
+    debug "^4.1.0"
+    tslib "^1.9.3"
+
+"@oclif/errors@^1.2.2":
+  version "1.2.2"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2ferrors/-/errors-1.2.2.tgz#9d8f269b15f13d70aa93316fed7bebc24688edc2"
+  integrity sha512-Eq8BFuJUQcbAPVofDxwdE0bL14inIiwt5EaKRVY9ZDIG11jwdXZqiQEECJx0VfnLyUZdYfRd/znDI/MytdJoKg==
+  dependencies:
+    clean-stack "^1.3.0"
+    fs-extra "^7.0.0"
+    indent-string "^3.2.0"
+    strip-ansi "^5.0.0"
+    wrap-ansi "^4.0.0"
+
+"@oclif/linewrap@^1.0.0":
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2flinewrap/-/linewrap-1.0.0.tgz#aedcb64b479d4db7be24196384897b5000901d91"
+  integrity sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==
+
+"@oclif/parser@^3.7.0":
+  version "3.7.0"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fparser/-/parser-3.7.0.tgz#cda3eea341e87cc7390511cf369a0126d0b39a93"
+  integrity sha512-CtRbCBJQ8prt9o3nCTSRi/UEw68t7mUf19vu3QKbh6sGc6BkD7OAX6Hfjxif636LSlR+N8eh3PELw9SxHdJcbQ==
+  dependencies:
+    "@oclif/linewrap" "^1.0.0"
+    chalk "^2.4.1"
+    tslib "^1.9.3"
+
+"@oclif/plugin-help@^1.2.11":
+  version "1.2.11"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fplugin-help/-/plugin-help-1.2.11.tgz#e6413a6009519230bc4c7e7fe45d8e139939e657"
+  integrity sha512-tuzhvxxRtfLnWa96klngXBi5IwHt9S/twedCbQhl9dYIKTFMHI1BcOQcPra6ylct+M+b9jhEF5sjWLv78tB6tw==
+  dependencies:
+    "@oclif/command" "^1.4.29"
+    chalk "^2.4.1"
+    indent-string "^3.2.0"
+    lodash.template "^4.4.0"
+    string-width "^2.1.1"
+    widest-line "^2.0.0"
+    wrap-ansi "^3.0.1"
+
+"@oclif/plugin-not-found@^1.0.9":
+  version "1.2.2"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fplugin-not-found/-/plugin-not-found-1.2.2.tgz#3e601f6e4264d7a0268cd03c152d90aa9c0cec6d"
+  integrity sha512-SPlmiJFmTFltQT/owdzQwKgq6eq5AEKVwVK31JqbzK48bRWvEL1Ye60cgztXyZ4bpPn2Fl+KeL3FWFQX41qJuA==
+  dependencies:
+    "@oclif/color" "^0.0.0"
+    "@oclif/command" "^1.5.3"
+    cli-ux "^4.9.0"
+    fast-levenshtein "^2.0.6"
+    lodash "^4.17.11"
+
+"@oclif/plugin-warn-if-update-available@^1.3.9":
+  version "1.5.4"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fplugin-warn-if-update-available/-/plugin-warn-if-update-available-1.5.4.tgz#f590c5bfbe2a8196d5b3285f367912fb9125dea0"
+  integrity sha512-WRLofKh7eejSlHx6N10kOddAzdftgBYRI7SwzEznDe67AijJo8uboUQUh3Emk8g3iLV77GkXP8FU49W5klmrdg==
+  dependencies:
+    "@oclif/command" "^1.5.3"
+    "@oclif/config" "^1.8.7"
+    "@oclif/errors" "^1.2.2"
+    chalk "^2.4.1"
+    debug "^4.1.0"
+    fs-extra "^7.0.0"
+    http-call "^5.2.2"
+    semver "^5.6.0"
+
+"@oclif/screen@^1.0.3":
+  version "1.0.4"
+  resolved "https://verdaccio.tools.moovly.com/@oclif%2fscreen/-/screen-1.0.4.tgz#b740f68609dfae8aa71c3a6cab15d816407ba493"
+  integrity sha512-60CHpq+eqnTxLZQ4PGHYNwUX572hgpMHGPtTWMjdTMsAvlm69lZV/4ly6O3sAYkomo4NggGcomrDpBe34rxUqw==
+
+"@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
+  version "1.1.2"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2faspromise/-/aspromise-1.1.2.tgz#9b8b0cc663d669a7d8f6f5d0893a14d348f30fbf"
+  integrity sha1-m4sMxmPWaafY9vXQiToU00jzD78=
+
+"@protobufjs/base64@^1.1.2":
+  version "1.1.2"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2fbase64/-/base64-1.1.2.tgz#4c85730e59b9a1f1f349047dbf24296034bb2735"
+  integrity sha512-AZkcAA5vnN/v4PDqKyMR5lx7hZttPDgClv83E//FMNhR2TMcLUhfRUBHCmSl0oi9zMgDDqRUJkSxO3wm85+XLg==
+
+"@protobufjs/codegen@^2.0.4":
+  version "2.0.4"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2fcodegen/-/codegen-2.0.4.tgz#7ef37f0d010fb028ad1ad59722e506d9262815cb"
+  integrity sha512-YyFaikqM5sH0ziFZCN3xDC7zeGaB/d0IUb9CATugHWbd1FRFwWwt4ld4OYMPWu5a3Xe01mGAULCdqhMlPl29Jg==
+
+"@protobufjs/eventemitter@^1.1.0":
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2feventemitter/-/eventemitter-1.1.0.tgz#355cbc98bafad5978f9ed095f397621f1d066b70"
+  integrity sha1-NVy8mLr61ZePntCV85diHx0Ga3A=
+
+"@protobufjs/fetch@^1.1.0":
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2ffetch/-/fetch-1.1.0.tgz#ba99fb598614af65700c1619ff06d454b0d84c45"
+  integrity sha1-upn7WYYUr2VwDBYZ/wbUVLDYTEU=
+  dependencies:
+    "@protobufjs/aspromise" "^1.1.1"
+    "@protobufjs/inquire" "^1.1.0"
+
+"@protobufjs/float@^1.0.2":
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2ffloat/-/float-1.0.2.tgz#5e9e1abdcb73fc0a7cb8b291df78c8cbd97b87d1"
+  integrity sha1-Xp4avctz/Ap8uLKR33jIy9l7h9E=
+
+"@protobufjs/inquire@^1.1.0":
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2finquire/-/inquire-1.1.0.tgz#ff200e3e7cf2429e2dcafc1140828e8cc638f089"
+  integrity sha1-/yAOPnzyQp4tyvwRQIKOjMY48Ik=
+
+"@protobufjs/path@^1.1.2":
+  version "1.1.2"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2fpath/-/path-1.1.2.tgz#6cc2b20c5c9ad6ad0dccfd21ca7673d8d7fbf68d"
+  integrity sha1-bMKyDFya1q0NzP0hynZz2Nf79o0=
+
+"@protobufjs/pool@^1.1.0":
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2fpool/-/pool-1.1.0.tgz#09fd15f2d6d3abfa9b65bc366506d6ad7846ff54"
+  integrity sha1-Cf0V8tbTq/qbZbw2ZQbWrXhG/1Q=
+
+"@protobufjs/utf8@^1.1.0":
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/@protobufjs%2futf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
+  integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
+
+"@samverschueren/stream-to-observable@^0.3.0":
+  version "0.3.0"
+  resolved "https://verdaccio.tools.moovly.com/@samverschueren%2fstream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
+  integrity sha512-MI4Xx6LHs4Webyvi6EbspgyAb4D2Q2VtnCQ1blOJcoLS6mVa8lNN2rkIy1CVxfTUpoyIbCTkXES1rLXztFD1lg==
+  dependencies:
+    any-observable "^0.3.0"
+
+"@sindresorhus/is@^0.7.0":
+  version "0.7.0"
+  resolved "https://verdaccio.tools.moovly.com/@sindresorhus%2fis/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
+  integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
 "@types/async@2.0.50":
   version "2.0.50"
   resolved "https://verdaccio.tools.moovly.com/@types%2fasync/-/async-2.0.50.tgz#117540e026d64e1846093abbd5adc7e27fda7bcb"
   integrity sha512-VMhZMMQgV1zsR+lX/0IBfAk+8Eb7dPVMWiQGFAt3qjo5x7Ml6b77jUo0e1C3ToD+XRDXqtrfw+6AB0uUsPEr3Q==
 
-"@types/babel-types@*":
-  version "7.0.4"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fbabel-types/-/babel-types-7.0.4.tgz#bfd5b0d0d1ba13e351dff65b6e52783b816826c8"
-  integrity sha512-WiZhq3SVJHFRgRYLXvpf65XnV6ipVHhnNaNvE8yCimejrGglkg38kEj0JcizqwSHxmPSjcTlig/6JouxLGEhGw==
+"@types/events@*":
+  version "1.2.0"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fevents/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
+  integrity sha512-KEIlhXnIutzKwRbQkGWb/I4HFqBuUykAdHgDED6xqwXJfONCjF5VoE0cXEiurh3XauygxzeDzgtXUqvLkxFzzA==
 
-"@types/babylon@6.16.3":
-  version "6.16.3"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fbabylon/-/babylon-6.16.3.tgz#c2937813a89fcb5e79a00062fc4a8b143e7237bb"
-  integrity sha512-lyJ8sW1PbY3uwuvpOBZ9zMYKshMnQpXmeDHh8dj9j2nJm/xrW0FgB5gLSYOArj5X0IfaXnmhFoJnhS4KbqIMug==
+"@types/glob@*":
+  version "7.1.1"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fglob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
+  integrity sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
   dependencies:
-    "@types/babel-types" "*"
+    "@types/events" "*"
+    "@types/minimatch" "*"
+    "@types/node" "*"
 
-"@types/deepmerge@2.1.0":
-  version "2.1.0"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fdeepmerge/-/deepmerge-2.1.0.tgz#22f175e5cb55874fe818caa6fd50a1d98fc3d748"
-  integrity sha512-/0Ct/q5g+SgaACZ+A0ylY3071nEBN7QDnTWiCtaB3fx24UpoAQXf25yNVloOYVUis7jytM1F1WC78+EOwXkQJQ==
+"@types/globby@^8.0.0":
+  version "8.0.0"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fglobby/-/globby-8.0.0.tgz#7bd10eaf802e1e11afdb1e5436cf472ddf4c0dd2"
+  integrity sha512-xDtsX5tlctxJzvg29r/LN12z30oJpoFP9cE8eJ8nY5cbSvN0c0RdRHrVlEq4LRh362Sd+JsqxJ3QWw0Wnyto8w==
+  dependencies:
+    "@types/glob" "*"
+    fast-glob "^2.0.2"
 
 "@types/graphql@^14.0.3":
   version "14.0.3"
   resolved "https://verdaccio.tools.moovly.com/@types%2fgraphql/-/graphql-14.0.3.tgz#389e2e5b83ecdb376d9f98fae2094297bc112c1c"
   integrity sha512-TcFkpEjcQK7w8OcrQcd7iIBPjU0rdyi3ldj6d0iJ4PPSzbWqPBvXj9KSwO14hTOX2dm9RoiH7VuxksJLNYdXUQ==
 
-"@types/handlebars@4.0.39":
-  version "4.0.39"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fhandlebars/-/handlebars-4.0.39.tgz#961fb54db68030890942e6aeffe9f93a957807bd"
-  integrity sha512-vjaS7Q0dVqFp85QhyPSZqDKnTTCemcSHNHFvDdalO1s0Ifz5KuE64jQD5xoUkfdWwF4WpqdJEl7LsWH8rzhKJA==
-
-"@types/is-glob@4.0.0":
-  version "4.0.0"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fis-glob/-/is-glob-4.0.0.tgz#fb8a2bff539025d4dcd6d5efe7689e03341b876d"
-  integrity sha512-zC/2EmD8scdsGIeE+Xg7kP7oi9VP90zgMQtm9Cr25av4V+a+k8slQyiT60qSw8KORYrOKlPXfHwoa1bQbRzskQ==
-
 "@types/jest@^23.3.9":
   version "23.3.9"
   resolved "https://verdaccio.tools.moovly.com/@types%2fjest/-/jest-23.3.9.tgz#c16b55186ee73ae65e001fbee69d392c51337ad1"
   integrity sha512-wNMwXSUcwyYajtbayfPp55tSayuDVU6PfY5gzvRSj80UvxdXEJOVPnUVajaOp7NgXLm+1e2ZDLULmpsU9vDvQw==
+
+"@types/lodash@^4.14.109":
+  version "4.14.118"
+  resolved "https://verdaccio.tools.moovly.com/@types%2flodash/-/lodash-4.14.118.tgz#247bab39bfcc6d910d4927c6e06cbc70ec376f27"
+  integrity sha512-iiJbKLZbhSa6FYRip/9ZDX6HXhayXLDGY2Fqws9cOkEQ6XeKfaxB0sC541mowZJueYyMnVUmmG+al5/4fCDrgw==
+
+"@types/long@^4.0.0":
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/@types%2flong/-/long-4.0.0.tgz#719551d2352d301ac8b81db732acb6bdc28dbdef"
+  integrity sha512-1w52Nyx4Gq47uuu0EVcsHBxZFJgurQ+rTKS3qMHxR1GY2T8c2AJYd6vZoZ9q1rupaDjU0yT+Jc2XTyXkjeMA+Q==
+
+"@types/minimatch@*":
+  version "3.0.3"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fminimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+  integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/next-server@*":
   version "7.0.1"
@@ -850,25 +1049,28 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*":
-  version "10.12.5"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fnode/-/node-10.12.5.tgz#7e7ea1a9b34d2c8d704cb0b755dffbcda34741ad"
-  integrity sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
+"@types/node@*", "@types/node@^10.1.0":
+  version "10.12.6"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fnode/-/node-10.12.6.tgz#7fc213c1b811c90fc9a3edb6206742b95d697678"
+  integrity sha512-+ZWB5Ec1iki99xQFzBlivlKxSZQ+fuUKBott8StBOnLN4dWbRHlgdg1XknpW6g0tweniN5DcOqA64CJyOUPSAw==
 
 "@types/nprogress@^0.0.29":
   version "0.0.29"
   resolved "https://verdaccio.tools.moovly.com/@types%2fnprogress/-/nprogress-0.0.29.tgz#060bd510022a005f1840234030d3132fb9195471"
   integrity sha1-BgvVEAIqAF8YQCNAMNMTL7kZVHE=
 
-"@types/prettier@1.13.2":
-  version "1.13.2"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fprettier/-/prettier-1.13.2.tgz#ffe96278e712a8d4e467e367a338b05e22872646"
-  integrity sha512-k6MCN8WuDiCj6O+UJsVMbrreZxkbrhQbO02oDj6yuRu8UAkp0MDdEcDKif8/gBKuJbT84kkO+VHQAqXkumEklg==
-
 "@types/prop-types@*":
   version "15.5.6"
   resolved "https://verdaccio.tools.moovly.com/@types%2fprop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
+
+"@types/react-dom@^16.0.5":
+  version "16.0.9"
+  resolved "https://verdaccio.tools.moovly.com/@types%2freact-dom/-/react-dom-16.0.9.tgz#73ceb7abe6703822eab6600e65c5c52efd07fb91"
+  integrity sha512-4Z0bW+75zeQgsEg7RaNuS1k9MKhci7oQqZXxrV5KUGIyXZHHAAL3KA4rjhdH8o6foZ5xsRMSqkoM5A3yRVPR5w==
+  dependencies:
+    "@types/node" "*"
+    "@types/react" "*"
 
 "@types/react-loadable@*":
   version "5.4.1"
@@ -878,13 +1080,21 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
-"@types/react@*", "@types/react@^16.4.18":
-  version "16.7.2"
-  resolved "https://verdaccio.tools.moovly.com/@types%2freact/-/react-16.7.2.tgz#8ef1f3484b13d1862be4bd7aa5ee6f6c305d8717"
-  integrity sha512-Z7gw8jYM+RYPU1sIiDYeICQXZwG+0PhCF3Jr0nFGuydUnPaQEno/4E8vzr19B2UGtL+2TPcSHMqdsP5JU/w4UA==
+"@types/react@*", "@types/react@^16.3.14", "@types/react@^16.4.18":
+  version "16.7.3"
+  resolved "https://verdaccio.tools.moovly.com/@types%2freact/-/react-16.7.3.tgz#dd96b19b21c450fab7d136f71d48f4b8fc72777e"
+  integrity sha512-ve/2lnXuLNaTDR1SPvsEX25m+NoNW3PMJxL2jd372UR8oJPwR5+jgtcheUoN27O+qKLFmQy0y0YKRwZcwtny3w==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/rimraf@^2.0.2":
+  version "2.0.2"
+  resolved "https://verdaccio.tools.moovly.com/@types%2frimraf/-/rimraf-2.0.2.tgz#7f0fc3cf0ff0ad2a99bb723ae1764f30acaf8b6e"
+  integrity sha512-Hm/bnWq0TCy7jmjeN5bKYij9vw5GrDFWME4IuxV08278NtU/VdGbzsBohcCUJ7+QMqmUq5hpRKB39HeQWJjztQ==
+  dependencies:
+    "@types/glob" "*"
+    "@types/node" "*"
 
 "@types/styled-components@^4.0.3":
   version "4.0.3"
@@ -905,11 +1115,6 @@
   integrity sha512-SudIN9TRJ+v8g5pTG8RRCqfqTMNqgWCKKd3vtynhGzkIIjxaicNAMuY5TRadJ6tzDu3Dotf3ngaMILtmOdmWEQ==
   dependencies:
     source-map "^0.6.1"
-
-"@types/valid-url@1.0.2":
-  version "1.0.2"
-  resolved "https://verdaccio.tools.moovly.com/@types%2fvalid-url/-/valid-url-1.0.2.tgz#60fa435ce24bfd5ba107b8d2a80796aeaf3a8f45"
-  integrity sha1-YPpDXOJL/VuhB7jSqAeWrq86j0U=
 
 "@types/webpack@*":
   version "4.4.18"
@@ -1136,17 +1341,7 @@ ajv-keywords@^3.0.0, ajv-keywords@^3.1.0:
   resolved "https://verdaccio.tools.moovly.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
   integrity sha1-6GuBnGAs+IIa1jdBNpjx3sAhhHo=
 
-ajv@^5.3.0:
-  version "5.5.2"
-  resolved "https://verdaccio.tools.moovly.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
-  integrity sha1-c7Xuyj+rZT49P5Qis0GtQiBdyWU=
-  dependencies:
-    co "^4.6.0"
-    fast-deep-equal "^1.0.0"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.3.0"
-
-ajv@^6.0.1, ajv@^6.1.0:
+ajv@^6.0.1, ajv@^6.1.0, ajv@^6.5.5:
   version "6.5.5"
   resolved "https://verdaccio.tools.moovly.com/ajv/-/ajv-6.5.5.tgz#cf97cdade71c6399a92c6d6c4177381291b781a1"
   integrity sha512-7q7gtRQDJSyuEHjuVgHoUa2VuemFiCMrfQc9Tc08XTAc4Zj/5U1buQJ0HU6i7fKjXU09SVgSmxa4sLvuvS8Iyg==
@@ -1161,7 +1356,12 @@ ansi-colors@^3.0.0:
   resolved "https://verdaccio.tools.moovly.com/ansi-colors/-/ansi-colors-3.2.1.tgz#9638047e4213f3428a11944a7d4b31cba0a3ff95"
   integrity sha512-Xt+zb6nqgvV9SWAVp0EG3lRsHcbq5DDgqjPPz6pwgtj6RKz65zGXMNa82oJfOSBA/to6GmRP7Dr+6o+kbApTzQ==
 
-ansi-escapes@^3.0.0:
+ansi-escapes@^1.0.0:
+  version "1.4.0"
+  resolved "https://verdaccio.tools.moovly.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
+  integrity sha1-06ioOzGapneTZisT52HHkRQiMG4=
+
+ansi-escapes@^3.0.0, ansi-escapes@^3.1.0:
   version "3.1.0"
   resolved "https://verdaccio.tools.moovly.com/ansi-escapes/-/ansi-escapes-3.1.0.tgz#f73207bb81207d75fd6c83f125af26eea378ca30"
   integrity sha512-UgAb8H9D41AQnu/PbWlCofQVcnV4Gs2bBJi9eZPxfU/hgglFh3SMDMENRIqdr7H6XFnXdoknctFByVsCOotTVw==
@@ -1181,6 +1381,11 @@ ansi-regex@^3.0.0:
   resolved "https://verdaccio.tools.moovly.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
   integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
 
+ansi-regex@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/ansi-regex/-/ansi-regex-4.0.0.tgz#70de791edf021404c3fd615aa89118ae0432e5a9"
+  integrity sha512-iB5Dda8t/UqpPI/IjsejXu5jOGDrzn41wJyljwPH65VCIbk6+1BzFIMJGFwTNrYXT1CrD+B4l19U7awiQ8rk7w==
+
 ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://verdaccio.tools.moovly.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
@@ -1192,6 +1397,16 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   integrity sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==
   dependencies:
     color-convert "^1.9.0"
+
+ansicolors@~0.3.2:
+  version "0.3.2"
+  resolved "https://verdaccio.tools.moovly.com/ansicolors/-/ansicolors-0.3.2.tgz#665597de86a9ffe3aa9bfbe6cae5c6ea426b4979"
+  integrity sha1-ZlWX3oap/+Oqm/vmyuXG6kJrSXk=
+
+any-observable@^0.3.0:
+  version "0.3.0"
+  resolved "https://verdaccio.tools.moovly.com/any-observable/-/any-observable-0.3.0.tgz#af933475e5806a67d0d7df090dd5e8bef65d119b"
+  integrity sha512-/FQM1EDkTsf63Ub2C6O7GuYFDsSXUwsaZDurV0np41ocwq0jthUAYCmhBX9f+KwlaCgIuWyr/4WlUQUBfKfZog==
 
 any-promise@^1.1.0:
   version "1.3.0"
@@ -1251,6 +1466,89 @@ apollo-client@^2.4.5:
   optionalDependencies:
     "@types/async" "2.0.50"
 
+apollo-codegen-core@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-core/-/apollo-codegen-core-0.28.1.tgz#ebfa6095f6205aa12aeb5f4aaf3538b7c11117a6"
+  integrity sha512-D30bfI7PiRJbSoRTSNOA/G10h3llvy0aKXZHHBLgs5O3kivst5auhYrKLtJd2v1Sv1k4aghs5M05UUYee2SPtQ==
+  dependencies:
+    "@babel/generator" "7.0.0-beta.38"
+    "@babel/parser" "^7.0.0"
+    "@babel/types" "7.0.0-beta.38"
+    ast-types "^0.11.5"
+    common-tags "^1.5.1"
+    core-js "^2.5.3"
+    recast "^0.15.3"
+
+apollo-codegen-flow-legacy@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-flow-legacy/-/apollo-codegen-flow-legacy-0.28.1.tgz#7e0cdca2c9f757ff97646c11abc41c7e6feb2fc6"
+  integrity sha512-3dsBIyvHkAfk8siag0pMJJCdJc+ran+9J/3EJRiFTazA4myHQeZ9teFSLeVmWLSt3E4QbWsU9pNSe8FZgjEovw==
+  dependencies:
+    apollo-codegen-core "0.28.1"
+
+apollo-codegen-flow@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-flow/-/apollo-codegen-flow-0.28.1.tgz#e534f3aa9ff066af96546e1fe3262e691bbffaa4"
+  integrity sha512-oXUtKri/SgEa/CQ8nK9bX28/ozVJnM9S41Z9jgxLN+U63pOxPzys3QCL3uoNppRbYwww7wpjcxMccyxes07kdw==
+  dependencies:
+    "@babel/types" "7.0.0-beta.38"
+    apollo-codegen-core "0.28.1"
+    change-case "^3.0.1"
+    inflected "^2.0.3"
+
+apollo-codegen-scala@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-scala/-/apollo-codegen-scala-0.28.1.tgz#5cd977285fa986858d609b2b0f4318f1182059e3"
+  integrity sha512-IUeBliu9JWPj4JZUu2hGFdhCpC8kCfd7u2hrCpbfzupV3Fvfvb53uEgJ/udoC/yWEVpRYmf+pg3LsVU7T8h2qQ==
+  dependencies:
+    apollo-codegen-core "0.28.1"
+    change-case "^3.0.1"
+    inflected "^2.0.3"
+
+apollo-codegen-swift@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-swift/-/apollo-codegen-swift-0.28.1.tgz#c655d984e901847df535de6e81f6b22629d50ab5"
+  integrity sha512-V0GiPulMAkNQ5iaplCO46pJzJKUeh3FuiNMZBDRzhAXNSlM+fEuzlypQ9hoU2542QuCz/uuOXM889AOb3CA95g==
+  dependencies:
+    apollo-codegen-core "0.28.1"
+    change-case "^3.0.1"
+    inflected "^2.0.3"
+
+apollo-codegen-typescript-legacy@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-typescript-legacy/-/apollo-codegen-typescript-legacy-0.28.1.tgz#490a47932ff3d6f7df6952b03be84707c5331b6b"
+  integrity sha512-xTBvofn/4VnxhLoG0SXSB4PxtgFu9Fob5QBKv4m4Pd13r7TD68hgPFe7rjkm8md+P6TTolVKr1/PdxZlv9gLQw==
+  dependencies:
+    apollo-codegen-core "0.28.1"
+
+apollo-codegen-typescript@0.28.1:
+  version "0.28.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-codegen-typescript/-/apollo-codegen-typescript-0.28.1.tgz#f31f3712df7ef15c45c6e1ffd691b8c5cd8c9b7c"
+  integrity sha512-wYlijNd8ML+V6W8FO0rz9UAv8W3HUl5nS6bpZCXUq5KmM9BFPjcHKiRaLvjJceBs0JgmciHx8APmGEH/sLHC4Q==
+  dependencies:
+    "@babel/types" "7.0.0-beta.38"
+    apollo-codegen-core "0.28.1"
+    change-case "^3.0.1"
+    inflected "^2.0.3"
+
+apollo-engine-reporting-protobuf@0.0.1:
+  version "0.0.1"
+  resolved "https://verdaccio.tools.moovly.com/apollo-engine-reporting-protobuf/-/apollo-engine-reporting-protobuf-0.0.1.tgz#cd394f0f769c6f97d8621c4a7839095c84efcdb0"
+  integrity sha512-AySoDgog2p1Nph44FyyqaU4AfRZOXx8XZxRsVHvYY4dHlrMmDDhhjfF3Jswa7Wr8X/ivvx3xA0jimRn6rsG8Ew==
+  dependencies:
+    protobufjs "^6.8.6"
+
+apollo-engine-reporting@0.0.2:
+  version "0.0.2"
+  resolved "https://verdaccio.tools.moovly.com/apollo-engine-reporting/-/apollo-engine-reporting-0.0.2.tgz#645a1133467e5b9f700ac278e89332703ddb4173"
+  integrity sha512-Fe/1oxC8rUXRrBTMUiqs5PSb6hnMOJHuttJMhs83u5POfplc4QrKJZtEEU4Ui8mxeJGaGNWbWf+D4q645xdQLA==
+  dependencies:
+    apollo-engine-reporting-protobuf "0.0.1"
+    apollo-server-env "2.0.2"
+    async-retry "^1.2.1"
+    graphql-extensions "0.1.2"
+    lodash "^4.17.10"
+
 apollo-link-dedup@^1.0.0:
   version "1.0.10"
   resolved "https://verdaccio.tools.moovly.com/apollo-link-dedup/-/apollo-link-dedup-1.0.10.tgz#7b94589fe7f969777efd18a129043c78430800ae"
@@ -1272,7 +1570,7 @@ apollo-link-http-common@^0.2.5:
   dependencies:
     apollo-link "^1.2.3"
 
-apollo-link-http@^1.3.1:
+apollo-link-http@^1.3.1, apollo-link-http@^1.5.4:
   version "1.5.5"
   resolved "https://verdaccio.tools.moovly.com/apollo-link-http/-/apollo-link-http-1.5.5.tgz#7dbe851821771ad67fa29e3900c57f38cbd80da8"
   integrity sha512-C5N6N/mRwmepvtzO27dgMEU3MMtRKSqcljBkYNZmWwH11BxkUQ5imBLPM3V4QJXNE7NFuAQAB5PeUd4ligivTQ==
@@ -1288,7 +1586,7 @@ apollo-link-state@^0.4.0:
     apollo-utilities "^1.0.8"
     graphql-anywhere "^4.1.0-alpha.0"
 
-apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.3:
+apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.2, apollo-link@^1.2.3:
   version "1.2.3"
   resolved "https://verdaccio.tools.moovly.com/apollo-link/-/apollo-link-1.2.3.tgz#9bd8d5fe1d88d31dc91dae9ecc22474d451fb70d"
   integrity sha512-iL9yS2OfxYhigme5bpTbmRyC+Htt6tyo2fRMHT3K1XRL/C5IQDDz37OjpPy4ndx7WInSvfSZaaOTKFja9VWqSw==
@@ -1296,12 +1594,63 @@ apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.3:
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.10"
 
+apollo-server-env@2.0.2:
+  version "2.0.2"
+  resolved "https://verdaccio.tools.moovly.com/apollo-server-env/-/apollo-server-env-2.0.2.tgz#cb136698d896435bc0ef9e8e0aad8e49ae94db32"
+  integrity sha512-LsSh2TSF1Sh+TnKxCv2To+UNTnoPpBGCXn6fPsmiNqVaBaSagfZEU/aaSu3ftMlmfXr4vXAfYNUDMKEi+7E6Bg==
+  dependencies:
+    node-fetch "^2.1.2"
+    util.promisify "^1.0.0"
+
 apollo-utilities@1.0.25, apollo-utilities@^1.0.0, apollo-utilities@^1.0.1, apollo-utilities@^1.0.25, apollo-utilities@^1.0.8:
   version "1.0.25"
   resolved "https://verdaccio.tools.moovly.com/apollo-utilities/-/apollo-utilities-1.0.25.tgz#899b00f5f990fb451675adf84cb3de82eb6372ea"
   integrity sha512-AXvqkhni3Ir1ffm4SA1QzXn8k8I5BBl4PVKEyak734i4jFdp+xgfUyi2VCqF64TJlFTA/B73TRDUvO2D+tKtZg==
   dependencies:
     fast-json-stable-stringify "^2.0.0"
+
+apollo@1.9.2:
+  version "1.9.2"
+  resolved "https://verdaccio.tools.moovly.com/apollo/-/apollo-1.9.2.tgz#356a3ee8cad28cc5244205a05c5125ca6ec365fe"
+  integrity sha512-QemDcp7kFVp31XbiS0e6uW61gT0UduFvqsX6xQfQJIdvJJAxQm1cmiSNQUEljsbVOzmQ3bUSM75afz2EJndNdg==
+  dependencies:
+    "@oclif/command" "^1.4.21"
+    "@oclif/config" "^1.6.17"
+    "@oclif/plugin-help" "^1.2.11"
+    "@oclif/plugin-not-found" "^1.0.9"
+    "@oclif/plugin-warn-if-update-available" "^1.3.9"
+    "@types/globby" "^8.0.0"
+    "@types/lodash" "^4.14.109"
+    "@types/react" "^16.3.14"
+    "@types/react-dom" "^16.0.5"
+    "@types/rimraf" "^2.0.2"
+    apollo-codegen-core "0.28.1"
+    apollo-codegen-flow "0.28.1"
+    apollo-codegen-flow-legacy "0.28.1"
+    apollo-codegen-scala "0.28.1"
+    apollo-codegen-swift "0.28.1"
+    apollo-codegen-typescript "0.28.1"
+    apollo-codegen-typescript-legacy "0.28.1"
+    apollo-engine-reporting "0.0.2"
+    apollo-link "^1.2.2"
+    apollo-link-http "^1.5.4"
+    chalk "^2.4.1"
+    cli-ux "^4.3.0"
+    decode-html "^2.0.0"
+    env-ci "^2.1.0"
+    gaze "^1.1.3"
+    git-parse "^1.0.3"
+    git-rev-sync "^1.12.0"
+    glob "^7.1.2"
+    graphql "^0.13.2"
+    graphql-tag "^2.9.2"
+    heroku-cli-util "^8.0.9"
+    listr "^0.14.1"
+    lodash "^4.17.10"
+    node-fetch "^2.1.2"
+    react "^16.4.0"
+    react-dom "^16.4.0"
+    rimraf "^2.6.2"
 
 append-transform@^0.4.0:
   version "0.4.0"
@@ -1451,6 +1800,16 @@ assign-symbols@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
+ast-types@0.11.5:
+  version "0.11.5"
+  resolved "https://verdaccio.tools.moovly.com/ast-types/-/ast-types-0.11.5.tgz#9890825d660c03c28339f315e9fa0a360e31ec28"
+  integrity sha512-oJjo+5e7/vEc2FBK8gUalV0pba4L3VdBIs2EKhOLHLcOd2FgQIVQN9xb0eZ9IjEWyAL7vq6fGJxOvVvdCHNyMw==
+
+ast-types@^0.11.5:
+  version "0.11.6"
+  resolved "https://verdaccio.tools.moovly.com/ast-types/-/ast-types-0.11.6.tgz#4e2266c2658829aef3b40cc33ad599c4e9eb89ef"
+  integrity sha512-nHiuV14upVGl7MWwFUYbzJ6YlfwWS084CU9EA8HajfYQjMSli5TQi3UTRygGF58LFWVkXxS1rbgRhROEqlQkXg==
+
 astral-regex@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
@@ -1466,7 +1825,14 @@ async-limiter@~1.0.0:
   resolved "https://verdaccio.tools.moovly.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
-async@^2.1.4, async@^2.5.0, async@^2.6.0:
+async-retry@^1.2.1:
+  version "1.2.3"
+  resolved "https://verdaccio.tools.moovly.com/async-retry/-/async-retry-1.2.3.tgz#a6521f338358d322b1a0012b79030c6f411d1ce0"
+  integrity sha512-tfDb02Th6CE6pJUF2gjW5ZVjsgwlucVXOEQMvEX9JgSJMs9gAX+Nz3xRuJBKuUYjTSYORqvDBORdAQ3LU59g7Q==
+  dependencies:
+    retry "0.12.0"
+
+async@^2.1.4, async@^2.5.0:
   version "2.6.1"
   resolved "https://verdaccio.tools.moovly.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
   integrity sha512-fNEiL2+AZt6AlAw/29Cr0UDe4sRAHCpEHh54WMz+Bb7QfNcFw4h3loofyJpLeQs4Yx7yuqu/2dLgM5hKOs6HlQ==
@@ -1649,6 +2015,15 @@ babel-plugin-transform-react-remove-prop-types@0.4.15:
   resolved "https://verdaccio.tools.moovly.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.15.tgz#7ba830e77276a0e788cd58ea527b5f70396e12a7"
   integrity sha512-bFxxYdkZBwTjTgtZEPTLqu9g8Ajz8x8uEP/O1iVuaZIz2RuxJ2gtx0EXDJRonC++KGsgsW/4Hqvk4KViEtE2nw==
 
+babel-polyfill@6.26.0:
+  version "6.26.0"
+  resolved "https://verdaccio.tools.moovly.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+  integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
+  dependencies:
+    babel-runtime "^6.26.0"
+    core-js "^2.5.0"
+    regenerator-runtime "^0.10.5"
+
 babel-preset-jest@^23.2.0:
   version "23.2.0"
   resolved "https://verdaccio.tools.moovly.com/babel-preset-jest/-/babel-preset-jest-23.2.0.tgz#8ec7a03a138f001a1a8fb1e8113652bf1a55da46"
@@ -1713,20 +2088,6 @@ babel-types@6.26.0, babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.26.0
     esutils "^2.0.2"
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
-
-babel-types@7.0.0-beta.3:
-  version "7.0.0-beta.3"
-  resolved "https://verdaccio.tools.moovly.com/babel-types/-/babel-types-7.0.0-beta.3.tgz#cd927ca70e0ae8ab05f4aab83778cfb3e6eb20b4"
-  integrity sha512-36k8J+byAe181OmCMawGhw+DtKO7AwexPVtsPXoMfAkjtZgoCX3bEuHWfdE5sYxRM8dojvtG/+O08M0Z/YDC6w==
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.2.0"
-    to-fast-properties "^2.0.0"
-
-babylon@7.0.0-beta.47:
-  version "7.0.0-beta.47"
-  resolved "https://verdaccio.tools.moovly.com/babylon/-/babylon-7.0.0-beta.47.tgz#6d1fa44f0abec41ab7c780481e62fd9aafbdea80"
-  integrity sha512-+rq2cr4GDhtToEzKFD6KZZMDBXhjFAr9JjPw9pAppZACeEWqNM294j+NdBzkSHYXwzzBmVjZ3nEVJlOhbR2gOQ==
 
 babylon@^6.18.0:
   version "6.18.0"
@@ -1949,6 +2310,11 @@ builtin-status-codes@^3.0.0:
   resolved "https://verdaccio.tools.moovly.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+byline@5.0.0:
+  version "5.0.0"
+  resolved "https://verdaccio.tools.moovly.com/byline/-/byline-5.0.0.tgz#741c5216468eadc457b03410118ad77de8c1ddb1"
+  integrity sha1-dBxSFkaOrcRXsDQQEYrXfejB3bE=
+
 cacache@^10.0.4:
   version "10.0.4"
   resolved "https://verdaccio.tools.moovly.com/cacache/-/cacache-10.0.4.tgz#6452367999eff9d4188aefd9a14e9d7c6a263460"
@@ -2003,6 +2369,24 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
+cacheable-request@^2.1.1:
+  version "2.1.4"
+  resolved "https://verdaccio.tools.moovly.com/cacheable-request/-/cacheable-request-2.1.4.tgz#0d808801b6342ad33c91df9d0b44dc09b91e5c3d"
+  integrity sha1-DYCIAbY0KtM8kd+dC0TcCbkeXD0=
+  dependencies:
+    clone-response "1.0.2"
+    get-stream "3.0.0"
+    http-cache-semantics "3.8.1"
+    keyv "3.0.0"
+    lowercase-keys "1.0.0"
+    normalize-url "2.0.1"
+    responselike "1.0.2"
+
+call-me-maybe@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/call-me-maybe/-/call-me-maybe-1.0.1.tgz#26d208ea89e37b5cbde60250a15f031c16a4d66b"
+  integrity sha1-JtII6onje1y95gJQoV8DHBak1ms=
+
 callsites@^2.0.0:
   version "2.0.0"
   resolved "https://verdaccio.tools.moovly.com/callsites/-/callsites-2.0.0.tgz#06eb84f00eea413da86affefacbffb36093b3c50"
@@ -2033,6 +2417,14 @@ capture-exit@^1.2.0:
   dependencies:
     rsvp "^3.3.3"
 
+cardinal@^2.0.1, cardinal@^2.1.1:
+  version "2.1.1"
+  resolved "https://verdaccio.tools.moovly.com/cardinal/-/cardinal-2.1.1.tgz#7cc1055d822d212954d07b085dea251cc7bc5505"
+  integrity sha1-fMEFXYItISlU0HsIXeolHMe8VQU=
+  dependencies:
+    ansicolors "~0.3.2"
+    redeyed "~2.1.0"
+
 case-sensitive-paths-webpack-plugin@2.1.2:
   version "2.1.2"
   resolved "https://verdaccio.tools.moovly.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.1.2.tgz#c899b52175763689224571dad778742e133f0192"
@@ -2051,16 +2443,7 @@ casual@^1.5.19:
     mersenne-twister "^1.0.1"
     moment "^2.15.2"
 
-chalk@2.4.1, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2, chalk@^2.4.0, chalk@^2.4.1:
-  version "2.4.1"
-  resolved "https://verdaccio.tools.moovly.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
-  integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
-  dependencies:
-    ansi-styles "^3.2.1"
-    escape-string-regexp "^1.0.5"
-    supports-color "^5.3.0"
-
-chalk@^1.1.3:
+chalk@^1.0.0, chalk@^1.1.3:
   version "1.1.3"
   resolved "https://verdaccio.tools.moovly.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
   integrity sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=
@@ -2071,7 +2454,16 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-change-case@3.0.2:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.2, chalk@^2.4.0, chalk@^2.4.1:
+  version "2.4.1"
+  resolved "https://verdaccio.tools.moovly.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
+  integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
+  dependencies:
+    ansi-styles "^3.2.1"
+    escape-string-regexp "^1.0.5"
+    supports-color "^5.3.0"
+
+change-case@^3.0.1:
   version "3.0.2"
   resolved "https://verdaccio.tools.moovly.com/change-case/-/change-case-3.0.2.tgz#fd48746cce02f03f0a672577d1d3a8dc2eceb037"
   integrity sha512-Mww+SLF6MZ0U6kdg11algyKd5BARbyM4TbFBepwowYSR5ClfQGCGtxNXgykpN0uF/bstWeaGDT4JWaDh8zWAHA==
@@ -2162,17 +2554,64 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-cli-cursor@^2.0.0, cli-cursor@^2.1.0:
+clean-stack@^1.3.0:
+  version "1.3.0"
+  resolved "https://verdaccio.tools.moovly.com/clean-stack/-/clean-stack-1.3.0.tgz#9e821501ae979986c46b1d66d2d432db2fd4ae31"
+  integrity sha1-noIVAa6XmYbEax1m0tQy2y/UrjE=
+
+clean-stack@^2.0.0:
+  version "2.0.0"
+  resolved "https://verdaccio.tools.moovly.com/clean-stack/-/clean-stack-2.0.0.tgz#301bfa9e8dd2d3d984c0e542f7aa67b996f63e0a"
+  integrity sha512-VEoL9Qh7I8s8iHnV53DaeWSt8NJ0g3khMfK6NiCPB7H657juhro+cSw2O88uo3bo0c0X5usamtXk0/Of0wXa5A==
+
+cli-cursor@^1.0.2:
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/cli-cursor/-/cli-cursor-1.0.2.tgz#64da3f7d56a54412e59794bd62dc35295e8f2987"
+  integrity sha1-ZNo/fValRBLll5S9Ytw1KV6PKYc=
+  dependencies:
+    restore-cursor "^1.0.1"
+
+cli-cursor@^2.0.0:
   version "2.1.0"
   resolved "https://verdaccio.tools.moovly.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
   integrity sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=
   dependencies:
     restore-cursor "^2.0.0"
 
-cli-spinners@^1.1.0:
-  version "1.3.1"
-  resolved "https://verdaccio.tools.moovly.com/cli-spinners/-/cli-spinners-1.3.1.tgz#002c1990912d0d59580c93bd36c056de99e4259a"
-  integrity sha512-1QL4544moEsDVH9T/l6Cemov/37iv1RtoKf7NJ04A60+4MREXNfx/QvavbH6QoGdsD4N4Mwy49cmaINR/o2mdg==
+cli-truncate@^0.2.1:
+  version "0.2.1"
+  resolved "https://verdaccio.tools.moovly.com/cli-truncate/-/cli-truncate-0.2.1.tgz#9f15cfbb0705005369216c626ac7d05ab90dd574"
+  integrity sha1-nxXPuwcFAFNpIWxiasfQWrkN1XQ=
+  dependencies:
+    slice-ansi "0.0.4"
+    string-width "^1.0.1"
+
+cli-ux@^4.3.0, cli-ux@^4.9.0:
+  version "4.9.3"
+  resolved "https://verdaccio.tools.moovly.com/cli-ux/-/cli-ux-4.9.3.tgz#4c3e070c1ea23eef010bbdb041192e0661be84ce"
+  integrity sha512-/1owvF0SZ5Gn54cgrikJ0QskgTzeg30HGjkmjFoaHDJzAqFpuX1DBpFR8aLvsE1J5s9MgeYRENQK4BFwOag5VA==
+  dependencies:
+    "@oclif/errors" "^1.2.2"
+    "@oclif/linewrap" "^1.0.0"
+    "@oclif/screen" "^1.0.3"
+    ansi-escapes "^3.1.0"
+    ansi-styles "^3.2.1"
+    cardinal "^2.1.1"
+    chalk "^2.4.1"
+    clean-stack "^2.0.0"
+    extract-stack "^1.0.0"
+    fs-extra "^7.0.0"
+    hyperlinker "^1.0.0"
+    indent-string "^3.2.0"
+    is-wsl "^1.1.0"
+    lodash "^4.17.11"
+    password-prompt "^1.0.7"
+    semver "^5.6.0"
+    strip-ansi "^5.0.0"
+    supports-color "^5.5.0"
+    supports-hyperlinks "^1.0.1"
+    treeify "^1.1.0"
+    tslib "^1.9.3"
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -2183,10 +2622,12 @@ cliui@^4.0.0:
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
 
-clone@^1.0.2:
-  version "1.0.4"
-  resolved "https://verdaccio.tools.moovly.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
-  integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+clone-response@1.0.2:
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/clone-response/-/clone-response-1.0.2.tgz#d1dc973920314df67fbeb94223b4ee350239e96b"
+  integrity sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=
+  dependencies:
+    mimic-response "^1.0.0"
 
 co@^4.6.0:
   version "4.6.0"
@@ -2206,7 +2647,7 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.9.0, color-convert@^1.9.1:
+color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://verdaccio.tools.moovly.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -2218,49 +2659,10 @@ color-name@1.1.3:
   resolved "https://verdaccio.tools.moovly.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-color-name@^1.0.0:
-  version "1.1.4"
-  resolved "https://verdaccio.tools.moovly.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
-  integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
-
-color-string@^1.5.2:
-  version "1.5.3"
-  resolved "https://verdaccio.tools.moovly.com/color-string/-/color-string-1.5.3.tgz#c9bbc5f01b58b5492f3d6857459cb6590ce204cc"
-  integrity sha512-dC2C5qeWoYkxki5UAXapdjqO672AM4vZuPGRQfO8b5HKuKGBbKWpITyDYN7TOFKvRW7kOgAn3746clDBMDJyQw==
-  dependencies:
-    color-name "^1.0.0"
-    simple-swizzle "^0.2.2"
-
-color@3.0.x:
-  version "3.0.0"
-  resolved "https://verdaccio.tools.moovly.com/color/-/color-3.0.0.tgz#d920b4328d534a3ac8295d68f7bd4ba6c427be9a"
-  integrity sha512-jCpd5+s0s0t7p3pHQKpnJ0TpQKKdleP71LWcA0aqiljpiuAkOSUFN/dyH8ZwF0hRmFlrIuRhufds1QyEP9EB+w==
-  dependencies:
-    color-convert "^1.9.1"
-    color-string "^1.5.2"
-
-colornames@^1.1.1:
-  version "1.1.1"
-  resolved "https://verdaccio.tools.moovly.com/colornames/-/colornames-1.1.1.tgz#f8889030685c7c4ff9e2a559f5077eb76a816f96"
-  integrity sha1-+IiQMGhcfE/54qVZ9Qd+t2qBb5Y=
-
 colors@0.5.x:
   version "0.5.1"
   resolved "https://verdaccio.tools.moovly.com/colors/-/colors-0.5.1.tgz#7d0023eaeb154e8ee9fce75dcb923d0ed1667774"
   integrity sha1-fQAj6usVTo7p/Oddy5I9DtFmd3Q=
-
-colors@^1.2.1:
-  version "1.3.2"
-  resolved "https://verdaccio.tools.moovly.com/colors/-/colors-1.3.2.tgz#2df8ff573dfbf255af562f8ce7181d6b971a359b"
-  integrity sha512-rhP0JSBGYvpcNQj4s5AdShMeE5ahMop96cTeDl/v9qQQm2fYClE2QXZRi8wLzc+GmXSxdIqqbOIAhyObEXDbfQ==
-
-colorspace@1.1.x:
-  version "1.1.1"
-  resolved "https://verdaccio.tools.moovly.com/colorspace/-/colorspace-1.1.1.tgz#9ac2491e1bc6f8fb690e2176814f8d091636d972"
-  integrity sha512-pI3btWyiuz7Ken0BWh9Elzsmv2bM9AhA7psXib4anUXy/orfZ/E0MbQwhSOG/9L8hLlalqrU0UhOuqxW1YjmVw==
-  dependencies:
-    color "3.0.x"
-    text-hex "1.0.x"
 
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.7"
@@ -2268,11 +2670,6 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   integrity sha512-brWl9y6vOB1xYPZcpZde3N9zDByXTosAeMDo4p1wzo6UMOX4vumB+TP1RZ76sfE6Md68Q0NJSrE/gbezd4Ul+w==
   dependencies:
     delayed-stream "~1.0.0"
-
-commander@2.19.0:
-  version "2.19.0"
-  resolved "https://verdaccio.tools.moovly.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
 
 commander@~2.13.0:
   version "2.13.0"
@@ -2284,7 +2681,7 @@ commander@~2.17.1:
   resolved "https://verdaccio.tools.moovly.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
-common-tags@1.8.0:
+common-tags@^1.5.1:
   version "1.8.0"
   resolved "https://verdaccio.tools.moovly.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
   integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
@@ -2354,6 +2751,11 @@ constants-browserify@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
+content-type@^1.0.4:
+  version "1.0.4"
+  resolved "https://verdaccio.tools.moovly.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
+  integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
+
 convert-source-map@1.5.1:
   version "1.5.1"
   resolved "https://verdaccio.tools.moovly.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
@@ -2388,7 +2790,7 @@ core-js@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
-core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.7:
+core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.3, core-js@^2.5.7:
   version "2.5.7"
   resolved "https://verdaccio.tools.moovly.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
   integrity sha512-RszJCAxg/PP6uzXVXL6BsxSXx/B05oJAQ2vkJRjyjrEcNVycaqOmNb5OTxZPE3xa5gwZduqza6L9JOCenh/Ecw==
@@ -2429,20 +2831,23 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-fetch@2.2.2:
-  version "2.2.2"
-  resolved "https://verdaccio.tools.moovly.com/cross-fetch/-/cross-fetch-2.2.2.tgz#a47ff4f7fc712daba8f6a695a11c948440d45723"
-  integrity sha1-pH/09/xxLauo9qaVoRyUhEDUVyM=
-  dependencies:
-    node-fetch "2.1.2"
-    whatwg-fetch "2.0.4"
-
 cross-spawn@5.1.0, cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://verdaccio.tools.moovly.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
   integrity sha1-6L0O/uWPz/b4+UUQoKVUu/ojVEk=
   dependencies:
     lru-cache "^4.0.1"
+    shebang-command "^1.2.0"
+    which "^1.2.9"
+
+cross-spawn@^6.0.0, cross-spawn@^6.0.4, cross-spawn@^6.0.5:
+  version "6.0.5"
+  resolved "https://verdaccio.tools.moovly.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
+  integrity sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
+  dependencies:
+    nice-try "^1.0.4"
+    path-key "^2.0.1"
+    semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
 
@@ -2530,6 +2935,11 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+date-fns@^1.27.2:
+  version "1.29.0"
+  resolved "https://verdaccio.tools.moovly.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
+  integrity sha512-lbTXWZ6M20cWH8N9S6afb0SBm6tMk+uUg6z3MqHPKE9atmsY3kJkTm8vKe93izJ2B2+q5MV990sM2CHgtAZaOw==
+
 date-fns@^2.0.0-alpha.25:
   version "2.0.0-alpha.25"
   resolved "https://verdaccio.tools.moovly.com/date-fns/-/date-fns-2.0.0-alpha.25.tgz#651a5d1f59a01af6cf0371e39b2ae29df5d521ee"
@@ -2554,15 +2964,34 @@ debug@^3.1.0:
   dependencies:
     ms "^2.1.1"
 
+debug@^4.1.0:
+  version "4.1.0"
+  resolved "https://verdaccio.tools.moovly.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
+  integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
+  dependencies:
+    ms "^2.1.1"
+
 decamelize@^1.1.1:
   version "1.2.0"
   resolved "https://verdaccio.tools.moovly.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
+decode-html@^2.0.0:
+  version "2.0.0"
+  resolved "https://verdaccio.tools.moovly.com/decode-html/-/decode-html-2.0.0.tgz#7d0a887ce44280e60978a707ebb7f8081fd61eaa"
+  integrity sha1-fQqIfORCgOYJeKcH67f4CB/WHqo=
+
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://verdaccio.tools.moovly.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+
+decompress-response@^3.3.0:
+  version "3.3.0"
+  resolved "https://verdaccio.tools.moovly.com/decompress-response/-/decompress-response-3.3.0.tgz#80a4dd323748384bfa248083622aedec982adff3"
+  integrity sha1-gKTdMjdIOEv6JICDYirt7Jgq3/M=
+  dependencies:
+    mimic-response "^1.0.0"
 
 deep-extend@^0.6.0:
   version "0.6.0"
@@ -2574,24 +3003,12 @@ deep-is@~0.1.3:
   resolved "https://verdaccio.tools.moovly.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
 
-deepmerge@2.2.1:
-  version "2.2.1"
-  resolved "https://verdaccio.tools.moovly.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
-  integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
-
 default-require-extensions@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
   integrity sha1-836hXT4T/9m0N9M+GnW1+5eHTLg=
   dependencies:
     strip-bom "^2.0.0"
-
-defaults@^1.0.3:
-  version "1.0.3"
-  resolved "https://verdaccio.tools.moovly.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
-  integrity sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=
-  dependencies:
-    clone "^1.0.2"
 
 define-properties@^1.1.2:
   version "1.1.3"
@@ -2667,11 +3084,6 @@ depd@~1.1.1, depd@~1.1.2:
   resolved "https://verdaccio.tools.moovly.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
-dependency-graph@0.7.2:
-  version "0.7.2"
-  resolved "https://verdaccio.tools.moovly.com/dependency-graph/-/dependency-graph-0.7.2.tgz#91db9de6eb72699209d88aea4c1fd5221cac1c49"
-  integrity sha512-KqtH4/EZdtdfWX0p6MGP9jljvxSY6msy/pRUD4jgNwVpv3v1QmNLlsB3LDSSUg79BRVSn7jI1QPRtArGABovAQ==
-
 deprecated-decorator@^0.1.6:
   version "0.1.6"
   resolved "https://verdaccio.tools.moovly.com/deprecated-decorator/-/deprecated-decorator-0.1.6.tgz#00966317b7a12fe92f3cc831f7583af329b86c37"
@@ -2706,15 +3118,6 @@ detect-newline@^2.1.0:
   version "2.1.0"
   resolved "https://verdaccio.tools.moovly.com/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
   integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
-
-diagnostics@^1.1.1:
-  version "1.1.1"
-  resolved "https://verdaccio.tools.moovly.com/diagnostics/-/diagnostics-1.1.1.tgz#cab6ac33df70c9d9a727490ae43ac995a769b22a"
-  integrity sha512-8wn1PmdunLJ9Tqbx+Fx/ZEuHfJf4NKSN2ZBj7SJC/OWRWha843+WsTjqMe1B5E3p28jqBlp+mJ2fPVxPyNgYKQ==
-  dependencies:
-    colorspace "1.1.x"
-    enabled "1.0.x"
-    kuler "1.0.x"
 
 diff@^3.2.0:
   version "3.5.0"
@@ -2810,6 +3213,16 @@ downshift@^2.2.3:
     compute-scroll-into-view "^1.0.2"
     prop-types "^15.6.0"
 
+duplexer3@^0.1.4:
+  version "0.1.4"
+  resolved "https://verdaccio.tools.moovly.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
+  integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
+
+duplexer@^0.1.1, duplexer@~0.1.1:
+  version "0.1.1"
+  resolved "https://verdaccio.tools.moovly.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+  integrity sha1-rOb/gIwc5mtX0ev5eXessCM0z8E=
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.1"
   resolved "https://verdaccio.tools.moovly.com/duplexify/-/duplexify-3.6.1.tgz#b1a7a29c4abfd639585efaecce80d666b1e34125"
@@ -2838,6 +3251,11 @@ electron-to-chromium@^1.3.82:
   resolved "https://verdaccio.tools.moovly.com/electron-to-chromium/-/electron-to-chromium-1.3.84.tgz#2e55df59e818f150a9f61b53471ebf4f0feecc65"
   integrity sha512-IYhbzJYOopiTaNWMBp7RjbecUBsbnbDneOP86f3qvS0G0xfzwNSvMJpTrvi5/Y1gU7tg2NAgeg8a8rCYvW9Whw==
 
+elegant-spinner@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
+  integrity sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=
+
 elliptic@^6.0.0:
   version "6.4.1"
   resolved "https://verdaccio.tools.moovly.com/elliptic/-/elliptic-6.4.1.tgz#c2d0b7776911b86722c632c3c06c60f2f819939a"
@@ -2860,13 +3278,6 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://verdaccio.tools.moovly.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
-
-enabled@1.0.x:
-  version "1.0.2"
-  resolved "https://verdaccio.tools.moovly.com/enabled/-/enabled-1.0.2.tgz#965f6513d2c2d1c5f4652b64a2e3396467fc2f93"
-  integrity sha1-ll9lE9LC0cX0ZStkouM5ZGf8L5M=
-  dependencies:
-    env-variable "0.0.x"
 
 encodeurl@~1.0.1:
   version "1.0.2"
@@ -2901,10 +3312,13 @@ entities@^1.1.1, entities@~1.1.1:
   resolved "https://verdaccio.tools.moovly.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
   integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
-env-variable@0.0.x:
-  version "0.0.5"
-  resolved "https://verdaccio.tools.moovly.com/env-variable/-/env-variable-0.0.5.tgz#913dd830bef11e96a039c038d4130604eba37f88"
-  integrity sha512-zoB603vQReOFvTg5xMl9I1P2PnHsHQQKTEowsKKD7nseUfJq6UWzK+4YtlWUO1nhiQUxe6XMkk+JleSZD1NZFA==
+env-ci@^2.1.0:
+  version "2.6.0"
+  resolved "https://verdaccio.tools.moovly.com/env-ci/-/env-ci-2.6.0.tgz#3fc46537c972b4d3ab5f0b82d07dfc1491297662"
+  integrity sha512-tnOi9qgtDxY3mvf69coXLHbSZtFMNGAJ1s/huirAhJZTx9rs/1qgFjl+6Z5ULQCfpDmlsf34L7wm+eJGwMazYg==
+  dependencies:
+    execa "^1.0.0"
+    java-properties "^0.2.9"
 
 enzyme-adapter-react-16@^1.7.0:
   version "1.7.0"
@@ -2968,7 +3382,7 @@ errno@^0.1.2, errno@^0.1.3, errno@~0.1.7:
   dependencies:
     prr "~1.0.1"
 
-error-ex@^1.2.0:
+error-ex@^1.2.0, error-ex@^1.3.1:
   version "1.3.2"
   resolved "https://verdaccio.tools.moovly.com/error-ex/-/error-ex-1.3.2.tgz#b4ac40648107fdcdcfae242f428bea8a14d4f1bf"
   integrity sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
@@ -2982,7 +3396,7 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.0.4"
 
-es-abstract@^1.10.0, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.6.1:
+es-abstract@^1.10.0, es-abstract@^1.4.3, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.6.1:
   version "1.12.0"
   resolved "https://verdaccio.tools.moovly.com/es-abstract/-/es-abstract-1.12.0.tgz#9dbbdd27c6856f0001421ca18782d786bf8a6165"
   integrity sha512-C8Fx/0jFmV5IPoMOFPA9P9G5NtqW+4cOPit3MIuvR2t7Ag2K15EJTpxnHAYTzL+aYQJIESYeXZmDBfOBE1HcpA==
@@ -3007,7 +3421,7 @@ escape-html@~1.0.3:
   resolved "https://verdaccio.tools.moovly.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
-escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://verdaccio.tools.moovly.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
@@ -3037,7 +3451,7 @@ esprima@^3.1.3:
   resolved "https://verdaccio.tools.moovly.com/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
   integrity sha1-/cpRzuYTOJXjyI1TXOSdv/YqRjM=
 
-esprima@^4.0.0:
+esprima@^4.0.0, esprima@~4.0.0:
   version "4.0.1"
   resolved "https://verdaccio.tools.moovly.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
@@ -3069,6 +3483,20 @@ event-source-polyfill@0.0.12:
   resolved "https://verdaccio.tools.moovly.com/event-source-polyfill/-/event-source-polyfill-0.0.12.tgz#e539cd67fdef2760a16aa5262fa98134df52e3af"
   integrity sha1-5TnNZ/3vJ2ChaqUmL6mBNN9S468=
 
+event-stream@~3.3.0:
+  version "3.3.6"
+  resolved "https://verdaccio.tools.moovly.com/event-stream/-/event-stream-3.3.6.tgz#cac1230890e07e73ec9cacd038f60a5b66173eef"
+  integrity sha512-dGXNg4F/FgVzlApjzItL+7naHutA3fDqbV/zAZqDDlXTjiMnQmZKu+prImWKszeBM5UQeGvAl3u1wBiKeDh61g==
+  dependencies:
+    duplexer "^0.1.1"
+    flatmap-stream "^0.1.0"
+    from "^0.1.7"
+    map-stream "0.0.7"
+    pause-stream "^0.0.11"
+    split "^1.0.1"
+    stream-combiner "^0.2.2"
+    through "^2.3.8"
+
 events@^1.0.0:
   version "1.1.1"
   resolved "https://verdaccio.tools.moovly.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
@@ -3089,6 +3517,19 @@ exec-sh@^0.2.0:
   dependencies:
     merge "^1.2.0"
 
+execa@^0.10.0:
+  version "0.10.0"
+  resolved "https://verdaccio.tools.moovly.com/execa/-/execa-0.10.0.tgz#ff456a8f53f90f8eccc71a96d11bdfc7f082cb50"
+  integrity sha512-7XOMnz8Ynx1gGo/3hyV9loYNPWM94jG3+3T3Y8tsfSstFmETmENCMU/A/zj8Lyaj1lkgEepKepvd6240tBRvlw==
+  dependencies:
+    cross-spawn "^6.0.0"
+    get-stream "^3.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
 execa@^0.7.0:
   version "0.7.0"
   resolved "https://verdaccio.tools.moovly.com/execa/-/execa-0.7.0.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
@@ -3101,6 +3542,24 @@ execa@^0.7.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
+
+execa@^1.0.0:
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/execa/-/execa-1.0.0.tgz#c6236a5bb4df6d6f15e88e7f017798216749ddd8"
+  integrity sha512-adbxcyWV46qiHyvSp50TKt05tB4tK3HcmF7/nxfAdhnox83seTDbwnaqKO4sXRy7roHAIFqJP/Rw/AuEbX61LA==
+  dependencies:
+    cross-spawn "^6.0.0"
+    get-stream "^4.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
+exit-hook@^1.0.0:
+  version "1.1.1"
+  resolved "https://verdaccio.tools.moovly.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
+  integrity sha1-8FyiM7SMBdVP/wd2XfhQfpXAL/g=
 
 exit@^0.1.2:
   version "0.1.2"
@@ -3187,6 +3646,11 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+extract-stack@^1.0.0:
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/extract-stack/-/extract-stack-1.0.0.tgz#b97acaf9441eea2332529624b732fc5a1c8165fa"
+  integrity sha1-uXrK+UQe6iMyUpYktzL8WhyBZfo=
+
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://verdaccio.tools.moovly.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -3197,32 +3661,34 @@ extsprintf@^1.2.0:
   resolved "https://verdaccio.tools.moovly.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fast-deep-equal@^1.0.0:
-  version "1.1.0"
-  resolved "https://verdaccio.tools.moovly.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
-  integrity sha1-wFNHeBfIa1HaqFPIHgWbcz0CNhQ=
-
 fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "https://verdaccio.tools.moovly.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
   integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
+
+fast-glob@^2.0.2:
+  version "2.2.4"
+  resolved "https://verdaccio.tools.moovly.com/fast-glob/-/fast-glob-2.2.4.tgz#e54f4b66d378040e0e4d6a68ec36bbc5b04363c0"
+  integrity sha512-FjK2nCGI/McyzgNtTESqaWP3trPvHyRyoyY70hxjc3oKPNmDe8taohLZpoVKoUjW85tbU5txaYUZCNtVzygl1g==
+  dependencies:
+    "@mrmlnc/readdir-enhanced" "^2.2.1"
+    "@nodelib/fs.stat" "^1.1.2"
+    glob-parent "^3.1.0"
+    is-glob "^4.0.0"
+    merge2 "^1.2.3"
+    micromatch "^3.1.10"
 
 fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "https://verdaccio.tools.moovly.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
   integrity sha1-1RQsDK7msRifh9OnYREGT4bIu/I=
 
-fast-levenshtein@~2.0.4:
+fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://verdaccio.tools.moovly.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fast-safe-stringify@^2.0.4:
-  version "2.0.6"
-  resolved "https://verdaccio.tools.moovly.com/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
-  integrity sha512-q8BZ89jjc+mz08rSxROs8VsrBBcn1SIw1kq9NjolL509tkABRk9io01RAjSaEv1Xb2uFLt8VtRiZbGp5H8iDtg==
-
-fb-watchman@2.0.0, fb-watchman@^2.0.0:
+fb-watchman@^2.0.0:
   version "2.0.0"
   resolved "https://verdaccio.tools.moovly.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
   integrity sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
@@ -3261,15 +3727,18 @@ fbjs@^1.0.0:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-fecha@^2.3.3:
-  version "2.3.3"
-  resolved "https://verdaccio.tools.moovly.com/fecha/-/fecha-2.3.3.tgz#948e74157df1a32fd1b12c3a3c3cdcb6ec9d96cd"
-  integrity sha512-lUGBnIamTAwk4znq5BcqsDaxSmZ9nDVJaij6NvRt/Tg4R69gERA+otPKbS86ROw9nxVMw2/mp1fnaiWqbs6Sdg==
-
 figgy-pudding@^3.1.0, figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://verdaccio.tools.moovly.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
   integrity sha512-vNKxJHTEKNThjfrdJwHc7brvM6eVevuO5nTj6ez8ZQ1qbXTvGthucRF7S4vf2cr71QVnT70V34v0S1DyQsti0w==
+
+figures@^1.7.0:
+  version "1.7.0"
+  resolved "https://verdaccio.tools.moovly.com/figures/-/figures-1.7.0.tgz#cbe1e3affcf1cd44b80cadfed28dc793a9701d2e"
+  integrity sha1-y+Hjr/zxzUS4DK3+0o3Hk6lwHS4=
+  dependencies:
+    escape-string-regexp "^1.0.5"
+    object-assign "^4.1.0"
 
 figures@^2.0.0:
   version "2.0.0"
@@ -3365,6 +3834,11 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+flatmap-stream@^0.1.0:
+  version "0.1.1"
+  resolved "https://verdaccio.tools.moovly.com/flatmap-stream/-/flatmap-stream-0.1.1.tgz#d34f39ef3b9aa5a2fc225016bd3adf28ac5ae6ea"
+  integrity sha512-lAq4tLbm3sidmdCN8G3ExaxH7cUCtP5mgDvrYowsx84dcYkJJ4I28N7gkxA6+YlSXzaGLJYIDEi9WGfXzMiXdw==
+
 flush-write-stream@^1.0.0:
   version "1.0.3"
   resolved "https://verdaccio.tools.moovly.com/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
@@ -3434,13 +3908,27 @@ friendly-errors-webpack-plugin@1.7.0:
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-from2@^2.1.0:
+from2@^2.1.0, from2@^2.1.1:
   version "2.3.0"
   resolved "https://verdaccio.tools.moovly.com/from2/-/from2-2.3.0.tgz#8bfb5502bde4a4d36cfdeea007fcca21d7e382af"
   integrity sha1-i/tVAr3kpNNs/e6gB/zKIdfjgq8=
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
+
+from@^0.1.7:
+  version "0.1.7"
+  resolved "https://verdaccio.tools.moovly.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
+  integrity sha1-g8YK/Fi5xWmXAH7Rp2izqzA6RP4=
+
+fs-extra@^7.0.0:
+  version "7.0.1"
+  resolved "https://verdaccio.tools.moovly.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
 
 fs-minipass@^1.2.5:
   version "1.2.5"
@@ -3500,15 +3988,29 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
+gaze@^1.1.3:
+  version "1.1.3"
+  resolved "https://verdaccio.tools.moovly.com/gaze/-/gaze-1.1.3.tgz#c441733e13b927ac8c0ff0b4c3b033f28812924a"
+  integrity sha512-BRdNm8hbWzFzWHERTrejLqwHDfS4GibPoq5wjTPIoJHoBtKGPg3xAFfxmM+9ztbXelxcf2hwQcaz1PtmFeue8g==
+  dependencies:
+    globule "^1.0.0"
+
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://verdaccio.tools.moovly.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
   integrity sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
 
-get-stream@^3.0.0:
+get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://verdaccio.tools.moovly.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
   integrity sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
+
+get-stream@^4.0.0:
+  version "4.1.0"
+  resolved "https://verdaccio.tools.moovly.com/get-stream/-/get-stream-4.1.0.tgz#c1b255575f3dc21d59bfc79cd3d2b46b1c3a54b5"
+  integrity sha512-GMat4EJ5161kIy2HevLlr4luNjBgvmj413KaQA7jt4V8B4RDsfpHk7WQ9GVqfYyyx8OS/L66Kox+rJRNklLK7w==
+  dependencies:
+    pump "^3.0.0"
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
@@ -3521,6 +4023,24 @@ getpass@^0.1.1:
   integrity sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=
   dependencies:
     assert-plus "^1.0.0"
+
+git-parse@^1.0.3:
+  version "1.0.3"
+  resolved "https://verdaccio.tools.moovly.com/git-parse/-/git-parse-1.0.3.tgz#82f165201892688ec9286184b3eee5c4cf0655ac"
+  integrity sha512-LlGDePBQ9Lr/jsL3ULrnV8SQL8sk3cdScyc+vAk6jVLkHBOxdIj3JosNWemH2o9pNnGtcqukl+ym1Nl6k5jw0Q==
+  dependencies:
+    babel-polyfill "6.26.0"
+    byline "5.0.0"
+    util.promisify "1.0.0"
+
+git-rev-sync@^1.12.0:
+  version "1.12.0"
+  resolved "https://verdaccio.tools.moovly.com/git-rev-sync/-/git-rev-sync-1.12.0.tgz#4468406c7e6c3ba4cf4587999e1adb28d9d1af55"
+  integrity sha1-RGhAbH5sO6TPRYeZnhrbKNnRr1U=
+  dependencies:
+    escape-string-regexp "1.0.5"
+    graceful-fs "4.1.11"
+    shelljs "0.7.7"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -3545,6 +4065,11 @@ glob-parent@^3.1.0:
     is-glob "^3.1.0"
     path-dirname "^1.0.0"
 
+glob-to-regexp@^0.3.0:
+  version "0.3.0"
+  resolved "https://verdaccio.tools.moovly.com/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
+  integrity sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=
+
 glob@7.1.2:
   version "7.1.2"
   resolved "https://verdaccio.tools.moovly.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
@@ -3557,7 +4082,7 @@ glob@7.1.2:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@7.1.3, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@~7.1.1:
   version "7.1.3"
   resolved "https://verdaccio.tools.moovly.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -3570,9 +4095,9 @@ glob@7.1.3, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2:
     path-is-absolute "^1.0.0"
 
 globals@^11.1.0:
-  version "11.8.0"
-  resolved "https://verdaccio.tools.moovly.com/globals/-/globals-11.8.0.tgz#c1ef45ee9bed6badf0663c5cb90e8d1adec1321d"
-  integrity sha512-io6LkyPVuzCHBSQV9fmOwxZkUk6nIaGmxheLDgmuFv89j0fm2aqDbIXKAGfzCMHqz3HLF2Zf8WSG6VqMh2qFmA==
+  version "11.9.0"
+  resolved "https://verdaccio.tools.moovly.com/globals/-/globals-11.9.0.tgz#bde236808e987f290768a93d065060d78e6ab249"
+  integrity sha512-5cJVtyXWH8PiJPVLZzzoIizXx944O4OmRro5MWKx5fT4MgcN7OfaMutPeaTdJCCURwbWdhhcCWcKIffPnmTzBg==
 
 globals@^9.18.0:
   version "9.18.0"
@@ -3602,7 +4127,44 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
+globule@^1.0.0:
+  version "1.2.1"
+  resolved "https://verdaccio.tools.moovly.com/globule/-/globule-1.2.1.tgz#5dffb1b191f22d20797a9369b49eab4e9839696d"
+  integrity sha512-g7QtgWF4uYSL5/dn71WxubOrS7JVGCnFPEnoeChJmBnyR9Mw8nGoEwOgJL/RC2Te0WhbsEUCejfH8SZNJ+adYQ==
+  dependencies:
+    glob "~7.1.1"
+    lodash "~4.17.10"
+    minimatch "~3.0.2"
+
+got@^8.3.1:
+  version "8.3.2"
+  resolved "https://verdaccio.tools.moovly.com/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
+  integrity sha512-qjUJ5U/hawxosMryILofZCkm3C84PLJS/0grRIpjAwu+Lkxxj5cxeCU25BG0/3mDSpXKTyZr8oh8wIgLaH0QCw==
+  dependencies:
+    "@sindresorhus/is" "^0.7.0"
+    cacheable-request "^2.1.1"
+    decompress-response "^3.3.0"
+    duplexer3 "^0.1.4"
+    get-stream "^3.0.0"
+    into-stream "^3.1.0"
+    is-retry-allowed "^1.1.0"
+    isurl "^1.0.0-alpha5"
+    lowercase-keys "^1.0.0"
+    mimic-response "^1.0.0"
+    p-cancelable "^0.4.0"
+    p-timeout "^2.0.1"
+    pify "^3.0.0"
+    safe-buffer "^5.1.1"
+    timed-out "^4.0.1"
+    url-parse-lax "^3.0.0"
+    url-to-options "^1.0.1"
+
+graceful-fs@4.1.11:
+  version "4.1.11"
+  resolved "https://verdaccio.tools.moovly.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+  integrity sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.15"
   resolved "https://verdaccio.tools.moovly.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
@@ -3614,116 +4176,19 @@ graphql-anywhere@^4.1.0-alpha.0:
   dependencies:
     apollo-utilities "^1.0.25"
 
-graphql-code-generator@^0.13.0:
-  version "0.13.0"
-  resolved "https://verdaccio.tools.moovly.com/graphql-code-generator/-/graphql-code-generator-0.13.0.tgz#fd71fe9cd913f5ca14eedd7ce39c4e2ff6053ee1"
-  integrity sha512-SM+K58Cg6jGL9pzOGWgRUJD4swQ+iOWEy/pyQ9BJxjv3d+eIV9uYwFwZ+flstRTvnu3spenTbjRE/mnw3jxHTQ==
+graphql-extensions@0.1.2:
+  version "0.1.2"
+  resolved "https://verdaccio.tools.moovly.com/graphql-extensions/-/graphql-extensions-0.1.2.tgz#d289cbddcf52364c066d8241a78d359c93c79c30"
+  integrity sha512-A81kfGtOKG0/1sDQGm23u60bkTuk9VDof0SrQrz7yNpPLY48JF11b8+4LNlYfEBVvceDbLAs1KRfyLQskJjJSg==
   dependencies:
-    "@graphql-modules/epoxy" "0.1.9"
-    "@types/babylon" "6.16.3"
-    "@types/is-glob" "4.0.0"
-    "@types/prettier" "1.13.2"
-    "@types/valid-url" "1.0.2"
-    babel-types "7.0.0-beta.3"
-    babylon "7.0.0-beta.47"
-    chalk "2.4.1"
-    commander "2.19.0"
-    fb-watchman "2.0.0"
-    glob "7.1.3"
-    graphql-codegen-compiler "0.13.0"
-    graphql-codegen-core "0.13.0"
-    graphql-config "2.2.1"
-    graphql-import "0.7.1"
-    is-glob "4.0.0"
-    is-valid-path "0.1.1"
-    mkdirp "0.5.1"
-    ora "3.0.0"
-    pify "4.0.1"
-    prettier "1.14.3"
-    request "2.88.0"
-    valid-url "1.0.9"
+    apollo-server-env "2.0.2"
 
-graphql-codegen-compiler@0.13.0:
-  version "0.13.0"
-  resolved "https://verdaccio.tools.moovly.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.13.0.tgz#5d7787849ce5b109f2ca7af681f428a1633c6b39"
-  integrity sha512-e6EjF1OXyUZ+8uiMK17NKoVYmiSJgw61EpYK9uLJAQlOcCeLPskSxRSNQU8mtAiveAE1tMSXt9BfXrleQbDPqA==
-  dependencies:
-    "@types/handlebars" "4.0.39"
-    change-case "3.0.2"
-    common-tags "1.8.0"
-    graphql-codegen-core "0.13.0"
-    handlebars "4.0.12"
-    moment "2.22.2"
-
-graphql-codegen-core@0.13.0:
-  version "0.13.0"
-  resolved "https://verdaccio.tools.moovly.com/graphql-codegen-core/-/graphql-codegen-core-0.13.0.tgz#c288b2e263ea73724215c10712116f05c7ce02cd"
-  integrity sha512-oM67vJvlt/azkbD4uy177duDuQkdpN9/PUOIcvvyGzjnsPkU7kB9uQ/vFK/+WwmxtYPzvm07PUnH2OkCssJtsQ==
-  dependencies:
-    chalk "2.4.1"
-    change-case "3.0.2"
-    common-tags "1.8.0"
-    graphql-tag "2.10.0"
-    graphql-tools "4.0.3"
-    ts-log "2.1.3"
-    winston "3.1.0"
-
-graphql-codegen-typescript-react-apollo-template@^0.13.0:
-  version "0.13.0"
-  resolved "https://verdaccio.tools.moovly.com/graphql-codegen-typescript-react-apollo-template/-/graphql-codegen-typescript-react-apollo-template-0.13.0.tgz#985f3dc90b26949e8e3bfcdd845aaa0c5392c32f"
-  integrity sha512-m5TElonBcyWOzOWqSC/CZpws3TTN0/ayXYp1P/rejx/DNkJXeyJ2dWoK5EgW4KK4zlXZs3HaL30na6ccVgwpqQ==
-  dependencies:
-    dependency-graph "0.7.2"
-    graphql-codegen-typescript-template "0.13.0"
-
-graphql-codegen-typescript-template@0.13.0:
-  version "0.13.0"
-  resolved "https://verdaccio.tools.moovly.com/graphql-codegen-typescript-template/-/graphql-codegen-typescript-template-0.13.0.tgz#41398687cbf279f1d97d8cfb8aa7c412bf0e7192"
-  integrity sha512-EYLd4v8toD+dpWHJsJliViaE52novhF9zbayFmY8IgLeHmYPVk2TfyS6CVvHmCoa0HTxOawvTY8a7UIgtnpw2w==
-
-graphql-config@2.2.1:
-  version "2.2.1"
-  resolved "https://verdaccio.tools.moovly.com/graphql-config/-/graphql-config-2.2.1.tgz#5fd0ec77ac7428ca5fb2026cf131be10151a0cb2"
-  integrity sha512-U8+1IAhw9m6WkZRRcyj8ZarK96R6lQBQ0an4lp76Ps9FyhOXENC5YQOxOFGm5CxPrX2rD0g3Je4zG5xdNJjwzQ==
-  dependencies:
-    graphql-import "^0.7.1"
-    graphql-request "^1.5.0"
-    js-yaml "^3.10.0"
-    lodash "^4.17.4"
-    minimatch "^3.0.4"
-
-graphql-import@0.7.1, graphql-import@^0.7.1:
-  version "0.7.1"
-  resolved "https://verdaccio.tools.moovly.com/graphql-import/-/graphql-import-0.7.1.tgz#4add8d91a5f752d764b0a4a7a461fcd93136f223"
-  integrity sha512-YpwpaPjRUVlw2SN3OPljpWbVRWAhMAyfSba5U47qGMOSsPLi2gYeJtngGpymjm9nk57RFWEpjqwh4+dpYuFAPw==
-  dependencies:
-    lodash "^4.17.4"
-    resolve-from "^4.0.0"
-
-graphql-request@^1.5.0:
-  version "1.8.2"
-  resolved "https://verdaccio.tools.moovly.com/graphql-request/-/graphql-request-1.8.2.tgz#398d10ae15c585676741bde3fc01d5ca948f8fbe"
-  integrity sha512-dDX2M+VMsxXFCmUX0Vo0TopIZIX4ggzOtiCsThgtrKR4niiaagsGTDIHj3fsOMFETpa064vzovI+4YV4QnMbcg==
-  dependencies:
-    cross-fetch "2.2.2"
-
-graphql-tag@2.10.0, graphql-tag@^2.10.0, graphql-tag@^2.4.2:
+graphql-tag@^2.10.0, graphql-tag@^2.4.2, graphql-tag@^2.9.2:
   version "2.10.0"
   resolved "https://verdaccio.tools.moovly.com/graphql-tag/-/graphql-tag-2.10.0.tgz#87da024be863e357551b2b8700e496ee2d4353ae"
   integrity sha512-9FD6cw976TLLf9WYIUPCaaTpniawIjHWZSwIRZSjrfufJamcXbVVYfN2TWvJYbw0Xf2JjYbl1/f2+wDnBVw3/w==
 
-graphql-tools@4.0.2:
-  version "4.0.2"
-  resolved "https://verdaccio.tools.moovly.com/graphql-tools/-/graphql-tools-4.0.2.tgz#9da22974cc6bf6524ed4f4af35556fd15aa6516d"
-  integrity sha512-GijRFaHmSbyVphtTb23wd6wxXNkct9usiXHl2v4cOFNdUWe3Qz7VqoNyOwINlff2nf01xO+lCkhVlay0svJqfQ==
-  dependencies:
-    apollo-link "^1.2.3"
-    apollo-utilities "^1.0.1"
-    deprecated-decorator "^0.1.6"
-    iterall "^1.1.3"
-    uuid "^3.1.0"
-
-graphql-tools@4.0.3, graphql-tools@^4.0.3:
+graphql-tools@^4.0.3:
   version "4.0.3"
   resolved "https://verdaccio.tools.moovly.com/graphql-tools/-/graphql-tools-4.0.3.tgz#23b5cb52c519212b1b2e4630a361464396ad264b"
   integrity sha512-NNZM0WSnVLX1zIMUxu7SjzLZ4prCp15N5L2T2ro02OVyydZ0fuCnZYRnx/yK9xjGWbZA0Q58yEO//Bv/psJWrg==
@@ -3734,7 +4199,7 @@ graphql-tools@4.0.3, graphql-tools@^4.0.3:
     iterall "^1.1.3"
     uuid "^3.1.0"
 
-graphql@^14.0.2:
+graphql@^0.13.2, graphql@^14.0.2:
   version "14.0.2"
   resolved "https://verdaccio.tools.moovly.com/graphql/-/graphql-14.0.2.tgz#7dded337a4c3fd2d075692323384034b357f5650"
   integrity sha512-gUC4YYsaiSJT1h40krG3J+USGlwhzNTXSb4IOZljn9ag5Tj+RkoXrWp+Kh7WyE3t1NCfab5kzCuxBIvOMERMXw==
@@ -3746,7 +4211,7 @@ growly@^1.3.0:
   resolved "https://verdaccio.tools.moovly.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-handlebars@4.0.12, handlebars@^4.0.3:
+handlebars@^4.0.3:
   version "4.0.12"
   resolved "https://verdaccio.tools.moovly.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
   integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
@@ -3763,11 +4228,11 @@ har-schema@^2.0.0:
   integrity sha1-qUwiJOvKwEeCoNkDVSHyRzW37JI=
 
 har-validator@~5.1.0:
-  version "5.1.0"
-  resolved "https://verdaccio.tools.moovly.com/har-validator/-/har-validator-5.1.0.tgz#44657f5688a22cfd4b72486e81b3a3fb11742c29"
-  integrity sha512-+qnmNjI4OfH2ipQ9VQOw23bBd/ibtfbVdK2fYbY4acTDqKTW/YDp9McimZdDbG8iV9fZizUqQMD5xvriB146TA==
+  version "5.1.3"
+  resolved "https://verdaccio.tools.moovly.com/har-validator/-/har-validator-5.1.3.tgz#1ef89ebd3e4996557675eed9893110dc350fa080"
+  integrity sha512-sNvOCzEQNr/qrvJgc3UG/kD4QtlHycrzwS+6mfTrrSq97BvaYcPZZI1ZSqGSPR73Cxn4LKTD4PttRwfU7jWq5g==
   dependencies:
-    ajv "^5.3.0"
+    ajv "^6.5.5"
     har-schema "^2.0.0"
 
 has-ansi@^2.0.0:
@@ -3782,15 +4247,32 @@ has-flag@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
   integrity sha1-nZ55MWXOAXoA8AQYxD+UKnsdEfo=
 
+has-flag@^2.0.0:
+  version "2.0.0"
+  resolved "https://verdaccio.tools.moovly.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
+  integrity sha1-6CB68cx7MNRGzHC3NLXovhj4jVE=
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://verdaccio.tools.moovly.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
 
+has-symbol-support-x@^1.4.1:
+  version "1.4.2"
+  resolved "https://verdaccio.tools.moovly.com/has-symbol-support-x/-/has-symbol-support-x-1.4.2.tgz#1409f98bc00247da45da67cee0a36f282ff26455"
+  integrity sha512-3ToOva++HaW+eCpgqZrCfN51IPB+7bJNVT6CUATzueB5Heb8o6Nam0V3HG5dlDvZU1Gn5QLcbahiKw/XVk5JJw==
+
 has-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
   integrity sha1-uhqPGvKg/DllD1yFA2dwQSIGO0Q=
+
+has-to-string-tag-x@^1.2.0:
+  version "1.4.1"
+  resolved "https://verdaccio.tools.moovly.com/has-to-string-tag-x/-/has-to-string-tag-x-1.4.1.tgz#a045ab383d7b4b2012a00148ab0aa5f290044d4d"
+  integrity sha512-vdbKfmw+3LoOYVr+mtxHaX5a96+0f3DljYd8JOqvOLsf5mw2Otda2qCDT9qRqLAhrjyQ0h7ual5nOiASpsGNFw==
+  dependencies:
+    has-symbol-support-x "^1.4.1"
 
 has-unicode@^2.0.0:
   version "2.0.1"
@@ -3859,6 +4341,35 @@ header-case@^1.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.3"
 
+heroku-cli-util@^8.0.9:
+  version "8.0.10"
+  resolved "https://verdaccio.tools.moovly.com/heroku-cli-util/-/heroku-cli-util-8.0.10.tgz#c14aa0ac8c31ddd5c18aac73369332b42c4205fc"
+  integrity sha512-NMcdnX3y2N+efhRGeZvBokmBtDdggtrgRb3pozhyrR2+5LmzKkDLONK/MfjvwrpAUP2MXPu8UkxJDnM/SAGlxA==
+  dependencies:
+    "@heroku-cli/color" "^1.1.3"
+    ansi-escapes "^3.1.0"
+    ansi-styles "^3.2.1"
+    cardinal "^2.0.1"
+    chalk "^2.4.1"
+    co "^4.6.0"
+    got "^8.3.1"
+    heroku-client "^3.0.6"
+    lodash "^4.17.10"
+    netrc-parser "^3.1.4"
+    opn "^3.0.3"
+    strip-ansi "^4.0.0"
+    supports-color "^5.4.0"
+    tslib "^1.9.0"
+    tunnel-agent "^0.6.0"
+
+heroku-client@^3.0.6:
+  version "3.0.6"
+  resolved "https://verdaccio.tools.moovly.com/heroku-client/-/heroku-client-3.0.6.tgz#bf603716a9d469682d4f7f80489276d82b896305"
+  integrity sha512-1FKLb5ngGTMwUh67DPiYmv+TaKasTfZSYHno/Kx0goE6Fqutec3WILCHPmOfw9LTGnRjL9/Pmi5BNmu9GwNFNA==
+  dependencies:
+    is-retry-allowed "^1.0.0"
+    tunnel-agent "^0.6.0"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://verdaccio.tools.moovly.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -3922,6 +4433,22 @@ htmlparser2@^3.9.1:
     inherits "^2.0.1"
     readable-stream "^3.0.6"
 
+http-cache-semantics@3.8.1:
+  version "3.8.1"
+  resolved "https://verdaccio.tools.moovly.com/http-cache-semantics/-/http-cache-semantics-3.8.1.tgz#39b0e16add9b605bf0a9ef3d9daaf4843b4cacd2"
+  integrity sha512-5ai2iksyV8ZXmnZhHH4rWPoxxistEexSi5936zIQ1bnNTW5VnA85B6P/VpXiRM017IgRvb2kKo1a//y+0wSp3w==
+
+http-call@^5.2.2:
+  version "5.2.2"
+  resolved "https://verdaccio.tools.moovly.com/http-call/-/http-call-5.2.2.tgz#d8eb37eef701e566d44373ef19b22444ebb7c02e"
+  integrity sha512-DMEU+vvbrvt7n1BYPacbvtSwUmIgORP7HphTmKFqt1wBVeGi/+ADe7KkfyKAcnpa9HEoVaPWdfpOKy7fNeLdiw==
+  dependencies:
+    content-type "^1.0.4"
+    debug "^3.1.0"
+    is-retry-allowed "^1.1.0"
+    is-stream "^1.1.0"
+    tunnel-agent "^0.6.0"
+
 http-errors@1.6.2:
   version "1.6.2"
   resolved "https://verdaccio.tools.moovly.com/http-errors/-/http-errors-1.6.2.tgz#0a002cc85707192a7e7946ceedc11155f60ec736"
@@ -3960,6 +4487,11 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+hyperlinker@^1.0.0:
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/hyperlinker/-/hyperlinker-1.0.0.tgz#23dc9e38a206b208ee49bc2d6c8ef47027df0c0e"
+  integrity sha512-Ty8UblRWFEcfSuIaajM34LdPXIhbs1ajEX/BBPv24J+enSVaEVY63xQ6lTO9VRYS5LAoghIG0IDJ+p+IPzKUQQ==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
@@ -4003,10 +4535,20 @@ imurmurhash@^0.1.4:
   resolved "https://verdaccio.tools.moovly.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
 
+indent-string@^3.0.0, indent-string@^3.2.0:
+  version "3.2.0"
+  resolved "https://verdaccio.tools.moovly.com/indent-string/-/indent-string-3.2.0.tgz#4a5fd6d27cc332f37e5419a504dbb837105c9289"
+  integrity sha1-Sl/W0nzDMvN+VBmlBNu4NxBckok=
+
 indexof@0.0.1:
   version "0.0.1"
   resolved "https://verdaccio.tools.moovly.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
   integrity sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=
+
+inflected@^2.0.3:
+  version "2.0.4"
+  resolved "https://verdaccio.tools.moovly.com/inflected/-/inflected-2.0.4.tgz#323770961ccbe992a98ea930512e9a82d3d3ef77"
+  integrity sha512-HQPzFLTTUvwfeUH6RAGjD8cHS069mBqXG5n4qaxX7sJXBhVQrsGgF+0ZJGkSuN6a8pcUWB/GXStta11kKi/WvA==
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -4030,6 +4572,19 @@ ini@~1.3.0:
   version "1.3.5"
   resolved "https://verdaccio.tools.moovly.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+
+interpret@^1.0.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
+  integrity sha1-ftGxQQxqDg94z5XTuEQMY/eLhhQ=
+
+into-stream@^3.1.0:
+  version "3.1.0"
+  resolved "https://verdaccio.tools.moovly.com/into-stream/-/into-stream-3.1.0.tgz#96fb0a936c12babd6ff1752a17d05616abd094c6"
+  integrity sha1-lvsKk2wSur1v8XUqF9BWFqvQlMY=
+  dependencies:
+    from2 "^2.1.1"
+    p-is-promise "^1.1.0"
 
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
@@ -4061,11 +4616,6 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://verdaccio.tools.moovly.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
   integrity sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=
-
-is-arrayish@^0.3.1:
-  version "0.3.2"
-  resolved "https://verdaccio.tools.moovly.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
-  integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
 is-binary-path@^1.0.0:
   version "1.0.1"
@@ -4198,13 +4748,6 @@ is-generator-fn@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/is-generator-fn/-/is-generator-fn-1.0.0.tgz#969d49e1bb3329f6bb7f09089be26578b2ddd46a"
   integrity sha1-lp1J4bszKfa7fwkIm+JleLLd1Go=
 
-is-glob@4.0.0, is-glob@^4.0.0:
-  version "4.0.0"
-  resolved "https://verdaccio.tools.moovly.com/is-glob/-/is-glob-4.0.0.tgz#9521c76845cc2610a85203ddf080a958c2ffabc0"
-  integrity sha1-lSHHaEXMJhCoUgPd8ICpWML/q8A=
-  dependencies:
-    is-extglob "^2.1.1"
-
 is-glob@^2.0.0, is-glob@^2.0.1:
   version "2.0.1"
   resolved "https://verdaccio.tools.moovly.com/is-glob/-/is-glob-2.0.1.tgz#d096f926a3ded5600f3fdfd91198cb0888c2d863"
@@ -4219,12 +4762,12 @@ is-glob@^3.1.0:
   dependencies:
     is-extglob "^2.1.0"
 
-is-invalid-path@^0.1.0:
-  version "0.1.0"
-  resolved "https://verdaccio.tools.moovly.com/is-invalid-path/-/is-invalid-path-0.1.0.tgz#307a855b3cf1a938b44ea70d2c61106053714f34"
-  integrity sha1-MHqFWzzxqTi0TqcNLGEQYFNxTzQ=
+is-glob@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/is-glob/-/is-glob-4.0.0.tgz#9521c76845cc2610a85203ddf080a958c2ffabc0"
+  integrity sha1-lSHHaEXMJhCoUgPd8ICpWML/q8A=
   dependencies:
-    is-glob "^2.0.0"
+    is-extglob "^2.1.1"
 
 is-lower-case@^1.1.0:
   version "1.1.3"
@@ -4257,6 +4800,18 @@ is-number@^4.0.0:
   resolved "https://verdaccio.tools.moovly.com/is-number/-/is-number-4.0.0.tgz#0026e37f5454d73e356dfe6564699867c6a7f0ff"
   integrity sha512-rSklcAIlf1OmFdyAqbnWTLVelsQ58uvZ66S/ZyawjWqIviTWCjg2PzVGw8WUA+nNuPTqb4wgA+NszrJ+08LlgQ==
 
+is-object@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/is-object/-/is-object-1.0.1.tgz#8952688c5ec2ffd6b03ecc85e769e02903083470"
+  integrity sha1-iVJojF7C/9awPsyF52ngKQMINHA=
+
+is-observable@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/is-observable/-/is-observable-1.1.0.tgz#b3e986c8f44de950867cab5403f5a3465005975e"
+  integrity sha512-NqCa4Sa2d+u7BWc6CukaObG3Fh+CU9bvixbpcXYhy2VvYS7vVGIdAgnIS5Ks3A/cqk4rebLJ9s8zBstT2aKnIA==
+  dependencies:
+    symbol-observable "^1.1.0"
+
 is-path-cwd@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/is-path-cwd/-/is-path-cwd-1.0.0.tgz#d225ec23132e89edd38fda767472e62e65f1106d"
@@ -4276,6 +4831,11 @@ is-path-inside@^1.0.0:
   dependencies:
     path-is-inside "^1.0.1"
 
+is-plain-obj@^1.0.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+  integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+
 is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
   resolved "https://verdaccio.tools.moovly.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
@@ -4293,12 +4853,22 @@ is-primitive@^2.0.0:
   resolved "https://verdaccio.tools.moovly.com/is-primitive/-/is-primitive-2.0.0.tgz#207bab91638499c07b2adf240a41a87210034575"
   integrity sha1-IHurkWOEmcB7Kt8kCkGochADRXU=
 
+is-promise@^2.1.0:
+  version "2.1.0"
+  resolved "https://verdaccio.tools.moovly.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+  integrity sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
+
 is-regex@^1.0.4:
   version "1.0.4"
   resolved "https://verdaccio.tools.moovly.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
   integrity sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
   dependencies:
     has "^1.0.1"
+
+is-retry-allowed@^1.0.0, is-retry-allowed@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/is-retry-allowed/-/is-retry-allowed-1.1.0.tgz#11a060568b67339444033d0125a61a20d564fb34"
+  integrity sha1-EaBgVotnM5REAz0BJaYaINVk+zQ=
 
 is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
@@ -4339,17 +4909,15 @@ is-utf8@^0.2.0:
   resolved "https://verdaccio.tools.moovly.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   integrity sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
 
-is-valid-path@0.1.1:
-  version "0.1.1"
-  resolved "https://verdaccio.tools.moovly.com/is-valid-path/-/is-valid-path-0.1.1.tgz#110f9ff74c37f663e1ec7915eb451f2db93ac9df"
-  integrity sha1-EQ+f90w39mPh7HkV60UfLbk6yd8=
-  dependencies:
-    is-invalid-path "^0.1.0"
-
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://verdaccio.tools.moovly.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
   integrity sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==
+
+is-wsl@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
+  integrity sha1-HxbkqiKwTRM2tmGIpmrzxgDDpm0=
 
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -4464,10 +5032,23 @@ istanbul-reports@^1.5.1:
   dependencies:
     handlebars "^4.0.3"
 
+isurl@^1.0.0-alpha5:
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/isurl/-/isurl-1.0.0.tgz#b27f4f49f3cdaa3ea44a0a5b7f3462e6edc39d67"
+  integrity sha512-1P/yWsxPlDtn7QeRD+ULKQPaIaN6yF368GZ2vDfv0AL0NwpStafjWCDDdn0k8wgFMWpVAqG7oJhxHnlud42i9w==
+  dependencies:
+    has-to-string-tag-x "^1.2.0"
+    is-object "^1.0.1"
+
 iterall@^1.1.3, iterall@^1.2.2:
   version "1.2.2"
   resolved "https://verdaccio.tools.moovly.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
   integrity sha512-yynBb1g+RFUPY64fTrFv7nsjRrENBQJaX2UL+2Szc9REFrSNm1rpSXHGzhmAy7a9uv3vlvgBlXnf9RqmPH1/DA==
+
+java-properties@^0.2.9:
+  version "0.2.10"
+  resolved "https://verdaccio.tools.moovly.com/java-properties/-/java-properties-0.2.10.tgz#2551560c25fa1ad94d998218178f233ad9b18f60"
+  integrity sha512-CpKJh9VRNhS+XqZtg1UMejETGEiqwCGDC/uwPEEQwc2nfdbSm73SIE29TplG2gLYuBOOTNDqxzG6A9NtEPLt0w==
 
 jest-changed-files@^23.4.2:
   version "23.4.2"
@@ -4806,7 +5387,7 @@ js-tokens@^3.0.2:
   resolved "https://verdaccio.tools.moovly.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.10.0, js-yaml@^3.7.0:
+js-yaml@^3.7.0:
   version "3.12.0"
   resolved "https://verdaccio.tools.moovly.com/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
   integrity sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
@@ -4866,15 +5447,15 @@ jsesc@~0.5.0:
   resolved "https://verdaccio.tools.moovly.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
   integrity sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=
 
-json-parse-better-errors@^1.0.2:
+json-buffer@3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
+  integrity sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
+
+json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
   resolved "https://verdaccio.tools.moovly.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
   integrity sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==
-
-json-schema-traverse@^0.3.0:
-  version "0.3.1"
-  resolved "https://verdaccio.tools.moovly.com/json-schema-traverse/-/json-schema-traverse-0.3.1.tgz#349a6d44c53a51de89b40805c5d5e59b417d3340"
-  integrity sha1-NJptRMU6Ud6JtAgFxdXlm0F9M0A=
 
 json-schema-traverse@^0.4.1:
   version "0.4.1"
@@ -4903,6 +5484,13 @@ json5@^0.5.0, json5@^0.5.1:
   resolved "https://verdaccio.tools.moovly.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
 
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
+
 jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://verdaccio.tools.moovly.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
@@ -4922,6 +5510,13 @@ junk@^1.0.1:
   version "1.0.3"
   resolved "https://verdaccio.tools.moovly.com/junk/-/junk-1.0.3.tgz#87be63488649cbdca6f53ab39bec9ccd2347f592"
   integrity sha1-h75jSIZJy9ym9Tqzm+yczSNH9ZI=
+
+keyv@3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
+  integrity sha512-eguHnq22OE3uVoSYG0LVWNP+4ppamWr9+zWBe1bsNcovIMy6huUJFPgy4mGwCd/rnl3vOLGW1MTlu4c57CT1xA==
+  dependencies:
+    json-buffer "3.0.0"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -4951,13 +5546,6 @@ kleur@^2.0.1:
   version "2.0.2"
   resolved "https://verdaccio.tools.moovly.com/kleur/-/kleur-2.0.2.tgz#b704f4944d95e255d038f0cb05fb8a602c55a300"
   integrity sha512-77XF9iTllATmG9lSlIv0qdQ2BQ/h9t0bJllHlbvsQ0zUWfU7Yi0S8L5JXzPZgkefIiajLmBJJ4BsMJmqcf7oxQ==
-
-kuler@1.0.x:
-  version "1.0.1"
-  resolved "https://verdaccio.tools.moovly.com/kuler/-/kuler-1.0.1.tgz#ef7c784f36c9fb6e16dd3150d152677b2b0228a6"
-  integrity sha512-J9nVUucG1p/skKul6DU3PUZrhs0LPulNaeUOox0IyXDi8S4CztTHs1gQphhuZmzXG7VOQSf6NJfKuzteQLv9gQ==
-  dependencies:
-    colornames "^1.1.1"
 
 launch-editor@2.2.1:
   version "2.2.1"
@@ -4992,6 +5580,50 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+listr-silent-renderer@^1.1.1:
+  version "1.1.1"
+  resolved "https://verdaccio.tools.moovly.com/listr-silent-renderer/-/listr-silent-renderer-1.1.1.tgz#924b5a3757153770bf1a8e3fbf74b8bbf3f9242e"
+  integrity sha1-kktaN1cVN3C/Go4/v3S4u/P5JC4=
+
+listr-update-renderer@^0.4.0:
+  version "0.4.0"
+  resolved "https://verdaccio.tools.moovly.com/listr-update-renderer/-/listr-update-renderer-0.4.0.tgz#344d980da2ca2e8b145ba305908f32ae3f4cc8a7"
+  integrity sha1-NE2YDaLKLosUW6MFkI8yrj9MyKc=
+  dependencies:
+    chalk "^1.1.3"
+    cli-truncate "^0.2.1"
+    elegant-spinner "^1.0.1"
+    figures "^1.7.0"
+    indent-string "^3.0.0"
+    log-symbols "^1.0.2"
+    log-update "^1.0.2"
+    strip-ansi "^3.0.1"
+
+listr-verbose-renderer@^0.4.0:
+  version "0.4.1"
+  resolved "https://verdaccio.tools.moovly.com/listr-verbose-renderer/-/listr-verbose-renderer-0.4.1.tgz#8206f4cf6d52ddc5827e5fd14989e0e965933a35"
+  integrity sha1-ggb0z21S3cWCfl/RSYng6WWTOjU=
+  dependencies:
+    chalk "^1.1.3"
+    cli-cursor "^1.0.2"
+    date-fns "^1.27.2"
+    figures "^1.7.0"
+
+listr@^0.14.1:
+  version "0.14.2"
+  resolved "https://verdaccio.tools.moovly.com/listr/-/listr-0.14.2.tgz#cbe44b021100a15376addfc2d79349ee430bfe14"
+  integrity sha512-vmaNJ1KlGuGWShHI35X/F8r9xxS0VTHh9GejVXwSN20fG5xpq3Jh4bJbnumoT6q5EDM/8/YP1z3YMtQbFmhuXw==
+  dependencies:
+    "@samverschueren/stream-to-observable" "^0.3.0"
+    is-observable "^1.1.0"
+    is-promise "^2.1.0"
+    is-stream "^1.1.0"
+    listr-silent-renderer "^1.1.1"
+    listr-update-renderer "^0.4.0"
+    listr-verbose-renderer "^0.4.0"
+    p-map "^1.1.1"
+    rxjs "^6.1.0"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://verdaccio.tools.moovly.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -5011,6 +5643,16 @@ load-json-file@^2.0.0:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
     pify "^2.0.0"
+    strip-bom "^3.0.0"
+
+load-json-file@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
+  integrity sha1-L19Fq5HjMhYjT9U62rZo607AmTs=
+  dependencies:
+    graceful-fs "^4.1.2"
+    parse-json "^4.0.0"
+    pify "^3.0.0"
     strip-bom "^3.0.0"
 
 loader-runner@^2.3.0:
@@ -5043,6 +5685,11 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
+lodash._reinterpolate@~3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
+  integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://verdaccio.tools.moovly.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -5073,17 +5720,40 @@ lodash.sortby@^4.7.0:
   resolved "https://verdaccio.tools.moovly.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0:
+lodash.template@^4.4.0:
+  version "4.4.0"
+  resolved "https://verdaccio.tools.moovly.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
+  integrity sha1-5zoDhcg1VZF0bgILmWecaQ5o+6A=
+  dependencies:
+    lodash._reinterpolate "~3.0.0"
+    lodash.templatesettings "^4.0.0"
+
+lodash.templatesettings@^4.0.0:
+  version "4.1.0"
+  resolved "https://verdaccio.tools.moovly.com/lodash.templatesettings/-/lodash.templatesettings-4.1.0.tgz#2b4d4e95ba440d915ff08bc899e4553666713316"
+  integrity sha1-K01OlbpEDZFf8IvImeRVNmZxMxY=
+  dependencies:
+    lodash._reinterpolate "~3.0.0"
+
+lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://verdaccio.tools.moovly.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
-log-symbols@^2.2.0:
-  version "2.2.0"
-  resolved "https://verdaccio.tools.moovly.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
-  integrity sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==
+log-symbols@^1.0.2:
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
+  integrity sha1-N2/3tY6jCGoPCfrMdGF+ylAeGhg=
   dependencies:
-    chalk "^2.0.1"
+    chalk "^1.0.0"
+
+log-update@^1.0.2:
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/log-update/-/log-update-1.0.2.tgz#19929f64c4093d2d2e7075a1dad8af59c296b8d1"
+  integrity sha1-GZKfZMQJPS0ucHWh2tivWcKWuNE=
+  dependencies:
+    ansi-escapes "^1.0.0"
+    cli-cursor "^1.0.2"
 
 log-update@^2.3.0:
   version "2.3.0"
@@ -5094,16 +5764,10 @@ log-update@^2.3.0:
     cli-cursor "^2.0.0"
     wrap-ansi "^3.0.1"
 
-logform@^1.9.1:
-  version "1.10.0"
-  resolved "https://verdaccio.tools.moovly.com/logform/-/logform-1.10.0.tgz#c9d5598714c92b546e23f4e78147c40f1e02012e"
-  integrity sha512-em5ojIhU18fIMOw/333mD+ZLE2fis0EzXl1ZwHx4iQzmpQi6odNiY/t+ITNr33JZhT9/KEaH+UPIipr6a9EjWg==
-  dependencies:
-    colors "^1.2.1"
-    fast-safe-stringify "^2.0.4"
-    fecha "^2.3.3"
-    ms "^2.1.1"
-    triple-beam "^1.2.0"
+long@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
+  integrity sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -5123,6 +5787,16 @@ lower-case@^1.1.0, lower-case@^1.1.1, lower-case@^1.1.2:
   version "1.1.4"
   resolved "https://verdaccio.tools.moovly.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
   integrity sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
+
+lowercase-keys@1.0.0:
+  version "1.0.0"
+  resolved "https://verdaccio.tools.moovly.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
+  integrity sha1-TjNms55/VFfjXxMkvfb4jQv8cwY=
+
+lowercase-keys@^1.0.0:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
+  integrity sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
 
 lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.3:
   version "4.1.3"
@@ -5155,6 +5829,11 @@ map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://verdaccio.tools.moovly.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
+
+map-stream@0.0.7:
+  version "0.0.7"
+  resolved "https://verdaccio.tools.moovly.com/map-stream/-/map-stream-0.0.7.tgz#8a1f07896d82b10926bd3744a2420009f88974a8"
+  integrity sha1-ih8HiW2CsQkmvTdEokIACfiJdKg=
 
 map-visit@^1.0.0:
   version "1.0.0"
@@ -5207,12 +5886,22 @@ memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
     errno "^0.1.3"
     readable-stream "^2.0.1"
 
+memorystream@^0.3.1:
+  version "0.3.1"
+  resolved "https://verdaccio.tools.moovly.com/memorystream/-/memorystream-0.3.1.tgz#86d7090b30ce455d63fbae12dda51a47ddcaf9b2"
+  integrity sha1-htcJCzDORV1j+64S3aUaR93K+bI=
+
 merge-stream@^1.0.1:
   version "1.0.1"
   resolved "https://verdaccio.tools.moovly.com/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
   integrity sha1-QEEgLVCKNCugAXQAjfDCUbjBNeE=
   dependencies:
     readable-stream "^2.0.1"
+
+merge2@^1.2.3:
+  version "1.2.3"
+  resolved "https://verdaccio.tools.moovly.com/merge2/-/merge2-1.2.3.tgz#7ee99dbd69bb6481689253f018488a1b902b0ed5"
+  integrity sha512-gdUU1Fwj5ep4kplwcmftruWofEFt6lfpkkr3h860CXbAB9c3hGb55EOL2ali0Td5oebvW0E1+3Sr+Ur7XfKpRA==
 
 merge@^1.2.0:
   version "1.2.1"
@@ -5297,6 +5986,11 @@ mimic-fn@^1.0.0:
   resolved "https://verdaccio.tools.moovly.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
   integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
 
+mimic-response@^1.0.0:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
+  integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://verdaccio.tools.moovly.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -5307,7 +6001,7 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   resolved "https://verdaccio.tools.moovly.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.0, minimatch@^3.0.3, minimatch@^3.0.4:
+minimatch@^3.0.0, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.2:
   version "3.0.4"
   resolved "https://verdaccio.tools.moovly.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
@@ -5392,14 +6086,14 @@ mkdirp-then@1.2.0:
     any-promise "^1.1.0"
     mkdirp "^0.5.0"
 
-mkdirp@0.5.1, mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
+mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "https://verdaccio.tools.moovly.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
 
-moment@2.22.2, moment@^2.15.2, moment@^2.22.1:
+moment@^2.15.2, moment@^2.22.1:
   version "2.22.2"
   resolved "https://verdaccio.tools.moovly.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
@@ -5488,6 +6182,14 @@ neo-async@^2.5.0:
   resolved "https://verdaccio.tools.moovly.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
+netrc-parser@^3.1.4:
+  version "3.1.6"
+  resolved "https://verdaccio.tools.moovly.com/netrc-parser/-/netrc-parser-3.1.6.tgz#7243c9ec850b8e805b9bdc7eae7b1450d4a96e72"
+  integrity sha512-lY+fmkqSwntAAjfP63jB4z5p5WbuZwyMCD3pInT7dpHU/Gc6Vv90SAC6A0aNiqaRGHiuZFBtiwu+pu8W/Eyotw==
+  dependencies:
+    debug "^3.1.0"
+    execa "^0.10.0"
+
 next-with-apollo@^3.2.2:
   version "3.2.2"
   resolved "https://verdaccio.tools.moovly.com/next-with-apollo/-/next-with-apollo-3.2.2.tgz#708c985d6da9d1898cc9f89414567db5557f60e3"
@@ -5556,17 +6258,17 @@ next@^7.0.2:
     webpackbar "2.6.3"
     write-file-webpack-plugin "4.3.2"
 
+nice-try@^1.0.4:
+  version "1.0.5"
+  resolved "https://verdaccio.tools.moovly.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
+  integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
 no-case@^2.2.0, no-case@^2.3.2:
   version "2.3.2"
   resolved "https://verdaccio.tools.moovly.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
   integrity sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
   dependencies:
     lower-case "^1.1.1"
-
-node-fetch@2.1.2:
-  version "2.1.2"
-  resolved "https://verdaccio.tools.moovly.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
-  integrity sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
 
 node-fetch@^1.0.1:
   version "1.7.3"
@@ -5576,7 +6278,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.2.0:
+node-fetch@^2.1.2, node-fetch@^2.2.0:
   version "2.2.1"
   resolved "https://verdaccio.tools.moovly.com/node-fetch/-/node-fetch-2.2.1.tgz#1fe551e0ded6c45b3b3b937d0fb46f76df718d1e"
   integrity sha512-ObXBpNCD3A/vYQiQtEWl7DuqjAXjfptYFuGHLdPl5U19/6kJuZV+8uMHLrkj3wJrJoyfg4nhgyFixZdaZoAiEQ==
@@ -5681,6 +6383,15 @@ normalize-path@^2.0.1, normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+normalize-url@2.0.1:
+  version "2.0.1"
+  resolved "https://verdaccio.tools.moovly.com/normalize-url/-/normalize-url-2.0.1.tgz#835a9da1551fa26f70e92329069a23aa6574d7e6"
+  integrity sha512-D6MUW4K/VzoJ4rJ01JFKxDrtY1v9wrgzCX5f2qj/lzH1m/lW6MhUZFKerVsnyjOhOsYzI9Kqqak+10l4LvLpMw==
+  dependencies:
+    prepend-http "^2.0.0"
+    query-string "^5.0.1"
+    sort-keys "^2.0.0"
+
 npm-bundled@^1.0.1:
   version "1.0.5"
   resolved "https://verdaccio.tools.moovly.com/npm-bundled/-/npm-bundled-1.0.5.tgz#3c1732b7ba936b3a10325aef616467c0ccbcc979"
@@ -5693,6 +6404,21 @@ npm-packlist@^1.1.6:
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
+
+npm-run-all@4.1.3:
+  version "4.1.3"
+  resolved "https://verdaccio.tools.moovly.com/npm-run-all/-/npm-run-all-4.1.3.tgz#49f15b55a66bb4101664ce270cb18e7103f8f185"
+  integrity sha512-aOG0N3Eo/WW+q6sUIdzcV2COS8VnTZCmdji0VQIAZF3b+a3YWb0AD0vFIyjKec18A7beLGbaQ5jFTNI2bPt9Cg==
+  dependencies:
+    ansi-styles "^3.2.0"
+    chalk "^2.1.0"
+    cross-spawn "^6.0.4"
+    memorystream "^0.3.1"
+    minimatch "^3.0.4"
+    ps-tree "^1.1.0"
+    read-pkg "^3.0.0"
+    shell-quote "^1.6.1"
+    string.prototype.padend "^3.0.0"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -5841,10 +6567,10 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-one-time@0.0.4:
-  version "0.0.4"
-  resolved "https://verdaccio.tools.moovly.com/one-time/-/one-time-0.0.4.tgz#f8cdf77884826fe4dff93e3a9cc37b1e4480742e"
-  integrity sha1-+M33eISCb+Tf+T46nMN7HkSAdC4=
+onetime@^1.0.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
+  integrity sha1-ofeDj4MUxRbwXs78vEzP4EtO14k=
 
 onetime@^2.0.0:
   version "2.0.1"
@@ -5852,6 +6578,13 @@ onetime@^2.0.0:
   integrity sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
   dependencies:
     mimic-fn "^1.0.0"
+
+opn@^3.0.3:
+  version "3.0.3"
+  resolved "https://verdaccio.tools.moovly.com/opn/-/opn-3.0.3.tgz#b6d99e7399f78d65c3baaffef1fb288e9b85243a"
+  integrity sha1-ttmec5n3jWXDuq/+8fsojpuFJDo=
+  dependencies:
+    object-assign "^4.0.1"
 
 optimism@^0.6.6:
   version "0.6.8"
@@ -5879,18 +6612,6 @@ optionator@^0.8.1:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
-
-ora@3.0.0:
-  version "3.0.0"
-  resolved "https://verdaccio.tools.moovly.com/ora/-/ora-3.0.0.tgz#8179e3525b9aafd99242d63cc206fd64732741d0"
-  integrity sha512-LBS97LFe2RV6GJmXBi6OKcETKyklHNMV0xw7BtsVn2MlsgsydyZetSCbCANr+PFLmDyv4KV88nn0eCKza665Mg==
-  dependencies:
-    chalk "^2.3.1"
-    cli-cursor "^2.1.0"
-    cli-spinners "^1.1.0"
-    log-symbols "^2.2.0"
-    strip-ansi "^4.0.0"
-    wcwidth "^1.0.1"
 
 os-browserify@^0.3.0:
   version "0.3.0"
@@ -5924,10 +6645,20 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
+p-cancelable@^0.4.0:
+  version "0.4.1"
+  resolved "https://verdaccio.tools.moovly.com/p-cancelable/-/p-cancelable-0.4.1.tgz#35f363d67d52081c8d9585e37bcceb7e0bbcb2a0"
+  integrity sha512-HNa1A8LvB1kie7cERyy21VNeHb2CWJJYqyyC2o3klWFfMGlFmWv2Z7sFgZH8ZiaYL95ydToKTFVXgMV/Os0bBQ==
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
   integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
+
+p-is-promise@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/p-is-promise/-/p-is-promise-1.1.0.tgz#9c9456989e9f6588017b0434d56097675c3da05e"
+  integrity sha1-nJRWmJ6fZYgBewQ01WCXZ1w9oF4=
 
 p-limit@^1.1.0:
   version "1.3.0"
@@ -5961,6 +6692,13 @@ p-map@^1.1.1:
   version "1.2.0"
   resolved "https://verdaccio.tools.moovly.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
   integrity sha512-r6zKACMNhjPJMTl8KcFH4li//gkrXWfbD6feV8l6doRHlzljFWGJ2AP6iKaCJXyZmAUMOPtvbW7EXkbWO/pLEA==
+
+p-timeout@^2.0.1:
+  version "2.0.1"
+  resolved "https://verdaccio.tools.moovly.com/p-timeout/-/p-timeout-2.0.1.tgz#d8dd1979595d2dc0139e1fe46b8b646cb3cdf038"
+  integrity sha512-88em58dDVB/KzPEx1X0N3LwFfYZPyDc4B6eF38M1rk9VTZMbxXXgjugz8mmwpS9Ox4BDZ+t6t3QP5+/gazweIA==
+  dependencies:
+    p-finally "^1.0.0"
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -6021,6 +6759,14 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
+parse-json@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/parse-json/-/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
+  integrity sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
+  dependencies:
+    error-ex "^1.3.1"
+    json-parse-better-errors "^1.0.1"
+
 parse5@4.0.0:
   version "4.0.0"
   resolved "https://verdaccio.tools.moovly.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
@@ -6045,6 +6791,14 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://verdaccio.tools.moovly.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
+
+password-prompt@^1.0.7:
+  version "1.0.7"
+  resolved "https://verdaccio.tools.moovly.com/password-prompt/-/password-prompt-1.0.7.tgz#8e27748d3400bc9c9140d5ade705dfb7aeb7d91a"
+  integrity sha1-jid0jTQAvJyRQNWt5wXft6632Ro=
+  dependencies:
+    ansi-escapes "^3.1.0"
+    cross-spawn "^6.0.5"
 
 path-browserify@0.0.0:
   version "0.0.0"
@@ -6085,7 +6839,7 @@ path-is-inside@^1.0.1:
   resolved "https://verdaccio.tools.moovly.com/path-is-inside/-/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
   integrity sha1-NlQX3t5EQw0cEa9hAn+s8HS9/FM=
 
-path-key@^2.0.0:
+path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "https://verdaccio.tools.moovly.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
@@ -6116,6 +6870,20 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
+path-type@^3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/path-type/-/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
+  integrity sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==
+  dependencies:
+    pify "^3.0.0"
+
+pause-stream@^0.0.11:
+  version "0.0.11"
+  resolved "https://verdaccio.tools.moovly.com/pause-stream/-/pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445"
+  integrity sha1-/lo0sMvOErWqaitAPuLnO2AvFEU=
+  dependencies:
+    through "~2.3"
+
 pbkdf2@^3.0.3:
   version "3.0.17"
   resolved "https://verdaccio.tools.moovly.com/pbkdf2/-/pbkdf2-3.0.17.tgz#976c206530617b14ebb32114239f7b09336e93a6"
@@ -6131,11 +6899,6 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://verdaccio.tools.moovly.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-
-pify@4.0.1:
-  version "4.0.1"
-  resolved "https://verdaccio.tools.moovly.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
-  integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
@@ -6200,15 +6963,15 @@ prelude-ls@~1.1.2:
   resolved "https://verdaccio.tools.moovly.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
+prepend-http@^2.0.0:
+  version "2.0.0"
+  resolved "https://verdaccio.tools.moovly.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
+  integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://verdaccio.tools.moovly.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
-
-prettier@1.14.3:
-  version "1.14.3"
-  resolved "https://verdaccio.tools.moovly.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
-  integrity sha512-qZDVnCrnpsRJJq5nSsiHCE3BYMED2OtsI+cmzIzF1QIfqm5ALf8tEJcO27zV1gKNKRPdhjO0dNWnrzssDQ1tFg==
 
 pretty-format@^23.6.0:
   version "23.6.0"
@@ -6223,7 +6986,7 @@ pretty-time@^1.1.0:
   resolved "https://verdaccio.tools.moovly.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
-private@^0.1.6, private@^0.1.8:
+private@^0.1.6, private@^0.1.8, private@~0.1.5:
   version "0.1.8"
   resolved "https://verdaccio.tools.moovly.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
@@ -6275,10 +7038,36 @@ prop-types@15.6.2, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+protobufjs@^6.8.6:
+  version "6.8.8"
+  resolved "https://verdaccio.tools.moovly.com/protobufjs/-/protobufjs-6.8.8.tgz#c8b4f1282fd7a90e6f5b109ed11c84af82908e7c"
+  integrity sha512-AAmHtD5pXgZfi7GMpllpO3q1Xw1OYldr+dMUlAnffGTAhqkg72WdmSY71uKBF/JuyiKs8psYbtKrhi0ASCD8qw==
+  dependencies:
+    "@protobufjs/aspromise" "^1.1.2"
+    "@protobufjs/base64" "^1.1.2"
+    "@protobufjs/codegen" "^2.0.4"
+    "@protobufjs/eventemitter" "^1.1.0"
+    "@protobufjs/fetch" "^1.1.0"
+    "@protobufjs/float" "^1.0.2"
+    "@protobufjs/inquire" "^1.1.0"
+    "@protobufjs/path" "^1.1.2"
+    "@protobufjs/pool" "^1.1.0"
+    "@protobufjs/utf8" "^1.1.0"
+    "@types/long" "^4.0.0"
+    "@types/node" "^10.1.0"
+    long "^4.0.0"
+
 prr@~1.0.1:
   version "1.0.1"
   resolved "https://verdaccio.tools.moovly.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
   integrity sha1-0/wRS6BplaRexok/SEzrHXj19HY=
+
+ps-tree@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/ps-tree/-/ps-tree-1.1.0.tgz#b421b24140d6203f1ed3c76996b4427b08e8c014"
+  integrity sha1-tCGyQUDWID8e08dplrRCewjowBQ=
+  dependencies:
+    event-stream "~3.3.0"
 
 pseudomap@^1.0.2:
   version "1.0.2"
@@ -6346,6 +7135,15 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "https://verdaccio.tools.moovly.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+
+query-string@^5.0.1:
+  version "5.1.1"
+  resolved "https://verdaccio.tools.moovly.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
+  integrity sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    object-assign "^4.1.0"
+    strict-uri-encode "^1.0.0"
 
 querystring-es3@^0.2.0:
   version "0.2.1"
@@ -6442,7 +7240,7 @@ react-display-name@^0.2.4:
   resolved "https://verdaccio.tools.moovly.com/react-display-name/-/react-display-name-0.2.4.tgz#e2a670b81d79a2204335510c01246f4c92ff12cf"
   integrity sha512-zvU6iouW+SWwHTyThwxGICjJYCMZFk/6r/+jmOdC7ntQoPlS/Pqb81MkxaMf2bHTSq9TN3K3zX2/ayMW/jCtyA==
 
-react-dom@^16.6.1:
+react-dom@^16.4.0, react-dom@^16.6.1:
   version "16.6.1"
   resolved "https://verdaccio.tools.moovly.com/react-dom/-/react-dom-16.6.1.tgz#5476e08694ae504ae385a28b62ecc4fe3a29add9"
   integrity sha512-zm+wBuEMGm009Wt1uE4Zw5KcXOW7qC4E/xW/fpJsCsbOco4U/R84u+DzzO/S4SYSdNBcqcaulcp4w3FXl8pImw==
@@ -6492,7 +7290,7 @@ react-transition-group@^2.5.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.3.2, react@^16.6.1:
+react@^16.3.2, react@^16.4.0, react@^16.6.1:
   version "16.6.1"
   resolved "https://verdaccio.tools.moovly.com/react/-/react-16.6.1.tgz#ee2aef4f0a09e494594882029821049772f915fe"
   integrity sha512-OtawJThYlvRgm9BXK+xTL7BIlDx8vv21j+fbQDjRRUyok6y7NyjlweGorielTahLZHYIdKUoK2Dp9ByVWuMqxw==
@@ -6527,6 +7325,15 @@ read-pkg@^2.0.0:
     load-json-file "^2.0.0"
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
+
+read-pkg@^3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/read-pkg/-/read-pkg-3.0.0.tgz#9cbc686978fee65d16c00e2b19c237fcf6e38389"
+  integrity sha1-nLxoaXj+5l0WwA4rGcI3/Pbjg4k=
+  dependencies:
+    load-json-file "^4.0.0"
+    normalize-package-data "^2.3.2"
+    path-type "^3.0.0"
 
 "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.6:
   version "2.3.6"
@@ -6566,6 +7373,23 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
+recast@^0.15.3:
+  version "0.15.5"
+  resolved "https://verdaccio.tools.moovly.com/recast/-/recast-0.15.5.tgz#6871177ee26720be80d7624e4283d5c855a5cb0b"
+  integrity sha512-nkAYNqarh73cMWRKFiPQ8I9dOLFvFk6SnG8u/LUlOYfArDOD/EjsVRAs860TlBLrpxqAXHGET/AUAVjdEymL5w==
+  dependencies:
+    ast-types "0.11.5"
+    esprima "~4.0.0"
+    private "~0.1.5"
+    source-map "~0.6.1"
+
+rechoir@^0.6.2:
+  version "0.6.2"
+  resolved "https://verdaccio.tools.moovly.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
+  integrity sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
+  dependencies:
+    resolve "^1.1.6"
+
 recursive-copy@2.0.6:
   version "2.0.6"
   resolved "https://verdaccio.tools.moovly.com/recursive-copy/-/recursive-copy-2.0.6.tgz#d590f9eb5f165b96a1b80bc8f9cbcb5c6f9c89e9"
@@ -6581,6 +7405,13 @@ recursive-copy@2.0.6:
     pify "^2.3.0"
     promise "^7.0.1"
     slash "^1.0.0"
+
+redeyed@~2.1.0:
+  version "2.1.1"
+  resolved "https://verdaccio.tools.moovly.com/redeyed/-/redeyed-2.1.1.tgz#8984b5815d99cb220469c99eeeffe38913e6cc0b"
+  integrity sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=
+  dependencies:
+    esprima "~4.0.0"
 
 reflect.ownkeys@^0.2.0:
   version "0.2.0"
@@ -6598,6 +7429,11 @@ regenerate@^1.4.0:
   version "1.4.0"
   resolved "https://verdaccio.tools.moovly.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
   integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
+
+regenerator-runtime@^0.10.5:
+  version "0.10.5"
+  resolved "https://verdaccio.tools.moovly.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+  integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
@@ -6693,7 +7529,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@2.88.0, request@^2.87.0:
+request@^2.87.0:
   version "2.88.0"
   resolved "https://verdaccio.tools.moovly.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
@@ -6746,11 +7582,6 @@ resolve-from@^3.0.0:
   resolved "https://verdaccio.tools.moovly.com/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
   integrity sha1-six699nWiBvItuZTM17rywoYh0g=
 
-resolve-from@^4.0.0:
-  version "4.0.0"
-  resolved "https://verdaccio.tools.moovly.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
-  integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
-
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://verdaccio.tools.moovly.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
@@ -6768,12 +7599,27 @@ resolve@1.5.0:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.3.2, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
+resolve@^1.1.6, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
   version "1.8.1"
   resolved "https://verdaccio.tools.moovly.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   integrity sha512-AicPrAC7Qu1JxPCZ9ZgCZlY35QgFnNqc+0LtbRNxnVw4TXvjQ72wnuL9JQcEBgXkI9JM8MsT9kaQoHcpCRJOYA==
   dependencies:
     path-parse "^1.0.5"
+
+responselike@1.0.2:
+  version "1.0.2"
+  resolved "https://verdaccio.tools.moovly.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"
+  integrity sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=
+  dependencies:
+    lowercase-keys "^1.0.0"
+
+restore-cursor@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/restore-cursor/-/restore-cursor-1.0.1.tgz#34661f46886327fed2991479152252df92daa541"
+  integrity sha1-NGYfRohjJ/7SmRR5FSJS35LapUE=
+  dependencies:
+    exit-hook "^1.0.0"
+    onetime "^1.0.0"
 
 restore-cursor@^2.0.0:
   version "2.0.0"
@@ -6787,6 +7633,11 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://verdaccio.tools.moovly.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+
+retry@0.12.0:
+  version "0.12.0"
+  resolved "https://verdaccio.tools.moovly.com/retry/-/retry-0.12.0.tgz#1b42a6266a21f07421d1b0b54b7dc167b01c013b"
+  integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
 
 rimraf@^2.2.8, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.2"
@@ -6822,6 +7673,13 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   integrity sha1-6Eg5bwV9Ij8kOGkkYY4laUFh7Ec=
   dependencies:
     aproba "^1.1.1"
+
+rxjs@^6.1.0:
+  version "6.3.3"
+  resolved "https://verdaccio.tools.moovly.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
+  integrity sha512-JTWmoY9tWCs7zvIk/CvRjhjGaOd+OVBM987mxFo+OW66cGpdKjZcpmc74ES1sB//7Kl/PAe8+wEakuhG4pcgOw==
+  dependencies:
+    tslib "^1.9.0"
 
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
@@ -6993,6 +7851,15 @@ shell-quote@^1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
+shelljs@0.7.7:
+  version "0.7.7"
+  resolved "https://verdaccio.tools.moovly.com/shelljs/-/shelljs-0.7.7.tgz#b2f5c77ef97148f4b4f6e22682e10bba8667cff1"
+  integrity sha1-svXHfvlxSPS09uImguELuoZnz/E=
+  dependencies:
+    glob "^7.0.0"
+    interpret "^1.0.0"
+    rechoir "^0.6.2"
+
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://verdaccio.tools.moovly.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
@@ -7003,13 +7870,6 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://verdaccio.tools.moovly.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
-simple-swizzle@^0.2.2:
-  version "0.2.2"
-  resolved "https://verdaccio.tools.moovly.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
-  integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
-  dependencies:
-    is-arrayish "^0.3.1"
-
 sisteransi@^0.1.1:
   version "0.1.1"
   resolved "https://verdaccio.tools.moovly.com/sisteransi/-/sisteransi-0.1.1.tgz#5431447d5f7d1675aac667ccd0b865a4994cb3ce"
@@ -7019,6 +7879,11 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
+
+slice-ansi@0.0.4:
+  version "0.0.4"
+  resolved "https://verdaccio.tools.moovly.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
+  integrity sha1-7b+JA/ZvfOL46v1s7tZeJkyDGzU=
 
 slice-ansi@1.0.0:
   version "1.0.0"
@@ -7063,6 +7928,13 @@ snapdragon@^0.8.1:
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
     use "^3.1.0"
+
+sort-keys@^2.0.0:
+  version "2.0.0"
+  resolved "https://verdaccio.tools.moovly.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
+  integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
+  dependencies:
+    is-plain-obj "^1.0.0"
 
 source-list-map@^2.0.0:
   version "2.0.1"
@@ -7148,6 +8020,13 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
+split@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
+  integrity sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==
+  dependencies:
+    through "2"
+
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://verdaccio.tools.moovly.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
@@ -7181,11 +8060,6 @@ ssri@^6.0.0:
   integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
   dependencies:
     figgy-pudding "^3.5.1"
-
-stack-trace@0.0.x:
-  version "0.0.10"
-  resolved "https://verdaccio.tools.moovly.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
-  integrity sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA=
 
 stack-utils@^1.0.1:
   version "1.0.1"
@@ -7235,6 +8109,14 @@ stream-browserify@^2.0.1:
     inherits "~2.0.1"
     readable-stream "^2.0.2"
 
+stream-combiner@^0.2.2:
+  version "0.2.2"
+  resolved "https://verdaccio.tools.moovly.com/stream-combiner/-/stream-combiner-0.2.2.tgz#aec8cbac177b56b6f4fa479ced8c1912cee52858"
+  integrity sha1-rsjLrBd7Vrb0+kec7YwZEs7lKFg=
+  dependencies:
+    duplexer "~0.1.1"
+    through "~2.3.4"
+
 stream-each@^1.1.0:
   version "1.2.3"
   resolved "https://verdaccio.tools.moovly.com/stream-each/-/stream-each-1.2.3.tgz#ebe27a0c389b04fbcc233642952e10731afa9bae"
@@ -7258,6 +8140,11 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
   integrity sha1-1cdSgl5TZ+eG944Y5EXqIjoVWVI=
+
+strict-uri-encode@^1.0.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+  integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
 string-hash@1.1.3:
   version "1.1.3"
@@ -7289,6 +8176,15 @@ string-width@^1.0.1:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
+string.prototype.padend@^3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/string.prototype.padend/-/string.prototype.padend-3.0.0.tgz#f3aaef7c1719f170c5eab1c32bf780d96e21f2f0"
+  integrity sha1-86rvfBcZ8XDF6rHDK/eA2W4h8vA=
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.4.3"
+    function-bind "^1.0.2"
+
 string.prototype.trim@^1.1.2:
   version "1.1.2"
   resolved "https://verdaccio.tools.moovly.com/string.prototype.trim/-/string.prototype.trim-1.1.2.tgz#d04de2c89e137f4d7d206f086b5ed2fae6be8cea"
@@ -7319,6 +8215,13 @@ strip-ansi@^4.0.0:
   dependencies:
     ansi-regex "^3.0.0"
 
+strip-ansi@^5.0.0:
+  version "5.0.0"
+  resolved "https://verdaccio.tools.moovly.com/strip-ansi/-/strip-ansi-5.0.0.tgz#f78f68b5d0866c20b2c9b8c61b5298508dc8756f"
+  integrity sha512-Uu7gQyZI7J7gn5qLn1Np3G9vcYGTVqB+lFTytnDJv83dd8T22aGH451P3jueT2/QemInJDfxHB5Tde5OzgG1Ow==
+  dependencies:
+    ansi-regex "^4.0.0"
+
 strip-bom@3.0.0, strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://verdaccio.tools.moovly.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
@@ -7342,11 +8245,12 @@ strip-json-comments@~2.0.1:
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
 styled-components@^4.0.3:
-  version "4.0.3"
-  resolved "https://verdaccio.tools.moovly.com/styled-components/-/styled-components-4.0.3.tgz#6c1a95a93857aa613fdfc26ad40899217100d8c3"
-  integrity sha512-oEZovK4xMGAMhOA9h74dCYJsp3IwUFhEvtYe4gwTy0cBZ3a17YMxBfM2oXsEoED9f+HCM5UQZW2h297n4u8hUw==
+  version "4.1.1"
+  resolved "https://verdaccio.tools.moovly.com/styled-components/-/styled-components-4.1.1.tgz#943922048fae556e286bcbfdd29da4f1399446bc"
+  integrity sha512-UzT/qyoOyKpYooeLdwKrPHZ85R8KWl8i0fbyH9I3z6B2WT9uGDCV7J4kbfKsBeSWFD9EytBriEODOkybcUFD/Q==
   dependencies:
     "@emotion/is-prop-valid" "^0.6.8"
+    "@emotion/unitless" "^0.7.0"
     babel-plugin-styled-components ">= 1"
     css-to-react-native "^2.2.2"
     memoize-one "^4.0.0"
@@ -7397,12 +8301,20 @@ supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-supports-color@^5.3.0, supports-color@^5.5.0:
+supports-color@^5.0.0, supports-color@^5.3.0, supports-color@^5.4.0, supports-color@^5.5.0:
   version "5.5.0"
   resolved "https://verdaccio.tools.moovly.com/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+supports-hyperlinks@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/supports-hyperlinks/-/supports-hyperlinks-1.0.1.tgz#71daedf36cc1060ac5100c351bb3da48c29c0ef7"
+  integrity sha512-HHi5kVSefKaJkGYXbDuKbUGRVxqnWGn3J2e39CYcNJEfWciGq2zYtOhXLTlvrOZW1QU7VX67w7fMmWafHX9Pfw==
+  dependencies:
+    has-flag "^2.0.0"
+    supports-color "^5.0.0"
 
 swap-case@^1.1.0:
   version "1.1.2"
@@ -7412,7 +8324,7 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-symbol-observable@^1.0.2:
+symbol-observable@^1.0.2, symbol-observable@^1.1.0:
   version "1.2.0"
   resolved "https://verdaccio.tools.moovly.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
@@ -7486,11 +8398,6 @@ test-exclude@^4.2.1:
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
 
-text-hex@1.0.x:
-  version "1.0.0"
-  resolved "https://verdaccio.tools.moovly.com/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
-  integrity sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==
-
 throat@^4.0.0:
   version "4.1.0"
   resolved "https://verdaccio.tools.moovly.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
@@ -7503,6 +8410,16 @@ through2@^2.0.0:
   dependencies:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
+
+through@2, through@^2.3.8, through@~2.3, through@~2.3.4:
+  version "2.3.8"
+  resolved "https://verdaccio.tools.moovly.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
+timed-out@^4.0.1:
+  version "4.0.1"
+  resolved "https://verdaccio.tools.moovly.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
+  integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
 
 timers-browserify@^2.0.4:
   version "2.0.10"
@@ -7579,15 +8496,15 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
+treeify@^1.1.0:
+  version "1.1.0"
+  resolved "https://verdaccio.tools.moovly.com/treeify/-/treeify-1.1.0.tgz#4e31c6a463accd0943879f30667c4fdaff411bb8"
+  integrity sha512-1m4RA7xVAJrSGrrXGs0L3YTwyvBs2S8PbRHaLZAkFw7JR8oIFwYtysxlBZhYIa7xSyiYJKZ3iGrrk55cGA3i9A==
+
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://verdaccio.tools.moovly.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
-
-triple-beam@^1.2.0, triple-beam@^1.3.0:
-  version "1.3.0"
-  resolved "https://verdaccio.tools.moovly.com/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
-  integrity sha512-XrHUvV5HpdLmIj4uVMxHggLbFSZYIn7HEWsqePZcI50pco+MPqJ50wMGY794X7AOOhxOBAjbkqfAbEe/QMp2Lw==
 
 ts-jest@^23.10.4:
   version "23.10.4"
@@ -7603,12 +8520,7 @@ ts-jest@^23.10.4:
     semver "^5.5"
     yargs-parser "10.x"
 
-ts-log@2.1.3:
-  version "2.1.3"
-  resolved "https://verdaccio.tools.moovly.com/ts-log/-/ts-log-2.1.3.tgz#9e30aca1baffe7693a2e4142b8f07ecb01cb8340"
-  integrity sha512-VIk9+hzE80UjhJcSANst8LGRBpfNh32y9d3LVDMtEqcEb1x0hB71IO0aObNcLJ5VpK5tKeF9uI4pwEco03SkwA==
-
-tslib@1.9.3, tslib@^1.9.0:
+tslib@^1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
   resolved "https://verdaccio.tools.moovly.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
@@ -7744,6 +8656,11 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
+universalify@^0.1.0:
+  version "0.1.2"
+  resolved "https://verdaccio.tools.moovly.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
+  integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+
 unset-value@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/unset-value/-/unset-value-1.0.0.tgz#8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559"
@@ -7781,6 +8698,18 @@ urix@^0.1.0:
   resolved "https://verdaccio.tools.moovly.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
+url-parse-lax@^3.0.0:
+  version "3.0.0"
+  resolved "https://verdaccio.tools.moovly.com/url-parse-lax/-/url-parse-lax-3.0.0.tgz#16b5cafc07dbe3676c1b1999177823d6503acb0c"
+  integrity sha1-FrXK/Afb42dsGxmZF3gj1lA6yww=
+  dependencies:
+    prepend-http "^2.0.0"
+
+url-to-options@^1.0.1:
+  version "1.0.1"
+  resolved "https://verdaccio.tools.moovly.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
+  integrity sha1-FQWgOiiaSMvXpDTvuu7FBV9WM6k=
+
 url@0.11.0, url@^0.11.0:
   version "0.11.0"
   resolved "https://verdaccio.tools.moovly.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
@@ -7799,7 +8728,7 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   resolved "https://verdaccio.tools.moovly.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-util.promisify@^1.0.0:
+util.promisify@1.0.0, util.promisify@^1.0.0:
   version "1.0.0"
   resolved "https://verdaccio.tools.moovly.com/util.promisify/-/util.promisify-1.0.0.tgz#440f7165a459c9a16dc145eb8e72f35687097030"
   integrity sha512-i+6qA2MPhvoKLuxnJNpXAGhg7HphQOSUq2LKMZD0m15EiskXUkMvKdF4Uui0WYeCUGea+o2cw/ZuwehtfsrNkA==
@@ -7825,11 +8754,6 @@ uuid@^3.1.0, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://verdaccio.tools.moovly.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-
-valid-url@1.0.9:
-  version "1.0.9"
-  resolved "https://verdaccio.tools.moovly.com/valid-url/-/valid-url-1.0.9.tgz#1c14479b40f1397a75782f115e4086447433a200"
-  integrity sha1-HBRHm0DxOXp1eC8RXkCGRHQzogA=
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
@@ -7890,13 +8814,6 @@ watchpack@^1.5.0:
     chokidar "^2.0.2"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-
-wcwidth@^1.0.1:
-  version "1.0.1"
-  resolved "https://verdaccio.tools.moovly.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
-  integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
-  dependencies:
-    defaults "^1.0.3"
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
@@ -8007,11 +8924,6 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   dependencies:
     iconv-lite "0.4.24"
 
-whatwg-fetch@2.0.4:
-  version "2.0.4"
-  resolved "https://verdaccio.tools.moovly.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
-  integrity sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
-
 whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "https://verdaccio.tools.moovly.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
@@ -8059,28 +8971,12 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-winston-transport@^4.2.0:
-  version "4.2.0"
-  resolved "https://verdaccio.tools.moovly.com/winston-transport/-/winston-transport-4.2.0.tgz#a20be89edf2ea2ca39ba25f3e50344d73e6520e5"
-  integrity sha512-0R1bvFqxSlK/ZKTH86nymOuKv/cT1PQBMuDdA7k7f0S9fM44dNH6bXnuxwXPrN8lefJgtZq08BKdyZ0DZIy/rg==
+widest-line@^2.0.0:
+  version "2.0.1"
+  resolved "https://verdaccio.tools.moovly.com/widest-line/-/widest-line-2.0.1.tgz#7438764730ec7ef4381ce4df82fb98a53142a3fc"
+  integrity sha512-Ba5m9/Fa4Xt9eb2ELXt77JxVDV8w7qQrH0zS/TWSJdLyAwQjWoOzpzj5lwVftDz6n/EOu3tNACS84v509qwnJA==
   dependencies:
-    readable-stream "^2.3.6"
-    triple-beam "^1.2.0"
-
-winston@3.1.0:
-  version "3.1.0"
-  resolved "https://verdaccio.tools.moovly.com/winston/-/winston-3.1.0.tgz#80724376aef164e024f316100d5b178d78ac5331"
-  integrity sha512-FsQfEE+8YIEeuZEYhHDk5cILo1HOcWkGwvoidLrDgPog0r4bser1lEIOco2dN9zpDJ1M88hfDgZvxe5z4xNcwg==
-  dependencies:
-    async "^2.6.0"
-    diagnostics "^1.1.1"
-    is-stream "^1.1.0"
-    logform "^1.9.1"
-    one-time "0.0.4"
-    readable-stream "^2.3.6"
-    stack-trace "0.0.x"
-    triple-beam "^1.3.0"
-    winston-transport "^4.2.0"
+    string-width "^2.1.1"
 
 wordwrap@~0.0.2:
   version "0.0.3"
@@ -8112,6 +9008,15 @@ wrap-ansi@^3.0.1:
   resolved "https://verdaccio.tools.moovly.com/wrap-ansi/-/wrap-ansi-3.0.1.tgz#288a04d87eda5c286e060dfe8f135ce8d007f8ba"
   integrity sha1-KIoE2H7aXChuBg3+jxNc6NAH+Lo=
   dependencies:
+    string-width "^2.1.1"
+    strip-ansi "^4.0.0"
+
+wrap-ansi@^4.0.0:
+  version "4.0.0"
+  resolved "https://verdaccio.tools.moovly.com/wrap-ansi/-/wrap-ansi-4.0.0.tgz#b3570d7c70156159a2d42be5cc942e957f7b1131"
+  integrity sha512-uMTsj9rDb0/7kk1PbcbCcwvHUxp60fGDB/NNXpVa0Q+ic/e7y5+BwTxKfQ33VYgDppSwi/FBzpetYzo8s6tfbg==
+  dependencies:
+    ansi-styles "^3.2.0"
     string-width "^2.1.1"
     strip-ansi "^4.0.0"
 
