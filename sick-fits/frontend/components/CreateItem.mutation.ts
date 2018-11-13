@@ -1,10 +1,7 @@
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import {
-  CreateItem as CreateItemResult,
-  CreateItemVariables
-} from './__generated__/types';
+import { CreateItem, CreateItemVariables } from './__generated__/types';
 
 export const CREATE_ITEM_MUTATION = gql`
   mutation CreateItem($data: ItemCreateInput!) {
@@ -15,6 +12,6 @@ export const CREATE_ITEM_MUTATION = gql`
 `;
 
 export class CreateItemMutation extends Mutation<
-  CreateItemResult,
+  CreateItem,
   CreateItemVariables
 > {}
