@@ -1,6 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga';
 
-import Query from './resolvers/Query';
+import Query, { MoovlyUser } from './resolvers/Query';
 import Mutation from './resolvers/Mutation';
 import db from './db';
 import { prisma } from './generated/prisma-client';
@@ -14,11 +14,11 @@ export interface Ctx extends ContextParameters {
 function createServer() {
   return new GraphQLServer({
     typeDefs: 'src/schemas/schema.graphql',
-
     // @ts-ignore
     resolvers: {
       Mutation,
       Query,
+      MoovlyUser
     },
     resolverValidationOptions: {
       requireResolversForResolveType: false,

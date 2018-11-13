@@ -60,6 +60,10 @@ export interface Node {
 
 export interface Query {
   items: Item[];
+
+  group: MoovlyUser[];
+
+  seats: Seat[];
 }
 
 export interface Item extends Node {
@@ -74,6 +78,46 @@ export interface Item extends Node {
   largeImage?: string | null;
 
   price: number;
+}
+
+export interface MoovlyUser {
+  id?: string | null;
+
+  user_id?: string | null;
+
+  group_id?: string | null;
+
+  info?: Info | null;
+
+  created_at?: string | null;
+
+  created_by?: string | null;
+
+  seatInfo?: Seat | null;
+}
+
+export interface Info {
+  email?: string | null;
+
+  pending_email?: string | null;
+
+  first_name?: string | null;
+
+  name?: string | null;
+}
+
+export interface Seat {
+  id?: string | null;
+
+  user_id?: string | null;
+
+  group_id?: string | null;
+
+  license_plan_code?: string | null;
+
+  assigned_by?: string | null;
+
+  created_at?: string | null;
 }
 
 export interface Mutation {
@@ -123,10 +167,24 @@ export interface CreateItemMutationArgs {
 export namespace QueryResolvers {
   export interface Resolvers<Context = any, TypeParent = never> {
     items?: ItemsResolver<Item[], TypeParent, Context>;
+
+    group?: GroupResolver<MoovlyUser[], TypeParent, Context>;
+
+    seats?: SeatsResolver<Seat[], TypeParent, Context>;
   }
 
   export type ItemsResolver<
     R = Item[],
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type GroupResolver<
+    R = MoovlyUser[],
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type SeatsResolver<
+    R = Seat[],
     Parent = never,
     Context = any
   > = Resolver<R, Parent, Context>;
@@ -175,6 +233,144 @@ export namespace ItemResolvers {
   export type PriceResolver<
     R = number,
     Parent = Item,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace MoovlyUserResolvers {
+  export interface Resolvers<Context = any, TypeParent = MoovlyUser> {
+    id?: IdResolver<string | null, TypeParent, Context>;
+
+    user_id?: UserIdResolver<string | null, TypeParent, Context>;
+
+    group_id?: GroupIdResolver<string | null, TypeParent, Context>;
+
+    info?: InfoResolver<Info | null, TypeParent, Context>;
+
+    created_at?: CreatedAtResolver<string | null, TypeParent, Context>;
+
+    created_by?: CreatedByResolver<string | null, TypeParent, Context>;
+
+    seatInfo?: SeatInfoResolver<Seat | null, TypeParent, Context>;
+  }
+
+  export type IdResolver<
+    R = string | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type UserIdResolver<
+    R = string | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type GroupIdResolver<
+    R = string | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type InfoResolver<
+    R = Info | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type CreatedAtResolver<
+    R = string | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type CreatedByResolver<
+    R = string | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type SeatInfoResolver<
+    R = Seat | null,
+    Parent = MoovlyUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace InfoResolvers {
+  export interface Resolvers<Context = any, TypeParent = Info> {
+    email?: EmailResolver<string | null, TypeParent, Context>;
+
+    pending_email?: PendingEmailResolver<string | null, TypeParent, Context>;
+
+    first_name?: FirstNameResolver<string | null, TypeParent, Context>;
+
+    name?: NameResolver<string | null, TypeParent, Context>;
+  }
+
+  export type EmailResolver<
+    R = string | null,
+    Parent = Info,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PendingEmailResolver<
+    R = string | null,
+    Parent = Info,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type FirstNameResolver<
+    R = string | null,
+    Parent = Info,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type NameResolver<
+    R = string | null,
+    Parent = Info,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace SeatResolvers {
+  export interface Resolvers<Context = any, TypeParent = Seat> {
+    id?: IdResolver<string | null, TypeParent, Context>;
+
+    user_id?: UserIdResolver<string | null, TypeParent, Context>;
+
+    group_id?: GroupIdResolver<string | null, TypeParent, Context>;
+
+    license_plan_code?: LicensePlanCodeResolver<
+      string | null,
+      TypeParent,
+      Context
+    >;
+
+    assigned_by?: AssignedByResolver<string | null, TypeParent, Context>;
+
+    created_at?: CreatedAtResolver<string | null, TypeParent, Context>;
+  }
+
+  export type IdResolver<
+    R = string | null,
+    Parent = Seat,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type UserIdResolver<
+    R = string | null,
+    Parent = Seat,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type GroupIdResolver<
+    R = string | null,
+    Parent = Seat,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type LicensePlanCodeResolver<
+    R = string | null,
+    Parent = Seat,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type AssignedByResolver<
+    R = string | null,
+    Parent = Seat,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type CreatedAtResolver<
+    R = string | null,
+    Parent = Seat,
     Context = any
   > = Resolver<R, Parent, Context>;
 }

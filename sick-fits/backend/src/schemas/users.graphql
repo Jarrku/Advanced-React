@@ -1,0 +1,30 @@
+type Query {
+  group: [MoovlyUser!]!
+  seats: [Seat!]!
+}
+
+type Seat {
+  id: String
+  user_id: String
+  group_id: String
+  license_plan_code: String
+  assigned_by: String
+  created_at: String
+}
+
+type MoovlyUser {
+  id: String
+  user_id: String
+  group_id: String
+  info: Info
+  created_at: String
+  created_by: String
+  seatInfo: Seat
+}
+
+type Info {
+  email: String
+  pending_email: String
+  first_name: String
+  name: String
+}

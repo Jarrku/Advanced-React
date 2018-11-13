@@ -1,3 +1,4 @@
 # import Query.*, Mutation.* from "items.graphql"
+# import Query.* from "users.graphql"
 
 scalar Nil
