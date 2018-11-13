@@ -22,8 +22,8 @@ class CreateItem extends React.Component<{}, State> {
   state = {
     title: 'Cool Shoes',
     description: 'I love those dogs',
-    image: 'dog.jpg',
-    largeImage: 'large-dog.jpg',
+    image: '',
+    largeImage: '',
     price: 2000
   };
 
@@ -33,6 +33,29 @@ class CreateItem extends React.Component<{}, State> {
     const { name, type, value } = event.currentTarget;
     const val = type === 'number' ? parseFloat(value) : value;
     this.setState({ [name]: val });
+  };
+
+  uploadFiles = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { files } = event.currentTarget;
+    if (!files) return;
+
+    const data = new FormData();
+    data.append('file', files[0]);
+    data.append('upload_preset', 'sickfits');
+
+    const res = await fetch(
+      `https://api.cloudinary.com/v1_1/simonvdb/image/upload`,
+      {
+        method: 'POST',
+        body: data
+      }
+    );
+
+    const file = await res.json();
+    this.setState({
+      image: file.secure_url,
+      largeImage: file.eager[0].url
+    });
   };
 
   render() {
@@ -56,6 +79,24 @@ class CreateItem extends React.Component<{}, State> {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <label htmlFor="file">
+                Image
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  placeholder="Upload an image"
+                  required
+                  onChange={this.uploadFiles}
+                />
+                {this.state.image && (
+                  <img
+                    src={this.state.image}
+                    alt="Upload Preview"
+                    width="200px"
+                  />
+                )}
+              </label>
               <label htmlFor="title">
                 Title
                 <input
