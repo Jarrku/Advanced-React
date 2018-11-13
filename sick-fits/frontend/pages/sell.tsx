@@ -1,6 +1,8 @@
+import CreateItem from '../components/CreateItem';
+
 const Sell: React.SFC = props => (
   <div>
-    <p>Sell!</p>
+    <CreateItem />
   </div>
 );
 
