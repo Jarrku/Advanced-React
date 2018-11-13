@@ -8,7 +8,7 @@ module.exports = {
     // optional if you only have one schema
     {
       schema: 'backend', // reference the previously defined schema
-      includes: ['**/*.tsx'], // load queries from .tsx files
+      includes: ['**/*.tsx', '**/*.ts'], // load queries from .tsx files
       excludes: ['node_modules/**'] // don't include any matching files from node_modules
     }
   ]
