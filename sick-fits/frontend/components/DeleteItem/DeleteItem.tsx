@@ -5,12 +5,11 @@ import {
   DELETE_ITEM_MUTATION
 } from './DeleteItem.mutation';
 
-import {
-  DeleteItem as DeleteItemResult,
-  AllItems
-} from './__generated__/types';
+import { DeleteItem as DeleteItemResult } from './__generated__/DeleteItem';
+import { AllItems } from '../__generated__/AllItems';
+
 import { MutationUpdaterFn } from 'apollo-boost';
-import { ALL_ITEMS_QUERY } from './AllItems.query';
+import { ALL_ITEMS_QUERY } from '../AllItems.query';
 
 interface Props {
   id: string;

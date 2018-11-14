@@ -1,23 +1,23 @@
 import * as React from 'react';
 import { MutationFn } from 'react-apollo';
 
+import Form from '../styles/Form';
+import Error from '../ErrorMessage';
+
+import {
+  UpdateItem as UpdateItemResult,
+  UpdateItemVariables
+} from './__generated__/UpdateItem';
+
+import { SingleItemQuery, SINGLE_ITEM_QUERY } from './SingleItem.query';
+
 import {
   UpdateItemMutation,
   UPDATE_ITEM_MUTATION
 } from './UpdateItem.mutation';
 
-import { SingleItemQuery, SINGLE_ITEM_QUERY } from './SingleItem.query';
-
-import Form from './styles/Form';
-import Error from './ErrorMessage';
-
-import {
-  UpdateItemVariables,
-  UpdateItem as UpdateItemResult
-} from './__generated__/types';
-
 interface Props {
-  id?: string;
+  id: string;
 }
 
 interface State {
@@ -64,7 +64,7 @@ class UpdateItem extends React.Component<Props, State> {
     return (
       <SingleItemQuery
         query={SINGLE_ITEM_QUERY}
-        variables={{ id: this.props.id! }}
+        variables={{ id: this.props.id }}
       >
         {({ data, error, loading }) => {
           if (loading) return <p>Loading...</p>;

@@ -1,7 +1,7 @@
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import { DeleteItem, DeleteItemVariables } from './__generated__/types';
+import { DeleteItem, DeleteItemVariables } from './__generated__/DeleteItem';
 
 export const DELETE_ITEM_MUTATION = gql`
   mutation DeleteItem($id: ID!) {

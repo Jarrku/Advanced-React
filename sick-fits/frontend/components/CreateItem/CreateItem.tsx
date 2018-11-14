@@ -6,8 +6,8 @@ import {
   CREATE_ITEM_MUTATION
 } from './CreateItem.mutation';
 
-import Form from './styles/Form';
-import Error from './ErrorMessage';
+import Form from '../styles/Form';
+import Error from '../ErrorMessage';
 
 interface State {
   [x: string]: any;

@@ -9,7 +9,7 @@
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
     "heroku-postbuild": "next build",
-    "types": "apollo codegen:generate --addTypename --target typescript --outputFlat ./components/__generated__/types.ts "
+    "types": "apollo codegen:generate --addTypename --target typescript --globalTypesFile='components/__generated__/globalTypes.ts'"
   },
   "author": "",
   "license": "ISC",

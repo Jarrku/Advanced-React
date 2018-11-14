@@ -1,7 +1,6 @@
-import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-
-import { UpdateItem, UpdateItemVariables } from './__generated__/types';
+import { Mutation } from 'react-apollo';
+import { UpdateItem, UpdateItemVariables } from './__generated__/UpdateItem';
 
 export const UPDATE_ITEM_MUTATION = gql`
   mutation UpdateItem($data: ItemUpdatesInput!) {

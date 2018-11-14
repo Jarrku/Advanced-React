@@ -1,6 +1,6 @@
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import { SingleItem, SingleItemVariables } from './__generated__/types';
+import { SingleItem, SingleItemVariables } from './__generated__/SingleItem';
 
 export const SINGLE_ITEM_QUERY = gql`
   query SingleItem($id: ID!) {

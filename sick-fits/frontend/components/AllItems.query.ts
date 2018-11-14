@@ -1,6 +1,6 @@
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import { AllItems } from './__generated__/types';
+import { AllItems } from './__generated__/AllItems';
 
 export const ALL_ITEMS_QUERY = gql`
   query AllItems {

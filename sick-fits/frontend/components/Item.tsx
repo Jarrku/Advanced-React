@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 import ItemStyles from './styles/ItemStyles';
 import Title from './styles/Title';
-import { AllItems_items } from './__generated__/types';
+import { AllItems_items } from './__generated__/AllItems';
 import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
-import DeleteItem from './DeleteItem';
+import DeleteItem from './DeleteItem/DeleteItem';
 
 interface Props {
   item: AllItems_items;
