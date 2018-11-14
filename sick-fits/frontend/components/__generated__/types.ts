@@ -71,6 +71,9 @@ export interface SingleItemVariables {
 export interface UpdateItem_updateItem {
   __typename: "Item";
   id: string;
+  title: string;
+  description: string;
+  price: number;
 }
 
 export interface UpdateItem {
