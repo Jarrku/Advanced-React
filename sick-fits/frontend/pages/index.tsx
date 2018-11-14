@@ -1,8 +1,14 @@
 import Items from '../components/Items';
 
-const Home: React.SFC = props => (
+interface Props {
+  query: {
+    [x: string]: string | undefined;
+  };
+}
+
+const Home: React.SFC<Props> = props => (
   <div>
-    <Items />
+    <Items page={parseFloat(props.query.page || '1')} />
   </div>
 );
 

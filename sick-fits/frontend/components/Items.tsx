@@ -3,7 +3,7 @@ import styled from './styled-components';
 import Item from './Item';
 
 import { ALL_ITEMS_QUERY, AllItemsQuery } from './AllItems.query';
-import Pagination from './Pagination';
+import Pagination from './Pagination/Pagination';
 
 const Center = styled.div`
   text-align: center;
@@ -17,11 +17,15 @@ const ItemsList = styled.div`
   margin: 0 auto;
 `;
 
-class Items extends React.Component {
+interface Props {
+  page: number;
+}
+
+class Items extends React.Component<Props> {
   render() {
     return (
       <Center>
-        <Pagination />
+        <Pagination page={this.props.page} />
         <AllItemsQuery query={ALL_ITEMS_QUERY}>
           {({ data, loading, error }) => {
             if (loading) return <p>Loading...</p>;
@@ -38,7 +42,7 @@ class Items extends React.Component {
             );
           }}
         </AllItemsQuery>
-        <Pagination />
+        <Pagination page={this.props.page} />
       </Center>
     );
   }
