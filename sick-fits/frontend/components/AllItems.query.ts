@@ -1,10 +1,12 @@
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import { AllItems } from './__generated__/AllItems';
+import { AllItems, AllItemsVariables } from './__generated__/AllItems';
+import { perPage } from '../config';
 
+// Note: Apollo cant generate interpolated code: replace with regular value to run generate command when this query changes
 export const ALL_ITEMS_QUERY = gql`
-  query AllItems {
-    items {
+  query AllItems($skip: Int = 0, $first: Int = ${perPage}) {
+    items(skip: $skip, first: $first, orderBy: createdAt_DESC) {
       id
       title
       price
@@ -14,4 +16,4 @@ export const ALL_ITEMS_QUERY = gql`
   }
 `;
 
-export class AllItemsQuery extends Query<AllItems> {}
+export class AllItemsQuery extends Query<AllItems, AllItemsVariables> {}

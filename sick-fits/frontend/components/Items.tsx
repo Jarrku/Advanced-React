@@ -4,6 +4,7 @@ import Item from './Item';
 
 import { ALL_ITEMS_QUERY, AllItemsQuery } from './AllItems.query';
 import Pagination from './Pagination/Pagination';
+import { perPage } from '../config';
 
 const Center = styled.div`
   text-align: center;
@@ -26,7 +27,12 @@ class Items extends React.Component<Props> {
     return (
       <Center>
         <Pagination page={this.props.page} />
-        <AllItemsQuery query={ALL_ITEMS_QUERY}>
+        <AllItemsQuery
+          query={ALL_ITEMS_QUERY}
+          variables={{
+            skip: this.props.page * perPage - perPage
+          }}
+        >
           {({ data, loading, error }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error: {error.message}</p>;

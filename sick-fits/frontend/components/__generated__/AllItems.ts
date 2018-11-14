@@ -17,3 +17,8 @@ export interface AllItems_items {
 export interface AllItems {
   items: AllItems_items[];
 }
+
+export interface AllItemsVariables {
+  skip?: number | null;
+  first?: number | null;
+}
