@@ -6,6 +6,7 @@ import Title from './styles/Title';
 import { AllItems_items } from './__generated__/types';
 import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
+import DeleteItem from './DeleteItem';
 
 interface Props {
   item: AllItems_items;
@@ -30,7 +31,7 @@ export default class Item extends React.Component<Props> {
             <a>Edit</a>
           </Link>
           <button>Add to Cart</button>
-          <button>Delete</button>
+          <DeleteItem id={this.props.item.id}>Delete This Item</DeleteItem>
         </div>
       </ItemStyles>
     );

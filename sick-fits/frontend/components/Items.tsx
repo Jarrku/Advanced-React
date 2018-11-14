@@ -11,7 +11,7 @@ const Center = styled.div`
 const ItemsList = styled.div`
   display: grid;
   grid-gap: 60px;
-  grid-template-colums: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
 `;
@@ -20,7 +20,6 @@ class Items extends React.Component {
   render() {
     return (
       <Center>
-        <p>Items!</p>
         <AllItemsQuery query={ALL_ITEMS_QUERY}>
           {({ data, loading, error }) => {
             if (loading) return <p>Loading...</p>;

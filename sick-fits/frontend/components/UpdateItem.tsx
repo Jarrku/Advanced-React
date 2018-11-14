@@ -50,7 +50,7 @@ class UpdateItem extends React.Component<Props, State> {
 
     if (!this.props.id) return;
 
-    const response = await updateItem({
+    await updateItem({
       variables: {
         data: {
           id: this.props.id,
