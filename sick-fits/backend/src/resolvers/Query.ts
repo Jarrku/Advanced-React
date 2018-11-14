@@ -10,7 +10,8 @@ configuration.setMiddlewares(middlewares.default);
 let start = 0;
 const Query: QueryResolvers.Resolvers<Ctx> = {
   items(parent, args, ctx, info) {
-    return ctx.client.items();
+    // @ts-ignore null || undefined issue
+    return ctx.client.items(args);
   },
   item(parent, args, ctx, info) {
     // @ts-ignore null || undefined issue

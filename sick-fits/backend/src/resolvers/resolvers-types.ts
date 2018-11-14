@@ -175,10 +175,6 @@ export interface User extends Node {
 // InputTypes
 // ====================================================
 
-export interface ItemWhereUniqueInput {
-  id?: string | null;
-}
-
 export interface ItemWhereInput {
   /** Logical AND on all given filters. */
   AND?: ItemWhereInput[] | null;
@@ -344,6 +340,10 @@ export interface ItemWhereInput {
   price_gte?: number | null;
 }
 
+export interface ItemWhereUniqueInput {
+  id?: string | null;
+}
+
 export interface ItemCreateInput {
   title: string;
 
@@ -370,6 +370,15 @@ export interface ItemUpdatesInput {
 // Arguments
 // ====================================================
 
+export interface ItemsQueryArgs {
+  where?: ItemWhereInput | null;
+
+  orderBy?: ItemOrderByInput | null;
+
+  skip?: number | null;
+
+  first?: number | null;
+}
 export interface ItemQueryArgs {
   where: ItemWhereUniqueInput;
 }
@@ -384,6 +393,29 @@ export interface UpdateItemMutationArgs {
 }
 export interface DeleteItemMutationArgs {
   id: string;
+}
+
+// ====================================================
+// Enums
+// ====================================================
+
+export enum ItemOrderByInput {
+  id_ASC = "id_ASC",
+  id_DESC = "id_DESC",
+  title_ASC = "title_ASC",
+  title_DESC = "title_DESC",
+  description_ASC = "description_ASC",
+  description_DESC = "description_DESC",
+  image_ASC = "image_ASC",
+  image_DESC = "image_DESC",
+  largeImage_ASC = "largeImage_ASC",
+  largeImage_DESC = "largeImage_DESC",
+  price_ASC = "price_ASC",
+  price_DESC = "price_DESC",
+  updatedAt_ASC = "updatedAt_ASC",
+  updatedAt_DESC = "updatedAt_DESC",
+  createdAt_ASC = "createdAt_ASC",
+  createdAt_DESC = "createdAt_DESC"
 }
 
 // ====================================================
@@ -415,7 +447,17 @@ export namespace QueryResolvers {
     R = Item[],
     Parent = never,
     Context = any
-  > = Resolver<R, Parent, Context>;
+  > = Resolver<R, Parent, Context, ItemsArgs>;
+  export interface ItemsArgs {
+    where?: ItemWhereInput | null;
+
+    orderBy?: ItemOrderByInput | null;
+
+    skip?: number | null;
+
+    first?: number | null;
+  }
+
   export type ItemResolver<
     R = Item | null,
     Parent = never,
