@@ -11,6 +11,7 @@ export interface SingleItemDetail_item {
   title: string;
   price: number;
   description: string;
+  largeImage: string | null;
 }
 
 export interface SingleItemDetail {
