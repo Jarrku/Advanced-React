@@ -9,7 +9,7 @@
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
     "heroku-postbuild": "next build",
-    "types": "apollo codegen:generate --addTypename --target typescript --globalTypesFile='components/__generated__/globalTypes.ts'"
+    "types": "apollo client:codegen --target typescript --globalTypesFile='components/__generated__/globalTypes.ts'"
   },
   "author": "",
   "license": "ISC",
@@ -50,7 +50,7 @@
     "@types/nprogress": "^0.0.29",
     "@types/react": "^16.4.18",
     "@types/styled-components": "^4.0.3",
-    "apollo": "1.9.2",
+    "apollo": "2.1.0",
     "babel-jest": "^23.6.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
