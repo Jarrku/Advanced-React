@@ -126,6 +126,8 @@ export interface Mutation {
   createItem: Item;
 
   updateItem: Item;
+
+  deleteItem?: Item | null;
 }
 
 export interface User extends Node {
@@ -178,6 +180,9 @@ export interface CreateItemMutationArgs {
 }
 export interface UpdateItemMutationArgs {
   data: ItemUpdatesInput;
+}
+export interface DeleteItemMutationArgs {
+  id: string;
 }
 
 // ====================================================
@@ -415,6 +420,8 @@ export namespace MutationResolvers {
     createItem?: CreateItemResolver<Item, TypeParent, Context>;
 
     updateItem?: UpdateItemResolver<Item, TypeParent, Context>;
+
+    deleteItem?: DeleteItemResolver<Item | null, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -433,6 +440,15 @@ export namespace MutationResolvers {
   > = Resolver<R, Parent, Context, UpdateItemArgs>;
   export interface UpdateItemArgs {
     data: ItemUpdatesInput;
+  }
+
+  export type DeleteItemResolver<
+    R = Item | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, DeleteItemArgs>;
+  export interface DeleteItemArgs {
+    id: string;
   }
 }
 

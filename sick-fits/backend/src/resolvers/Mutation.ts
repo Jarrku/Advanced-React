@@ -15,6 +15,14 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
     const { id, ...updates } = args.data;
     // @ts-ignore null | undefined issue.
     return ctx.client.updateItem({ data: updates, where: { id } });
+  },
+  async deleteItem(parent, args, ctx) {
+    const where = { id: args.id };
+
+    // const item = await ctx.client.item(where);
+    // TODO : check permission
+
+    return ctx.client.deleteItem(where);
   }
 };
 
