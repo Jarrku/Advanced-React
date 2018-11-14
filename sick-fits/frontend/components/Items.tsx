@@ -3,6 +3,7 @@ import styled from './styled-components';
 import Item from './Item';
 
 import { ALL_ITEMS_QUERY, AllItemsQuery } from './AllItems.query';
+import Pagination from './Pagination';
 
 const Center = styled.div`
   text-align: center;
@@ -20,6 +21,7 @@ class Items extends React.Component {
   render() {
     return (
       <Center>
+        <Pagination />
         <AllItemsQuery query={ALL_ITEMS_QUERY}>
           {({ data, loading, error }) => {
             if (loading) return <p>Loading...</p>;
@@ -36,6 +38,7 @@ class Items extends React.Component {
             );
           }}
         </AllItemsQuery>
+        <Pagination />
       </Center>
     );
   }
