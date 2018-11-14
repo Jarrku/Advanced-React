@@ -16,6 +16,16 @@ const Query: QueryResolvers.Resolvers<Ctx> = {
     // @ts-ignore null || undefined issue
     return ctx.client.item(args.where);
   },
+  itemsConnection(parent, args, ctx) {
+    const where = {
+      id: args.where && args.where.id || undefined,
+    }
+    return {
+      pageInfo: ctx.client.itemsConnection({ where }).pageInfo(),
+      edges: ctx.client.itemsConnection({ where }).edges(),
+      aggregate: ctx.client.itemsConnection({ where }).aggregate(),
+    }
+  },
   async seats() {
     const start = Date.now();
     const seats = await Licenses.getActiveSeats('7ecd40fb-b502-11e8-bd9b-0a2cf957548e');

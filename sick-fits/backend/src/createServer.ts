@@ -18,7 +18,7 @@ function createServer() {
     resolvers: {
       Mutation,
       Query,
-      MoovlyUser
+      MoovlyUser,
     },
     resolverValidationOptions: {
       requireResolversForResolveType: false,
