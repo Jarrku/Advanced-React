@@ -692,9 +692,9 @@ export type String = string;
 /**
  * Type Defs
  */
-
-export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
+// @ts-ignore
+ export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
-  endpoint: `${process.env["PRISMA_ENDPOINT"]}`
+  endpoint: `${process.env["PRISMA_ENDPOINT"]}`,
 });
 export const prisma = new Prisma();
