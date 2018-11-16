@@ -169,6 +169,14 @@ export interface User extends Node {
   name: string;
 
   email: string;
+
+  password: string;
+
+  resetToken?: string | null;
+
+  resetTokenExpiry?: number | null;
+
+  permissions: Permission[];
 }
 
 // ====================================================
@@ -416,6 +424,15 @@ export enum ItemOrderByInput {
   updatedAt_DESC = "updatedAt_DESC",
   createdAt_ASC = "createdAt_ASC",
   createdAt_DESC = "createdAt_DESC"
+}
+
+export enum Permission {
+  ADMIN = "ADMIN",
+  USER = "USER",
+  ITEMCREATE = "ITEMCREATE",
+  ITEMUPDATE = "ITEMUPDATE",
+  ITEMDELETE = "ITEMDELETE",
+  PERMISSIONUPDATE = "PERMISSIONUPDATE"
 }
 
 // ====================================================
@@ -810,6 +827,18 @@ export namespace UserResolvers {
     name?: NameResolver<string, TypeParent, Context>;
 
     email?: EmailResolver<string, TypeParent, Context>;
+
+    password?: PasswordResolver<string, TypeParent, Context>;
+
+    resetToken?: ResetTokenResolver<string | null, TypeParent, Context>;
+
+    resetTokenExpiry?: ResetTokenExpiryResolver<
+      number | null,
+      TypeParent,
+      Context
+    >;
+
+    permissions?: PermissionsResolver<Permission[], TypeParent, Context>;
   }
 
   export type IdResolver<R = string, Parent = User, Context = any> = Resolver<
@@ -824,6 +853,26 @@ export namespace UserResolvers {
   >;
   export type EmailResolver<
     R = string,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PasswordResolver<
+    R = string,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenResolver<
+    R = string | null,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenExpiryResolver<
+    R = number | null,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PermissionsResolver<
+    R = Permission[],
     Parent = User,
     Context = any
   > = Resolver<R, Parent, Context>;
