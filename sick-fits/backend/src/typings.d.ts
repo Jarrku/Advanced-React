@@ -5,7 +5,7 @@ declare namespace NodeJS {
       PRISMA_SECRET: string;
       APP_SECRET: string;
       STRIPE_SECRET: string;
-      PORT: number;
+      PORT: string;
       NODE_ENV: 'development' | 'production' | 'test';
     }
 }
