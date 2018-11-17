@@ -1,0 +1,35 @@
+version: "3"
+services:
+  # redis:
+  #   image: redis
+  #   networks:
+  #     - webnet
+  server:
+    image: grahpql-test-backend
+    ports:
+      - "4444:4444"
+    networks:
+      - webnet
+    # environment:
+    #   REDIS_HOST: redis
+    # depends_on:
+    #   - redis
+  # nginx:
+  #   image: nginx
+  #   volumes:
+  #     - ./mysite.template:/etc/nginx/conf.d/mysite.template
+  #     - ./files:/files
+  #   networks:
+  #     - webnet
+  #   depends_on:
+  #     - web
+  #   ports:
+  #     - "8001:80"
+  #   environment:
+  #     VIRTUAL_ENV: localhost
+  #     VIRTUAL_PORT: 8001
+networks:
+  webnet:
+  default:
+    external:
+      name: webproxy
