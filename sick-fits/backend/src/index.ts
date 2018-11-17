@@ -2,11 +2,8 @@ import { config } from "dotenv";
 config({ path: ".env" });
 
 import createServer from "./createServer";
-import * as compression from "compression";
 
 const server = createServer();
-
-server.use(compression());
 
 server.start(
   {
