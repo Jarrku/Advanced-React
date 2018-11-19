@@ -19,7 +19,7 @@ class CurrentUserQuery extends Query<CurrentUser> {}
 interface Props {
   children: (props: QueryResult<CurrentUser>) => React.ReactNode;
 }
-const User: React.SFC<Props> = props => (
+const User: React.FunctionComponent<Props> = props => (
   <CurrentUserQuery {...props} query={CURRENT_USER_QUERY}>
     {payload => props.children(payload)}
   </CurrentUserQuery>

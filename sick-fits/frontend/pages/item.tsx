@@ -7,7 +7,7 @@ interface Props {
   };
 }
 
-const Item: React.SFC<Props> = props => (
+const Item: React.FunctionComponent<Props> = props => (
   <div>
     <SingleItem id={props.query.id} />
   </div>

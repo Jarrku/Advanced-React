@@ -6,7 +6,7 @@ interface Props {
   };
 }
 
-const Home: React.SFC<Props> = props => (
+const Home: React.FunctionComponent<Props> = props => (
   <div>
     <Items page={parseFloat(props.query.page || '1')} />
   </div>

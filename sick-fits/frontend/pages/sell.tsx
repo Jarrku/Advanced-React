@@ -1,6 +1,6 @@
 import CreateItem from '../components/CreateItem/CreateItem';
 
-const Sell: React.SFC = props => (
+const Sell: React.FunctionComponent = props => (
   <div>
     <CreateItem />
   </div>
