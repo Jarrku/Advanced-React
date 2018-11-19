@@ -144,6 +144,10 @@ export interface Mutation {
   signin: User;
 
   signout?: SuccessMessage | null;
+
+  requestReset?: SuccessMessage | null;
+
+  resetPassword: User;
 }
 
 export interface SuccessMessage {
@@ -425,6 +429,16 @@ export interface SigninMutationArgs {
   email: string;
 
   password: string;
+}
+export interface RequestResetMutationArgs {
+  email: string;
+}
+export interface ResetPasswordMutationArgs {
+  resetToken: string;
+
+  password: string;
+
+  confirmPassword: string;
 }
 
 // ====================================================
@@ -739,6 +753,14 @@ export namespace MutationResolvers {
     signin?: SigninResolver<User, TypeParent, Context>;
 
     signout?: SignoutResolver<SuccessMessage | null, TypeParent, Context>;
+
+    requestReset?: RequestResetResolver<
+      SuccessMessage | null,
+      TypeParent,
+      Context
+    >;
+
+    resetPassword?: ResetPasswordResolver<User, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -797,6 +819,27 @@ export namespace MutationResolvers {
     Parent = never,
     Context = any
   > = Resolver<R, Parent, Context>;
+  export type RequestResetResolver<
+    R = SuccessMessage | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, RequestResetArgs>;
+  export interface RequestResetArgs {
+    email: string;
+  }
+
+  export type ResetPasswordResolver<
+    R = User,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, ResetPasswordArgs>;
+  export interface ResetPasswordArgs {
+    resetToken: string;
+
+    password: string;
+
+    confirmPassword: string;
+  }
 }
 
 export namespace SuccessMessageResolvers {
