@@ -1,6 +1,7 @@
 import Signup from '../components/Signup/Signup';
 import styled from '../components/styled-components';
 import Signin from '../components/Signin/Signin';
+import RequestReset from '../components/RequestReset/RequestReset';
 
 const Columns = styled.div`
   display: grid;
@@ -8,10 +9,11 @@ const Columns = styled.div`
   grid-gap: 20px;
 `;
 
-const SignupPage: React.SFC = props => (
+const SignupPage: React.FunctionComponent = props => (
   <Columns>
     <Signup />
     <Signin />
+    <RequestReset />
   </Columns>
 );
 
