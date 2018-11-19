@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
 import User from './User/User';
+import Signout from './Signout/Signout';
 
 const Nav: React.SFC = () => (
   <User>
@@ -20,14 +21,14 @@ const Nav: React.SFC = () => (
             <Link href="/me">
               <a>Account</a>
             </Link>
+            <Signout />
           </>
         )}
-        {!data ||
-          (!data.me && (
-            <Link href="/signup">
-              <a>Sign In!</a>
-            </Link>
-          ))}
+        {(!data || !data.me) && (
+          <Link href="/signup">
+            <a>Sign In!</a>
+          </Link>
+        )}
       </NavStyles>
     )}
   </User>
