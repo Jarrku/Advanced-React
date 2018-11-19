@@ -8,6 +8,7 @@ import {
   SignupMutation as SignupMutationResponse,
   SignupMutationVariables
 } from './__generated__/SignupMutation';
+import { CURRENT_USER_QUERY } from '../User/User';
 
 const SIGNUP_MUTATION = gql`
   mutation SignupMutation($email: String!, $name: String!, $password: String!) {
@@ -39,7 +40,11 @@ class Signup extends Component {
 
   render() {
     return (
-      <SignupMutation mutation={SIGNUP_MUTATION} variables={this.state}>
+      <SignupMutation
+        mutation={SIGNUP_MUTATION}
+        variables={this.state}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+      >
         {(signup, { error, loading }) => {
           return (
             <Form
@@ -51,7 +56,7 @@ class Signup extends Component {
               }}
             >
               <fieldset disabled={loading} aria-busy={loading}>
-                <h2>Sign Up for an account</h2>
+                <h2>Sign Up For An Account</h2>
                 <Error error={error} />
                 <label htmlFor="email">
                   Email
