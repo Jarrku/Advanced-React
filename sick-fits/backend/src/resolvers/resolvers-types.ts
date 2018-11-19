@@ -44,6 +44,9 @@ export type SubscriptionResolver<
 
 export type Nil = any;
 
+/** The `Long` scalar type represents non-fractional signed whole numeric values.Long can represent values between -(2^63) and 2^63 - 1. */
+export type Long = any;
+
 // ====================================================
 // Interfaces
 // ====================================================
@@ -64,10 +67,6 @@ export interface Query {
   item?: Item | null;
 
   itemsConnection: ItemConnection;
-
-  group: MoovlyUser[];
-
-  seats: Seat[];
 }
 
 export interface Item extends Node {
@@ -115,55 +114,58 @@ export interface AggregateItem {
   count: number;
 }
 
-export interface MoovlyUser {
-  id?: string | null;
-
-  user_id?: string | null;
-
-  group_id?: string | null;
-
-  info?: Info | null;
-
-  created_at?: string | null;
-
-  created_by?: string | null;
-
-  seatInfo?: Seat | null;
-}
-
-export interface Info {
-  email?: string | null;
-
-  pending_email?: string | null;
-
-  first_name?: string | null;
-
-  name?: string | null;
-}
-
-export interface Seat {
-  id?: string | null;
-
-  user_id?: string | null;
-
-  group_id?: string | null;
-
-  license_plan_code?: string | null;
-
-  assigned_by?: string | null;
-
-  created_at?: string | null;
-}
-
 export interface Mutation {
   createItem: Item;
 
   updateItem: Item;
 
   deleteItem?: Item | null;
+
+  signup: User;
 }
 
 export interface User extends Node {
+  id: string;
+
+  name: string;
+
+  email: string;
+
+  password: string;
+
+  resetToken?: string | null;
+
+  resetTokenExpiry?: number | null;
+
+  permissions: Permission[];
+}
+
+export interface ItemPreviousValues {
+  id: string;
+
+  title: string;
+
+  description: string;
+
+  image?: string | null;
+
+  largeImage?: string | null;
+
+  price: number;
+}
+/** An edge in a connection. */
+export interface UserEdge {
+  /** The item at the end of the edge. */
+  node: User;
+  /** A cursor for use in pagination. */
+  cursor: string;
+}
+
+export interface AggregateUser {
+  count: number;
+}
+
+export interface UserPreviousValues {
   id: string;
 
   name: string;
@@ -402,6 +404,13 @@ export interface UpdateItemMutationArgs {
 export interface DeleteItemMutationArgs {
   id: string;
 }
+export interface SignupMutationArgs {
+  email: string;
+
+  password: string;
+
+  name: string;
+}
 
 // ====================================================
 // Enums
@@ -435,6 +444,12 @@ export enum Permission {
   PERMISSIONUPDATE = "PERMISSIONUPDATE"
 }
 
+export enum MutationType {
+  CREATED = "CREATED",
+  UPDATED = "UPDATED",
+  DELETED = "DELETED"
+}
+
 // ====================================================
 // END: Typescript template
 // ====================================================
@@ -454,10 +469,6 @@ export namespace QueryResolvers {
       TypeParent,
       Context
     >;
-
-    group?: GroupResolver<MoovlyUser[], TypeParent, Context>;
-
-    seats?: SeatsResolver<Seat[], TypeParent, Context>;
   }
 
   export type ItemsResolver<
@@ -492,17 +503,6 @@ export namespace QueryResolvers {
   export interface ItemsConnectionArgs {
     where?: ItemWhereInput | null;
   }
-
-  export type GroupResolver<
-    R = MoovlyUser[],
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type SeatsResolver<
-    R = Seat[],
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context>;
 }
 
 export namespace ItemResolvers {
@@ -645,144 +645,6 @@ export namespace AggregateItemResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
-export namespace MoovlyUserResolvers {
-  export interface Resolvers<Context = any, TypeParent = MoovlyUser> {
-    id?: IdResolver<string | null, TypeParent, Context>;
-
-    user_id?: UserIdResolver<string | null, TypeParent, Context>;
-
-    group_id?: GroupIdResolver<string | null, TypeParent, Context>;
-
-    info?: InfoResolver<Info | null, TypeParent, Context>;
-
-    created_at?: CreatedAtResolver<string | null, TypeParent, Context>;
-
-    created_by?: CreatedByResolver<string | null, TypeParent, Context>;
-
-    seatInfo?: SeatInfoResolver<Seat | null, TypeParent, Context>;
-  }
-
-  export type IdResolver<
-    R = string | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type UserIdResolver<
-    R = string | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type GroupIdResolver<
-    R = string | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type InfoResolver<
-    R = Info | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type CreatedAtResolver<
-    R = string | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type CreatedByResolver<
-    R = string | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type SeatInfoResolver<
-    R = Seat | null,
-    Parent = MoovlyUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace InfoResolvers {
-  export interface Resolvers<Context = any, TypeParent = Info> {
-    email?: EmailResolver<string | null, TypeParent, Context>;
-
-    pending_email?: PendingEmailResolver<string | null, TypeParent, Context>;
-
-    first_name?: FirstNameResolver<string | null, TypeParent, Context>;
-
-    name?: NameResolver<string | null, TypeParent, Context>;
-  }
-
-  export type EmailResolver<
-    R = string | null,
-    Parent = Info,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PendingEmailResolver<
-    R = string | null,
-    Parent = Info,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type FirstNameResolver<
-    R = string | null,
-    Parent = Info,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type NameResolver<
-    R = string | null,
-    Parent = Info,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace SeatResolvers {
-  export interface Resolvers<Context = any, TypeParent = Seat> {
-    id?: IdResolver<string | null, TypeParent, Context>;
-
-    user_id?: UserIdResolver<string | null, TypeParent, Context>;
-
-    group_id?: GroupIdResolver<string | null, TypeParent, Context>;
-
-    license_plan_code?: LicensePlanCodeResolver<
-      string | null,
-      TypeParent,
-      Context
-    >;
-
-    assigned_by?: AssignedByResolver<string | null, TypeParent, Context>;
-
-    created_at?: CreatedAtResolver<string | null, TypeParent, Context>;
-  }
-
-  export type IdResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type UserIdResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type GroupIdResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type LicensePlanCodeResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type AssignedByResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type CreatedAtResolver<
-    R = string | null,
-    Parent = Seat,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
 export namespace MutationResolvers {
   export interface Resolvers<Context = any, TypeParent = never> {
     createItem?: CreateItemResolver<Item, TypeParent, Context>;
@@ -790,6 +652,8 @@ export namespace MutationResolvers {
     updateItem?: UpdateItemResolver<Item, TypeParent, Context>;
 
     deleteItem?: DeleteItemResolver<Item | null, TypeParent, Context>;
+
+    signup?: SignupResolver<User, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -817,6 +681,19 @@ export namespace MutationResolvers {
   > = Resolver<R, Parent, Context, DeleteItemArgs>;
   export interface DeleteItemArgs {
     id: string;
+  }
+
+  export type SignupResolver<
+    R = User,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, SignupArgs>;
+  export interface SignupArgs {
+    email: string;
+
+    password: string;
+
+    name: string;
   }
 }
 
@@ -874,6 +751,143 @@ export namespace UserResolvers {
   export type PermissionsResolver<
     R = Permission[],
     Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace ItemPreviousValuesResolvers {
+  export interface Resolvers<Context = any, TypeParent = ItemPreviousValues> {
+    id?: IdResolver<string, TypeParent, Context>;
+
+    title?: TitleResolver<string, TypeParent, Context>;
+
+    description?: DescriptionResolver<string, TypeParent, Context>;
+
+    image?: ImageResolver<string | null, TypeParent, Context>;
+
+    largeImage?: LargeImageResolver<string | null, TypeParent, Context>;
+
+    price?: PriceResolver<number, TypeParent, Context>;
+  }
+
+  export type IdResolver<
+    R = string,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type TitleResolver<
+    R = string,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type DescriptionResolver<
+    R = string,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ImageResolver<
+    R = string | null,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type LargeImageResolver<
+    R = string | null,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PriceResolver<
+    R = number,
+    Parent = ItemPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+/** An edge in a connection. */
+export namespace UserEdgeResolvers {
+  export interface Resolvers<Context = any, TypeParent = UserEdge> {
+    /** The item at the end of the edge. */
+    node?: NodeResolver<User, TypeParent, Context>;
+    /** A cursor for use in pagination. */
+    cursor?: CursorResolver<string, TypeParent, Context>;
+  }
+
+  export type NodeResolver<
+    R = User,
+    Parent = UserEdge,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type CursorResolver<
+    R = string,
+    Parent = UserEdge,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace AggregateUserResolvers {
+  export interface Resolvers<Context = any, TypeParent = AggregateUser> {
+    count?: CountResolver<number, TypeParent, Context>;
+  }
+
+  export type CountResolver<
+    R = number,
+    Parent = AggregateUser,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace UserPreviousValuesResolvers {
+  export interface Resolvers<Context = any, TypeParent = UserPreviousValues> {
+    id?: IdResolver<string, TypeParent, Context>;
+
+    name?: NameResolver<string, TypeParent, Context>;
+
+    email?: EmailResolver<string, TypeParent, Context>;
+
+    password?: PasswordResolver<string, TypeParent, Context>;
+
+    resetToken?: ResetTokenResolver<string | null, TypeParent, Context>;
+
+    resetTokenExpiry?: ResetTokenExpiryResolver<
+      number | null,
+      TypeParent,
+      Context
+    >;
+
+    permissions?: PermissionsResolver<Permission[], TypeParent, Context>;
+  }
+
+  export type IdResolver<
+    R = string,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type NameResolver<
+    R = string,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type EmailResolver<
+    R = string,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PasswordResolver<
+    R = string,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenResolver<
+    R = string | null,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenExpiryResolver<
+    R = number | null,
+    Parent = UserPreviousValues,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PermissionsResolver<
+    R = Permission[],
+    Parent = UserPreviousValues,
     Context = any
   > = Resolver<R, Parent, Context>;
 }
