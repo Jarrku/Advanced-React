@@ -67,6 +67,8 @@ export interface Query {
   item?: Item | null;
 
   itemsConnection: ItemConnection;
+
+  me?: User | null;
 }
 
 export interface Item extends Node {
@@ -114,16 +116,6 @@ export interface AggregateItem {
   count: number;
 }
 
-export interface Mutation {
-  createItem: Item;
-
-  updateItem: Item;
-
-  deleteItem?: Item | null;
-
-  signup: User;
-}
-
 export interface User extends Node {
   id: string;
 
@@ -138,6 +130,16 @@ export interface User extends Node {
   resetTokenExpiry?: number | null;
 
   permissions: Permission[];
+}
+
+export interface Mutation {
+  createItem: Item;
+
+  updateItem: Item;
+
+  deleteItem?: Item | null;
+
+  signup: User;
 }
 
 export interface ItemPreviousValues {
@@ -469,6 +471,8 @@ export namespace QueryResolvers {
       TypeParent,
       Context
     >;
+
+    me?: MeResolver<User | null, TypeParent, Context>;
   }
 
   export type ItemsResolver<
@@ -503,6 +507,12 @@ export namespace QueryResolvers {
   export interface ItemsConnectionArgs {
     where?: ItemWhereInput | null;
   }
+
+  export type MeResolver<
+    R = User | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context>;
 }
 
 export namespace ItemResolvers {
@@ -645,58 +655,6 @@ export namespace AggregateItemResolvers {
   > = Resolver<R, Parent, Context>;
 }
 
-export namespace MutationResolvers {
-  export interface Resolvers<Context = any, TypeParent = never> {
-    createItem?: CreateItemResolver<Item, TypeParent, Context>;
-
-    updateItem?: UpdateItemResolver<Item, TypeParent, Context>;
-
-    deleteItem?: DeleteItemResolver<Item | null, TypeParent, Context>;
-
-    signup?: SignupResolver<User, TypeParent, Context>;
-  }
-
-  export type CreateItemResolver<
-    R = Item,
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context, CreateItemArgs>;
-  export interface CreateItemArgs {
-    data: ItemCreateInput;
-  }
-
-  export type UpdateItemResolver<
-    R = Item,
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context, UpdateItemArgs>;
-  export interface UpdateItemArgs {
-    data: ItemUpdatesInput;
-  }
-
-  export type DeleteItemResolver<
-    R = Item | null,
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context, DeleteItemArgs>;
-  export interface DeleteItemArgs {
-    id: string;
-  }
-
-  export type SignupResolver<
-    R = User,
-    Parent = never,
-    Context = any
-  > = Resolver<R, Parent, Context, SignupArgs>;
-  export interface SignupArgs {
-    email: string;
-
-    password: string;
-
-    name: string;
-  }
-}
-
 export namespace UserResolvers {
   export interface Resolvers<Context = any, TypeParent = User> {
     id?: IdResolver<string, TypeParent, Context>;
@@ -753,6 +711,58 @@ export namespace UserResolvers {
     Parent = User,
     Context = any
   > = Resolver<R, Parent, Context>;
+}
+
+export namespace MutationResolvers {
+  export interface Resolvers<Context = any, TypeParent = never> {
+    createItem?: CreateItemResolver<Item, TypeParent, Context>;
+
+    updateItem?: UpdateItemResolver<Item, TypeParent, Context>;
+
+    deleteItem?: DeleteItemResolver<Item | null, TypeParent, Context>;
+
+    signup?: SignupResolver<User, TypeParent, Context>;
+  }
+
+  export type CreateItemResolver<
+    R = Item,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, CreateItemArgs>;
+  export interface CreateItemArgs {
+    data: ItemCreateInput;
+  }
+
+  export type UpdateItemResolver<
+    R = Item,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, UpdateItemArgs>;
+  export interface UpdateItemArgs {
+    data: ItemUpdatesInput;
+  }
+
+  export type DeleteItemResolver<
+    R = Item | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, DeleteItemArgs>;
+  export interface DeleteItemArgs {
+    id: string;
+  }
+
+  export type SignupResolver<
+    R = User,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, SignupArgs>;
+  export interface SignupArgs {
+    email: string;
+
+    password: string;
+
+    name: string;
+  }
 }
 
 export namespace ItemPreviousValuesResolvers {
