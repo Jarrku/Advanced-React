@@ -140,6 +140,8 @@ export interface Mutation {
   deleteItem?: Item | null;
 
   signup: User;
+
+  signin: User;
 }
 
 export interface ItemPreviousValues {
@@ -412,6 +414,11 @@ export interface SignupMutationArgs {
   password: string;
 
   name: string;
+}
+export interface SigninMutationArgs {
+  email: string;
+
+  password: string;
 }
 
 // ====================================================
@@ -722,6 +729,8 @@ export namespace MutationResolvers {
     deleteItem?: DeleteItemResolver<Item | null, TypeParent, Context>;
 
     signup?: SignupResolver<User, TypeParent, Context>;
+
+    signin?: SigninResolver<User, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -762,6 +771,17 @@ export namespace MutationResolvers {
     password: string;
 
     name: string;
+  }
+
+  export type SigninResolver<
+    R = User,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context, SigninArgs>;
+  export interface SigninArgs {
+    email: string;
+
+    password: string;
   }
 }
 

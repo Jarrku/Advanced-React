@@ -1,6 +1,6 @@
 import { MutationResolvers } from "./resolvers-types";
 import { Ctx } from "../createServer";
-import { hash } from 'bcryptjs';
+import { hash, compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
 const Mutations: MutationResolvers.Resolvers<Ctx> = {
@@ -45,6 +45,27 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
       maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
     });
 
+    return user;
+  },
+  async signin(parent, { email, password }, ctx, info) {
+    // Check if there is a user.
+    const user = ctx.client.user({ email });
+    if(!user) {
+      throw new Error(`No such user found for email ${email}`);
+    }
+    // Check if password matches
+    const valid = await compare(password, user.password);
+    if(!valid) {
+      throw new Error('Invalid password!');
+    }
+    // Generate Token
+    const token = sign({ userId: user.id }, process.env.APP_SECRET!);
+    // Set cookie with the token
+    ctx.response.cookie('token', token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
+    });
+    // Return the user
     return user;
   }
 };
