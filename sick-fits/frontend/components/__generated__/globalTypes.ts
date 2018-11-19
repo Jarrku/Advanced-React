@@ -5,6 +5,15 @@
 // START Enums and Input Objects
 //==============================================================
 
+export enum Permission {
+  ADMIN = "ADMIN",
+  ITEMCREATE = "ITEMCREATE",
+  ITEMDELETE = "ITEMDELETE",
+  ITEMUPDATE = "ITEMUPDATE",
+  PERMISSIONUPDATE = "PERMISSIONUPDATE",
+  USER = "USER",
+}
+
 export interface ItemCreateInput {
   title: string;
   description: string;
