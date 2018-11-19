@@ -27,6 +27,17 @@ const Query: QueryResolvers.Resolvers<Ctx> = {
       aggregate: ctx.client.itemsConnection({ where }).aggregate(),
     }
   },
+  me(parent, args, ctx, info) {
+
+    // check if there is a current userId;
+    if(!ctx.request.userId) {
+      return null;
+    }
+
+    return ctx.client.user({
+      where: { id: ctx.request.userId }
+    }, info);
+  }
   // async seats() {
   //   const start = Date.now();
   //   const seats = await Licenses.getActiveSeats('7ecd40fb-b502-11e8-bd9b-0a2cf957548e');
