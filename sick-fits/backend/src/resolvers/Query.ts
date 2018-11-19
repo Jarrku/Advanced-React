@@ -1,4 +1,4 @@
-import { QueryResolvers, MoovlyUserResolvers } from './resolvers-types';
+import { QueryResolvers } from './resolvers-types';
 import { Ctx } from '../createServer';
 // import { clients, configuration, middlewares } from '@moovly/clients';
 
@@ -74,15 +74,15 @@ const Query: QueryResolvers.Resolvers<Ctx> = {
   // }
 };
 
-export const MoovlyUser: MoovlyUserResolvers.Resolvers = {
-  // async info(parent, args, ctx, info) {
-  //   const startLocal = Date.now();
-  //   console.log(`STARTED ${parent.user_id}: ${startLocal}`);
-  //   const res = await Users.getUserInformation(parent.user_id!);
-  //   console.log(`COMPLETED ${parent.user_id}: ${Date.now() - startLocal}`);
-  //   console.log(`TOTAL: ${Date.now() - start}`);
-  //   return res;
-  // }
-}
+// export const MoovlyUser: MoovlyUserResolvers.Resolvers = {
+//   async info(parent, args, ctx, info) {
+//     const startLocal = Date.now();
+//     console.log(`STARTED ${parent.user_id}: ${startLocal}`);
+//     const res = await Users.getUserInformation(parent.user_id!);
+//     console.log(`COMPLETED ${parent.user_id}: ${Date.now() - startLocal}`);
+//     console.log(`TOTAL: ${Date.now() - start}`);
+//     return res;
+//   }
+// }
 
 export default Query;

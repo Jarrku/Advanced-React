@@ -1,6 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga';
 
-import Query, { MoovlyUser } from './resolvers/Query';
+import Query from './resolvers/Query';
 import Mutation from './resolvers/Mutation';
 import db from './db';
 import { prisma } from './generated/prisma-client';
@@ -18,7 +18,6 @@ function createServer() {
     resolvers: {
       Mutation,
       Query,
-      MoovlyUser,
     },
     resolverValidationOptions: {
       requireResolversForResolveType: false,
