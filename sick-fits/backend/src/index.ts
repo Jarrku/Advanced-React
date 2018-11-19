@@ -1,9 +1,11 @@
 import { config } from "dotenv";
 config({ path: ".env" });
-
+import * as cookieParser from 'cookie-parser';
 import createServer from "./createServer";
 
 const server = createServer();
+
+server.express.use(cookieParser());
 
 server.start(
   {
