@@ -56,7 +56,7 @@ class Reset extends Component<Props> {
         variables={{ resetToken: this.props.resetToken, ...this.state }}
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
-        {(reset, { error, loading, called }) => {
+        {(reset, { error, loading }) => {
           return (
             <Form
               method="post"
