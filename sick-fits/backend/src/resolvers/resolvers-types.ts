@@ -44,9 +44,6 @@ export type SubscriptionResolver<
 
 export type Nil = any;
 
-/** The `Long` scalar type represents non-fractional signed whole numeric values.Long can represent values between -(2^63) and 2^63 - 1. */
-export type Long = any;
-
 // ====================================================
 // Interfaces
 // ====================================================
@@ -152,47 +149,6 @@ export interface Mutation {
 
 export interface SuccessMessage {
   message?: string | null;
-}
-
-export interface ItemPreviousValues {
-  id: string;
-
-  title: string;
-
-  description: string;
-
-  image?: string | null;
-
-  largeImage?: string | null;
-
-  price: number;
-}
-/** An edge in a connection. */
-export interface UserEdge {
-  /** The item at the end of the edge. */
-  node: User;
-  /** A cursor for use in pagination. */
-  cursor: string;
-}
-
-export interface AggregateUser {
-  count: number;
-}
-
-export interface UserPreviousValues {
-  id: string;
-
-  name: string;
-
-  email: string;
-
-  password: string;
-
-  resetToken?: string | null;
-
-  resetTokenExpiry?: number | null;
-
-  permissions: Permission[];
 }
 
 // ====================================================
@@ -471,12 +427,6 @@ export enum Permission {
   ITEMUPDATE = "ITEMUPDATE",
   ITEMDELETE = "ITEMDELETE",
   PERMISSIONUPDATE = "PERMISSIONUPDATE"
-}
-
-export enum MutationType {
-  CREATED = "CREATED",
-  UPDATED = "UPDATED",
-  DELETED = "DELETED"
 }
 
 // ====================================================
@@ -850,143 +800,6 @@ export namespace SuccessMessageResolvers {
   export type MessageResolver<
     R = string | null,
     Parent = SuccessMessage,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace ItemPreviousValuesResolvers {
-  export interface Resolvers<Context = any, TypeParent = ItemPreviousValues> {
-    id?: IdResolver<string, TypeParent, Context>;
-
-    title?: TitleResolver<string, TypeParent, Context>;
-
-    description?: DescriptionResolver<string, TypeParent, Context>;
-
-    image?: ImageResolver<string | null, TypeParent, Context>;
-
-    largeImage?: LargeImageResolver<string | null, TypeParent, Context>;
-
-    price?: PriceResolver<number, TypeParent, Context>;
-  }
-
-  export type IdResolver<
-    R = string,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type TitleResolver<
-    R = string,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type DescriptionResolver<
-    R = string,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type ImageResolver<
-    R = string | null,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type LargeImageResolver<
-    R = string | null,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PriceResolver<
-    R = number,
-    Parent = ItemPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-/** An edge in a connection. */
-export namespace UserEdgeResolvers {
-  export interface Resolvers<Context = any, TypeParent = UserEdge> {
-    /** The item at the end of the edge. */
-    node?: NodeResolver<User, TypeParent, Context>;
-    /** A cursor for use in pagination. */
-    cursor?: CursorResolver<string, TypeParent, Context>;
-  }
-
-  export type NodeResolver<
-    R = User,
-    Parent = UserEdge,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type CursorResolver<
-    R = string,
-    Parent = UserEdge,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace AggregateUserResolvers {
-  export interface Resolvers<Context = any, TypeParent = AggregateUser> {
-    count?: CountResolver<number, TypeParent, Context>;
-  }
-
-  export type CountResolver<
-    R = number,
-    Parent = AggregateUser,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace UserPreviousValuesResolvers {
-  export interface Resolvers<Context = any, TypeParent = UserPreviousValues> {
-    id?: IdResolver<string, TypeParent, Context>;
-
-    name?: NameResolver<string, TypeParent, Context>;
-
-    email?: EmailResolver<string, TypeParent, Context>;
-
-    password?: PasswordResolver<string, TypeParent, Context>;
-
-    resetToken?: ResetTokenResolver<string | null, TypeParent, Context>;
-
-    resetTokenExpiry?: ResetTokenExpiryResolver<
-      number | null,
-      TypeParent,
-      Context
-    >;
-
-    permissions?: PermissionsResolver<Permission[], TypeParent, Context>;
-  }
-
-  export type IdResolver<
-    R = string,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type NameResolver<
-    R = string,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type EmailResolver<
-    R = string,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PasswordResolver<
-    R = string,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type ResetTokenResolver<
-    R = string | null,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type ResetTokenExpiryResolver<
-    R = number | null,
-    Parent = UserPreviousValues,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PermissionsResolver<
-    R = Permission[],
-    Parent = UserPreviousValues,
     Context = any
   > = Resolver<R, Parent, Context>;
 }

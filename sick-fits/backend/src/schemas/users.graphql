@@ -1,8 +1,16 @@
 
-# import * from '../generated/prisma.graphql'
+# import Permission from '../generated/prisma.graphql'
 
 type SuccessMessage {
   message: String
+}
+
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  password: String!
+  permissions: [Permission!]!
 }
 
 type Query {
@@ -17,13 +25,6 @@ type Mutation {
   resetPassword(resetToken: String!, password: String!, confirmPassword: String!): User!
 }
 
-type User {
-  id: ID!
-  email: String!
-  name: String!
-  password: String!
-  permissions: [Permission!]!
-}
 
 # Moovly Users:
 # type Query {

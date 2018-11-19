@@ -91,9 +91,8 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
     const resetToken = (await promisify(randomBytes)(20)).toString("hex");
     const resetTokenExpiry = Date.now() + ONE_HOUR;
 
-    const res = await ctx.client.updateUser({ data: { resetToken, resetTokenExpiry }, where: { email } });
-    console.log(res);
     // Set Reset token & expiry
+    await ctx.client.updateUser({ data: { resetToken, resetTokenExpiry }, where: { email } });
     // Email reset token
     return {
       message: "Success"
