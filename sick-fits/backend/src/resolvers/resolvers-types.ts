@@ -142,6 +142,12 @@ export interface Mutation {
   signup: User;
 
   signin: User;
+
+  signout?: SuccessMessage | null;
+}
+
+export interface SuccessMessage {
+  message?: string | null;
 }
 
 export interface ItemPreviousValues {
@@ -731,6 +737,8 @@ export namespace MutationResolvers {
     signup?: SignupResolver<User, TypeParent, Context>;
 
     signin?: SigninResolver<User, TypeParent, Context>;
+
+    signout?: SignoutResolver<SuccessMessage | null, TypeParent, Context>;
   }
 
   export type CreateItemResolver<
@@ -783,6 +791,24 @@ export namespace MutationResolvers {
 
     password: string;
   }
+
+  export type SignoutResolver<
+    R = SuccessMessage | null,
+    Parent = never,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+}
+
+export namespace SuccessMessageResolvers {
+  export interface Resolvers<Context = any, TypeParent = SuccessMessage> {
+    message?: MessageResolver<string | null, TypeParent, Context>;
+  }
+
+  export type MessageResolver<
+    R = string | null,
+    Parent = SuccessMessage,
+    Context = any
+  > = Resolver<R, Parent, Context>;
 }
 
 export namespace ItemPreviousValuesResolvers {
