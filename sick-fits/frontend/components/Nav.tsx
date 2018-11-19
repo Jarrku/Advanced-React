@@ -1,8 +1,16 @@
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
+import User from './User/User';
 
 const Nav: React.SFC = () => (
   <NavStyles>
+    <User>
+      {({ data }) => {
+        if (!data || !data.me) return null;
+
+        return <p>{data.me.name}</p>;
+      }}
+    </User>
     <Link href="/items">
       <a>Shop</a>
     </Link>
