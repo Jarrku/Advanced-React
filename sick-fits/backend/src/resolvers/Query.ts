@@ -34,9 +34,7 @@ const Query: QueryResolvers.Resolvers<Ctx> = {
       return null;
     }
 
-    return ctx.client.user({
-      where: { id: ctx.request.userId }
-    }, info);
+    return ctx.client.user({ id: ctx.request.userId }, info);
   }
   // async seats() {
   //   const start = Date.now();
