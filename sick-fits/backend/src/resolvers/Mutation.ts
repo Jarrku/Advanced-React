@@ -49,7 +49,7 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
   },
   async signin(parent, { email, password }, ctx, info) {
     // Check if there is a user.
-    const user = ctx.client.user({ email });
+    const user = await ctx.client.user({ email });
     if(!user) {
       throw new Error(`No such user found for email ${email}`);
     }

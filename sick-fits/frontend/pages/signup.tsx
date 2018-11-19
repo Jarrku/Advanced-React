@@ -1,5 +1,6 @@
 import Signup from '../components/Signup/Signup';
 import styled from '../components/styled-components';
+import Signin from '../components/Signin/Signin';
 
 const Columns = styled.div`
   display: grid;
@@ -10,8 +11,7 @@ const Columns = styled.div`
 const SignupPage: React.SFC = props => (
   <Columns>
     <Signup />
-    <Signup />
-    <Signup />
+    <Signin />
   </Columns>
 );
 
