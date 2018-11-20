@@ -5,6 +5,7 @@ import { sign } from "jsonwebtoken";
 import { randomBytes } from "crypto";
 import { promisify } from "util";
 import { CookieOptions } from "express-serve-static-core";
+import { makeANiceEmail, transport } from "../mail";
 
 const ONE_HOUR = 1000 * 60 * 60;
 const ONE_YEAR = ONE_HOUR * 24 * 365;
@@ -93,7 +94,17 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
 
     // Set Reset token & expiry
     await ctx.client.updateUser({ data: { resetToken, resetTokenExpiry }, where: { email } });
+
     // Email reset token
+    await transport.sendMail({
+      from: 'simon@simon.com',
+      to: user.email,
+      subject: 'Your password Reset Token',
+      html: makeANiceEmail(`Your Password reset token is here!
+      \n\n
+      <a href="${process.env.FRONTEND_URL}/reset?resetToken=${resetToken}">Click Here to Reset</a>`)
+    });
+
     return {
       message: "Success"
     };
