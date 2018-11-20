@@ -80,6 +80,24 @@ export interface Item extends Node {
   largeImage?: string | null;
 
   price: number;
+
+  user: User;
+}
+
+export interface User extends Node {
+  id: string;
+
+  name: string;
+
+  email: string;
+
+  password: string;
+
+  resetToken?: string | null;
+
+  resetTokenExpiry?: number | null;
+
+  permissions: Permission[];
 }
 /** A connection to a list of items. */
 export interface ItemConnection {
@@ -111,22 +129,6 @@ export interface ItemEdge {
 
 export interface AggregateItem {
   count: number;
-}
-
-export interface User extends Node {
-  id: string;
-
-  name: string;
-
-  email: string;
-
-  password: string;
-
-  resetToken?: string | null;
-
-  resetTokenExpiry?: number | null;
-
-  permissions: Permission[];
 }
 
 export interface Mutation {
@@ -318,6 +320,173 @@ export interface ItemWhereInput {
   price_gt?: number | null;
   /** All values greater than or equal the given value. */
   price_gte?: number | null;
+
+  user?: UserWhereInput | null;
+}
+
+export interface UserWhereInput {
+  /** Logical AND on all given filters. */
+  AND?: UserWhereInput[] | null;
+  /** Logical OR on all given filters. */
+  OR?: UserWhereInput[] | null;
+  /** Logical NOT on all given filters combined by AND. */
+  NOT?: UserWhereInput[] | null;
+
+  id?: string | null;
+  /** All values that are not equal to given value. */
+  id_not?: string | null;
+  /** All values that are contained in given list. */
+  id_in?: string[] | null;
+  /** All values that are not contained in given list. */
+  id_not_in?: string[] | null;
+  /** All values less than the given value. */
+  id_lt?: string | null;
+  /** All values less than or equal the given value. */
+  id_lte?: string | null;
+  /** All values greater than the given value. */
+  id_gt?: string | null;
+  /** All values greater than or equal the given value. */
+  id_gte?: string | null;
+  /** All values containing the given string. */
+  id_contains?: string | null;
+  /** All values not containing the given string. */
+  id_not_contains?: string | null;
+  /** All values starting with the given string. */
+  id_starts_with?: string | null;
+  /** All values not starting with the given string. */
+  id_not_starts_with?: string | null;
+  /** All values ending with the given string. */
+  id_ends_with?: string | null;
+  /** All values not ending with the given string. */
+  id_not_ends_with?: string | null;
+
+  name?: string | null;
+  /** All values that are not equal to given value. */
+  name_not?: string | null;
+  /** All values that are contained in given list. */
+  name_in?: string[] | null;
+  /** All values that are not contained in given list. */
+  name_not_in?: string[] | null;
+  /** All values less than the given value. */
+  name_lt?: string | null;
+  /** All values less than or equal the given value. */
+  name_lte?: string | null;
+  /** All values greater than the given value. */
+  name_gt?: string | null;
+  /** All values greater than or equal the given value. */
+  name_gte?: string | null;
+  /** All values containing the given string. */
+  name_contains?: string | null;
+  /** All values not containing the given string. */
+  name_not_contains?: string | null;
+  /** All values starting with the given string. */
+  name_starts_with?: string | null;
+  /** All values not starting with the given string. */
+  name_not_starts_with?: string | null;
+  /** All values ending with the given string. */
+  name_ends_with?: string | null;
+  /** All values not ending with the given string. */
+  name_not_ends_with?: string | null;
+
+  email?: string | null;
+  /** All values that are not equal to given value. */
+  email_not?: string | null;
+  /** All values that are contained in given list. */
+  email_in?: string[] | null;
+  /** All values that are not contained in given list. */
+  email_not_in?: string[] | null;
+  /** All values less than the given value. */
+  email_lt?: string | null;
+  /** All values less than or equal the given value. */
+  email_lte?: string | null;
+  /** All values greater than the given value. */
+  email_gt?: string | null;
+  /** All values greater than or equal the given value. */
+  email_gte?: string | null;
+  /** All values containing the given string. */
+  email_contains?: string | null;
+  /** All values not containing the given string. */
+  email_not_contains?: string | null;
+  /** All values starting with the given string. */
+  email_starts_with?: string | null;
+  /** All values not starting with the given string. */
+  email_not_starts_with?: string | null;
+  /** All values ending with the given string. */
+  email_ends_with?: string | null;
+  /** All values not ending with the given string. */
+  email_not_ends_with?: string | null;
+
+  password?: string | null;
+  /** All values that are not equal to given value. */
+  password_not?: string | null;
+  /** All values that are contained in given list. */
+  password_in?: string[] | null;
+  /** All values that are not contained in given list. */
+  password_not_in?: string[] | null;
+  /** All values less than the given value. */
+  password_lt?: string | null;
+  /** All values less than or equal the given value. */
+  password_lte?: string | null;
+  /** All values greater than the given value. */
+  password_gt?: string | null;
+  /** All values greater than or equal the given value. */
+  password_gte?: string | null;
+  /** All values containing the given string. */
+  password_contains?: string | null;
+  /** All values not containing the given string. */
+  password_not_contains?: string | null;
+  /** All values starting with the given string. */
+  password_starts_with?: string | null;
+  /** All values not starting with the given string. */
+  password_not_starts_with?: string | null;
+  /** All values ending with the given string. */
+  password_ends_with?: string | null;
+  /** All values not ending with the given string. */
+  password_not_ends_with?: string | null;
+
+  resetToken?: string | null;
+  /** All values that are not equal to given value. */
+  resetToken_not?: string | null;
+  /** All values that are contained in given list. */
+  resetToken_in?: string[] | null;
+  /** All values that are not contained in given list. */
+  resetToken_not_in?: string[] | null;
+  /** All values less than the given value. */
+  resetToken_lt?: string | null;
+  /** All values less than or equal the given value. */
+  resetToken_lte?: string | null;
+  /** All values greater than the given value. */
+  resetToken_gt?: string | null;
+  /** All values greater than or equal the given value. */
+  resetToken_gte?: string | null;
+  /** All values containing the given string. */
+  resetToken_contains?: string | null;
+  /** All values not containing the given string. */
+  resetToken_not_contains?: string | null;
+  /** All values starting with the given string. */
+  resetToken_starts_with?: string | null;
+  /** All values not starting with the given string. */
+  resetToken_not_starts_with?: string | null;
+  /** All values ending with the given string. */
+  resetToken_ends_with?: string | null;
+  /** All values not ending with the given string. */
+  resetToken_not_ends_with?: string | null;
+
+  resetTokenExpiry?: number | null;
+  /** All values that are not equal to given value. */
+  resetTokenExpiry_not?: number | null;
+  /** All values that are contained in given list. */
+  resetTokenExpiry_in?: number[] | null;
+  /** All values that are not contained in given list. */
+  resetTokenExpiry_not_in?: number[] | null;
+  /** All values less than the given value. */
+  resetTokenExpiry_lt?: number | null;
+  /** All values less than or equal the given value. */
+  resetTokenExpiry_lte?: number | null;
+  /** All values greater than the given value. */
+  resetTokenExpiry_gt?: number | null;
+  /** All values greater than or equal the given value. */
+  resetTokenExpiry_gte?: number | null;
 }
 
 export interface ItemWhereUniqueInput {
@@ -334,6 +503,38 @@ export interface ItemCreateInput {
   largeImage?: string | null;
 
   price: number;
+
+  user: UserCreateOneInput;
+}
+
+export interface UserCreateOneInput {
+  create?: UserCreateInput | null;
+
+  connect?: UserWhereUniqueInput | null;
+}
+
+export interface UserCreateInput {
+  name: string;
+
+  email: string;
+
+  password: string;
+
+  resetToken?: string | null;
+
+  resetTokenExpiry?: number | null;
+
+  permissions?: UserCreatepermissionsInput | null;
+}
+
+export interface UserCreatepermissionsInput {
+  set?: Permission[] | null;
+}
+
+export interface UserWhereUniqueInput {
+  id?: string | null;
+
+  email?: string | null;
 }
 
 export interface ItemUpdatesInput {
@@ -505,6 +706,8 @@ export namespace ItemResolvers {
     largeImage?: LargeImageResolver<string | null, TypeParent, Context>;
 
     price?: PriceResolver<number, TypeParent, Context>;
+
+    user?: UserResolver<User, TypeParent, Context>;
   }
 
   export type IdResolver<R = string, Parent = Item, Context = any> = Resolver<
@@ -535,6 +738,69 @@ export namespace ItemResolvers {
   export type PriceResolver<
     R = number,
     Parent = Item,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type UserResolver<R = User, Parent = Item, Context = any> = Resolver<
+    R,
+    Parent,
+    Context
+  >;
+}
+
+export namespace UserResolvers {
+  export interface Resolvers<Context = any, TypeParent = User> {
+    id?: IdResolver<string, TypeParent, Context>;
+
+    name?: NameResolver<string, TypeParent, Context>;
+
+    email?: EmailResolver<string, TypeParent, Context>;
+
+    password?: PasswordResolver<string, TypeParent, Context>;
+
+    resetToken?: ResetTokenResolver<string | null, TypeParent, Context>;
+
+    resetTokenExpiry?: ResetTokenExpiryResolver<
+      number | null,
+      TypeParent,
+      Context
+    >;
+
+    permissions?: PermissionsResolver<Permission[], TypeParent, Context>;
+  }
+
+  export type IdResolver<R = string, Parent = User, Context = any> = Resolver<
+    R,
+    Parent,
+    Context
+  >;
+  export type NameResolver<R = string, Parent = User, Context = any> = Resolver<
+    R,
+    Parent,
+    Context
+  >;
+  export type EmailResolver<
+    R = string,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PasswordResolver<
+    R = string,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenResolver<
+    R = string | null,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type ResetTokenExpiryResolver<
+    R = number | null,
+    Parent = User,
+    Context = any
+  > = Resolver<R, Parent, Context>;
+  export type PermissionsResolver<
+    R = Permission[],
+    Parent = User,
     Context = any
   > = Resolver<R, Parent, Context>;
 }
@@ -628,64 +894,6 @@ export namespace AggregateItemResolvers {
   export type CountResolver<
     R = number,
     Parent = AggregateItem,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-}
-
-export namespace UserResolvers {
-  export interface Resolvers<Context = any, TypeParent = User> {
-    id?: IdResolver<string, TypeParent, Context>;
-
-    name?: NameResolver<string, TypeParent, Context>;
-
-    email?: EmailResolver<string, TypeParent, Context>;
-
-    password?: PasswordResolver<string, TypeParent, Context>;
-
-    resetToken?: ResetTokenResolver<string | null, TypeParent, Context>;
-
-    resetTokenExpiry?: ResetTokenExpiryResolver<
-      number | null,
-      TypeParent,
-      Context
-    >;
-
-    permissions?: PermissionsResolver<Permission[], TypeParent, Context>;
-  }
-
-  export type IdResolver<R = string, Parent = User, Context = any> = Resolver<
-    R,
-    Parent,
-    Context
-  >;
-  export type NameResolver<R = string, Parent = User, Context = any> = Resolver<
-    R,
-    Parent,
-    Context
-  >;
-  export type EmailResolver<
-    R = string,
-    Parent = User,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PasswordResolver<
-    R = string,
-    Parent = User,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type ResetTokenResolver<
-    R = string | null,
-    Parent = User,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type ResetTokenExpiryResolver<
-    R = number | null,
-    Parent = User,
-    Context = any
-  > = Resolver<R, Parent, Context>;
-  export type PermissionsResolver<
-    R = Permission[],
-    Parent = User,
     Context = any
   > = Resolver<R, Parent, Context>;
 }
