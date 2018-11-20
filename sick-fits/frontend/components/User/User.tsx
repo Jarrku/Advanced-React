@@ -14,7 +14,7 @@ export const CURRENT_USER_QUERY = gql`
   }
 `;
 
-class CurrentUserQuery extends Query<CurrentUser> {}
+export class CurrentUserQuery extends Query<CurrentUser> {}
 
 interface Props {
   children: (props: QueryResult<CurrentUser>) => React.ReactNode;
