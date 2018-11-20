@@ -6,6 +6,10 @@ declare namespace NodeJS {
       APP_SECRET: string;
       STRIPE_SECRET: string;
       PORT: string;
+      MAIL_HOST: string;
+      MAIL_PORT: string;
+      MAIL_USER: string;
+      MAIL_PASSWORD: string;
       NODE_ENV: 'development' | 'production' | 'test';
     }
 }

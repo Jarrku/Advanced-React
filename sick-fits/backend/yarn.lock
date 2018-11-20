@@ -252,6 +252,14 @@
   resolved "https://verdaccio.tools.moovly.com/@types%2fnode/-/node-10.12.9.tgz#a07bfa74331471e1dc22a47eb72026843f7b95c8"
   integrity sha512-eajkMXG812/w3w4a1OcBlaTwsFPO5F7fJ/amy+tieQxEMWBlbV1JGSjkFM+zkHNf81Cad+dfIRA+IBkvmvdAeA==
 
+"@types/nodemailer@^4.6.5":
+  version "4.6.5"
+  resolved "https://verdaccio.tools.moovly.com/@types%2fnodemailer/-/nodemailer-4.6.5.tgz#8bb799202f8cfcc8200a1c1627f6a8a74fe71da6"
+  integrity sha512-cbs2HFLj33TBqzcCqTrs+6/mgTX3xl0odbApv3vTdF2+JERLxh5rDZCasXhvy+YqaiUNBr2I1RjNCdbKGs1Bnw==
+  dependencies:
+    "@types/events" "*"
+    "@types/node" "*"
+
 "@types/prettier@1.13.2", "@types/prettier@^1.13.2":
   version "1.13.2"
   resolved "https://verdaccio.tools.moovly.com/@types%2fprettier/-/prettier-1.13.2.tgz#ffe96278e712a8d4e467e367a338b05e22872646"
