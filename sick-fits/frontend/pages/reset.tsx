@@ -7,7 +7,7 @@ interface Props {
   };
 }
 
-const ResetPage: React.FunctionComponent<Props> = props => (
+const ResetPage: React.FC<Props> = props => (
   <div>
     <Reset resetToken={props.query.resetToken} />
   </div>

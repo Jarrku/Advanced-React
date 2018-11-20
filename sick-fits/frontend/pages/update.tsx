@@ -7,7 +7,7 @@ interface PageProps {
   };
 }
 
-const Update: React.FunctionComponent<PageProps> = props => (
+const Update: React.FC<PageProps> = props => (
   <div>
     <UpdateItem id={props.query.id} />
   </div>

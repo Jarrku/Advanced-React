@@ -3,7 +3,7 @@ import NavStyles from './styles/NavStyles';
 import User from './User/User';
 import Signout from './Signout/Signout';
 
-const Nav: React.FunctionComponent = () => (
+const Nav: React.FC = () => (
   <User>
     {({ data }) => (
       <NavStyles>

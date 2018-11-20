@@ -59,7 +59,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header: React.FunctionComponent = () => (
+const Header: React.FC = () => (
   <StyledHeader>
     <div className="bar">
       <Logo>
