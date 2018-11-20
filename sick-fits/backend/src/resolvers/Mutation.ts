@@ -16,8 +16,20 @@ const COOKIE_SETTINGS: CookieOptions = {
 }
 
 const Mutations: MutationResolvers.Resolvers<Ctx> = {
+  //@ts-ignore
   createItem(parent, args, ctx) {
+    if(!ctx.request.userId) {
+      throw new Error('You must be logged in to do that!');
+    }
+
     return ctx.client.createItem({
+      // This is how we create a relation between 2 entities
+      //@ts-ignore
+      user: {
+        connect: {
+          id: ctx.request.userId
+        }
+      },
       title: args.data.title || "Default Title",
       description: args.data.description || "default description",
       image: args.data.image || undefined,
@@ -38,6 +50,7 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
 
     return ctx.client.deleteItem(where);
   },
+  // @ts-ignore
   async signup(parent, args, ctx) {
     const email = args.email.toLowerCase();
 
@@ -57,6 +70,7 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
 
     return user;
   },
+  // @ts-ignore
   async signin(parent, { email, password }, ctx, info) {
     // Check if there is a user.
     const user = await ctx.client.user({ email });
@@ -109,6 +123,7 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
       message: "Success"
     };
   },
+  // @ts-ignore
   async resetPassword(parent, args, ctx, info) {
     // Check if password match
     if (args.password !== args.confirmPassword) {
@@ -134,8 +149,8 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
       },
       data: {
         password,
-        resetToken: null,
-        resetTokenExpiry: null
+        resetToken: undefined,
+        resetTokenExpiry: undefined
       }
     });
 
