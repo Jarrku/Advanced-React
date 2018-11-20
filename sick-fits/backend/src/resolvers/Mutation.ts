@@ -42,13 +42,14 @@ const Mutations: MutationResolvers.Resolvers<Ctx> = {
     // @ts-ignore null | undefined issue.
     return ctx.client.updateItem({ data: updates, where: { id } });
   },
+  // @ts-ignore
   async deleteItem(parent, args, ctx) {
     const where = { id: args.id };
 
     // const item = await ctx.client.item(where);
     // TODO : check permission
-
-    return ctx.client.deleteItem(where);
+    const item = await ctx.client.deleteItem(where);
+    return item;
   },
   // @ts-ignore
   async signup(parent, args, ctx) {
