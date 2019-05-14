@@ -46,32 +46,32 @@ const Query: QueryResolvers.Resolvers<Ctx> = {
   //   return seats;
   // },
   // // @ts-ignore
-  // async group(parent, args, ctx, info) {
-  //   start = Date.now();
-  //   const seatsPr = await Licenses.getActiveSeats('7ecd40fb-b502-11e8-bd9b-0a2cf957548e');
+  async group(parent, args, ctx, info) {
+    start = Date.now();
+    const seatsPr = await Licenses.getActiveSeats('7ecd40fb-b502-11e8-bd9b-0a2cf957548e');
 
-  //   const membersPr = await Group.getGroupMemberships('7ecd40fb-b502-11e8-bd9b-0a2cf957548e', {
-  //     page: 1,
-  //     page_size: 100,
-  //   });
+    const membersPr = await Group.getGroupMemberships('7ecd40fb-b502-11e8-bd9b-0a2cf957548e', {
+      page: 1,
+      page_size: 100,
+    });
 
-  //   const [members1, seats] = await Promise.all([membersPr, seatsPr]);
+    const [members1, seats] = await Promise.all([membersPr, seatsPr]);
 
-  //   const members2 = await Group.getGroupMemberships('7ecd40fb-b502-11e8-bd9b-0a2cf957548e', {
-  //     page: 2,
-  //     page_size: 100,
-  //   });
+    const members2 = await Group.getGroupMemberships('7ecd40fb-b502-11e8-bd9b-0a2cf957548e', {
+      page: 2,
+      page_size: 100,
+    });
 
-  //   const members = members1.results.concat(members2.results);
+    const members = members1.results.concat(members2.results);
 
-  //   seats.forEach(s => {
-  //     const idx = members.findIndex(m => m.user_id === s.user_id);
+    seats.forEach(s => {
+      const idx = members.findIndex(m => m.user_id === s.user_id);
 
-  //     if(idx !== -1) {
-  //       // @ts-ignore
-  //       members[idx].seatInfo = s;
-  //     }
-  //   });
+      if(idx !== -1) {
+        // @ts-ignore
+        members[idx].seatInfo = s;
+      }
+    });
 
 
   //   console.log(members.length);
